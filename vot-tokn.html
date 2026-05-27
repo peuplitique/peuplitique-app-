@@ -2,41 +2,40 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Validation Token</title>
+<title>Test Token</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="zone">
-    <h1>Validation du Token</h1>
+    <h1>Test Token</h1>
 
-    <button onclick="genererToken()">Générer un Token</button>
-    <p id="token"></p>
+    <button onclick="generer()">Générer un token</button>
+    <p id="t"></p>
 
-    <button onclick="validerToken()">Valider le Token</button>
-    <p id="resultat"></p>
+    <button onclick="valider()">Valider</button>
+    <p id="r"></p>
 </div>
 
 <script>
 let token = null;
-let tokenValide = false;
+let actif = false;
 
-function genererToken() {
+function generer() {
     token = "TKN-" + Math.floor(Math.random() * 999999);
-    tokenValide = true;
-    document.getElementById("token").innerText = "Votre token : " + token;
-    document.getElementById("resultat").innerText = "";
+    actif = true;
+    document.getElementById("t").innerText = "Token : " + token;
+    document.getElementById("r").innerText = "";
 }
 
-function validerToken() {
-    if (!tokenValide) {
-        document.getElementById("resultat").innerText = "Token déjà utilisé ou invalide.";
+function valider() {
+    if (!actif) {
+        document.getElementById("r").innerText = "Token invalide ou déjà utilisé.";
         return;
     }
-
-    tokenValide = false;
-    document.getElementById("resultat").innerText = "Token validé et détruit.";
+    actif = false;
+    document.getElementById("r").innerText = "Token validé et détruit.";
 }
 </script>
 
