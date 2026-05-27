@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisation économique structurelle – Peuplitique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-bg">
+
+<!-- LANG SWITCH -->
+<div class="lang-switch">
+    <a href="?lang=fr">FR</a> |
+    <a href="?lang=en">EN</a> |
+    <a href="?lang=es">ES</a> |
+    <a href="?lang=ru">RU</a> |
+    <a href="?lang=cn">CN</a>
+</div>
+
+<!-- HEADER + MENU -->
+<header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-dao.html">Gouvernance DAO</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="organisation-economique-structurelle.html" class="active">Organisation économique</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+            <li><a href="organisation-politique-territoriale.html">Organisation politique</a></li>
+            <li><a href="protocole.html">Protocole citoyen</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+        </ul>
+    </nav>
+</header>
+</header>
+</header>
+
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1>Peuplitique — Gouvernance partagée</h1>
+
+    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
+
+    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
+
+    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
+
+    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
+</section>
+
+<!-- CONTENU -->
+<main class="content">
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1>Peuplitique — Gouvernance partagée</h1>
+
+    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
+
+    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
+
+    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
+
+    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
+</section>
+
+<!-- CONTENU -->
+<main class="content">
+<!-- CONTENU -->
+<main class="content">
+
+    <h1>Organisation économique structurelle</h1>
+
+    <section>
+        <p>
+            L’organisation économique structurelle définit la manière dont les ressources, les flux, les productions et les échanges sont structurés dans un modèle intégré, transparent et démocratique.
+        </p>
+    </section>
+
+    <section>
+        <h2>1. Les trois piliers économiques</h2>
+        <ul>
+            <li><strong>Production</strong> — création de biens et services.</li>
+            <li><strong>Distribution</strong> — circulation des ressources.</li>
+            <li><strong>Régulation</strong> — équilibre, transparence, équité.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Rôle du DAO dans l’économie</h2>
+        <ul>
+            <li>Traçabilité totale des flux.</li>
+            <li>Budgets participatifs automatisés.</li>
+            <li>Audit public permanent.</li>
+            <li>Optimisation des ressources.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Schéma structurel</h2>
+
+<pre class="ascii-schema">
+[ Production ]
+        |
+        v
+[ Distribution ]
+        |
+        v
+[ Régulation ]
+</pre>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+<!-- SCRIPT MULTILINGUE -->
+<script>
+const translations = {
+    "en": {
+        "footer": "© 2026 Peuplitique – All rights reserved"
+    },
+    "es": {
+        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
+    },
+    "ru": {
+        "footer": "© 2026 Peuplitique – Все права защищены"
+    },
+    "cn": {
+        "footer": "© 2026 Peuplitique – 版权所有"
+    }
+};
+
+function applyTranslation(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang");
+if (lang) applyTranslation(lang);
+</script>
+
+</body>
+</html>

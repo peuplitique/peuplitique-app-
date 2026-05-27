@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Glossaire – Peuplitique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="glossaire">
+
+<!-- LANG SWITCH -->
+<div class="lang-switch">
+    <a href="?lang=fr">FR</a> |
+    <a href="?lang=en">EN</a> |
+    <a href="?lang=es">ES</a> |
+    <a href="?lang=ru">RU</a> |
+    <a href="?lang=cn">CN</a>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+        <li><a href="glossaire.html" class="active">Glossaire</a></li>
+        <li><a href="desequilibre-structurelle.html">Déséquilibres structurels</a></li>
+        <li><a href="economie-integree.html">Économie intégrée</a></li>
+        <li><a href="organisation-economique-structurelle.html">Organisation économique structurelle</a></li>
+        <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+        <li><a href="gouvernance-dao.html">Gouvernance & DAO</a></li>
+        <li><a href="organisation-politique-territoriale.html">Organisation politique territoriale</a></li>
+        <li><a href="protocole.html">Protocole</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="header-blue">
+    <h1>Glossaire</h1>
+    <p>Les termes essentiels pour comprendre Peuplitique.</p>
+</header>
+
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1>Peuplitique — Gouvernance partagée</h1>
+
+    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
+
+    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
+
+    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
+
+    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
+</section>
+
+<!-- CONTENU -->
+<section class="content">
+    <h2>DAO</h2>
+
+<section>
+    <h2>Économie intégrée</h2>
+    <p>Modèle économique où production, redistribution et réinvestissement sont coordonnés de manière transparente et collective.</p>
+</section>
+
+<section>
+    <h2>Flux structurels</h2>
+    <p>Mouvements organisés de ressources entre production, redistribution et innovation.</p>
+</section>
+
+<section>
+    <h2>Protocole citoyen</h2>
+    <p>Ensemble des règles simples permettant à chaque citoyen de participer aux décisions publiques.</p>
+</section>
+
+<section>
+    <h2>Organisation structurelle</h2>
+    <p>Architecture interne du système : rôles, responsabilités, interactions et mécanismes de coordination.</p>
+</section>
+
+<section>
+    <h2>Organisation économique structurelle</h2>
+    <p>Structure de gestion des ressources, des flux financiers et des priorités publiques.</p>
+</section>
+
+<section>
+    <h2>Organisation politique territoriale</h2>
+    <p>Répartition des responsabilités et décisions entre niveaux local, régional et national.</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+<!-- SCRIPT MULTILINGUE -->
+<script>
+const translations = {
+    "en": {
+        "menu_home": "Home",
+        "menu_limits": "Structural Limits",
+        "menu_governance": "Shared Governance",
+        "menu_protocol": "Protocol",
+        "footer": "© 2026 Peuplitique – All rights reserved"
+    },
+    "es": {
+        "menu_home": "Inicio",
+        "menu_limits": "Límites Estructurales",
+        "menu_governance": "Gobernanza Compartida",
+        "menu_protocol": "Protocolo",
+        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
+    },
+    "ru": {
+        "menu_home": "Главная",
+        "menu_limits": "Структурные ограничения",
+        "menu_governance": "Совместное управление",
+        "menu_protocol": "Протокол",
+        "footer": "© 2026 Peuplitique – Все права защищены"
+    },
+    "cn": {
+        "menu_home": "首页",
+        "menu_limits": "结构限制",
+        "menu_governance": "共享治理",
+        "menu_protocol": "协议",
+        "footer": "© 2026 Peuplitique – 版权所有"
+    }
+};
+
+function applyTranslation(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang");
+if (lang) applyTranslation(lang);
+</script>
+
+</body>
+</html>

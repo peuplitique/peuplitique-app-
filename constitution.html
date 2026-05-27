@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peuplitique – Constitution</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LANG SWITCH -->
+<div class="lang-switch">
+    <a href="?lang=fr">FR</a> |
+    <a href="?lang=en">EN</a> |
+    <a href="?lang=es">ES</a> |
+    <a href="?lang=ru">RU</a> |
+    <a href="?lang=cn">CN</a>
+</div>
+
+<!-- FOOTER (PLACÉ CORRECTEMENT DANS LE BODY) -->
+<footer class="footer">
+    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+<!-- SCRIPT MULTILINGUE (FERMÉ CORRECTEMENT) -->
+<script>
+const translations = {
+    "en": {
+        "menu_home": "Home",
+        "menu_limits": "Structural Limits",
+        "menu_governance": "Shared Governance",
+        "menu_protocol": "Protocol",
+        "footer": "© 2026 Peuplitique – All rights reserved"
+    },
+    "es": {
+        "menu_home": "Inicio",
+        "menu_limits": "Límites Estructurales",
+        "menu_governance": "Gobernanza Compartida",
+        "menu_protocol": "Protocolo",
+        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
+    },
+    "ru": {
+        "menu_home": "Главная",
+        "menu_limits": "Структурные ограничения",
+        "menu_governance": "Совместное управление",
+        "menu_protocol": "Протокол",
+        "footer": "© 2026 Peuplitique – Все права защищены"
+    },
+    "cn": {
+        "menu_home": "首页",
+        "menu_limits": "结构限制",
+        "menu_governance": "共享治理",
+        "menu_protocol": "协议",
+        "footer": "© 2026 Peuplitique – 版权所有"
+    }
+};
+
+function applyTranslation(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang");
+if (lang) applyTranslation(lang);
+</script>
+
+<!-- HEADER -->
+<header class="header-blue">
+    <h1 class="title-main">PEUPLITIQUE</h1>
+    <p class="title-sub">Constitution, limites structurelles et articles</p>
+    <div class="header-line"></div>
+</header>
+
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1>Peuplitique — Gouvernance partagée</h1>
+
+    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
+
+    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
+
+    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
+
+    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
+</section>
+<!-- MENU -->
+<nav class="menu">
+    <ul>
+             <li><a href="index.html" data-i18n="menu_home">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html" data-i18n="menu_governance">Gouvernance partagée</a></li>
+            <li><a href="gouvernance-dao.html">DAO</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+           <li><a href="vote-token.html">Vote Token</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="protocole.html" data-i18n="menu_protocol">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<!-- CONTENU -->
+<main class="content">
+
+<!-- ========================= -->
+<!-- ÉTAPE 1 — CONSTITUTION -->
+<!-- ========================= -->
+<section id="constitution">
+    <h2>Étape 1 — Constitution</h2>
+    <p>
+        L’étape 1 consiste à établir une base commune, claire et accessible à tous les citoyens. Elle définit les principes, les règles et les garanties qui encadrent l’ensemble du processus de participation, d’analyse et de décision collective.
+    </p>
+
+    <h3>Objectifs de l’étape 1</h3>
+    <ul style="padding: 0 40px;">
+        <li>Définir les fondements de la plateforme citoyenne ;</li>
+        <li>Garantir l’égalité entre tous les participants ;</li>
+        <li>Établir les règles de transparence et de traçabilité ;</li>
+        <li>Créer un cadre stable pour les étapes suivantes.</li>
+    </ul>
+
+    <h3>Principes fondamentaux</h3>
+    <p>Cette constitution citoyenne repose sur plusieurs principes essentiels :</p>
+    <ul style="padding: 0 40px;">
+        <li><strong>Égalité :</strong> chaque citoyen dispose du même poids dans les décisions ;</li>
+        <li><strong>Transparence :</strong> toutes les règles sont visibles, compréhensibles et vérifiables ;</li>
+        <li><strong>Neutralité :</strong> aucune influence extérieure ne peut orienter le processus ;</li>
+        <li><strong>Traçabilité :</strong> chaque action citoyenne est associée à un token non financier ;</li>
+        <li><strong>Accessibilité :</strong> le langage, les outils et les mécanismes doivent être compréhensibles par tous.</li>
+    </ul>
+
+    <h3>Structure de la constitution</h3>
+    <p>
+        La constitution citoyenne se compose de plusieurs articles, chacun définissant un aspect essentiel du fonctionnement de Peuplitique. Elle n’est pas figée : elle peut évoluer collectivement, selon un processus clair et démocratique.
+    </p>
+
+    <ul style="padding: 0 40px;">
+        <li>Article 1 — Définition du citoyen participant ;</li>
+        <li>Article 2 — Règles de participation et d’engagement ;</li>
+        <li>Article 3 — Transparence et traçabilité ;</li>
+        <li>Article 4 — Processus de modification de la constitution ;</li>
+        <li>Article 5 — Garanties d’égalité et de neutralité.</li>
+    </ul>
+
+    <p>
+        L’étape 1 pose ainsi les fondations nécessaires pour que les étapes suivantes — analyse, débat, référendum et vote — puissent se dérouler dans un cadre stable, équitable et compréhensible.
+    </p>
+</section>
+
+<!-- ================================== -->
+<!-- ÉTAPE 2 — LIMITES STRUCTURELLES -->
+<!-- ================================== -->
+<section id="limites-structurelles">
+    <h2>Étape 2 — Les limites structurelles des constitutions actuelles</h2>
+
+    <p>
+        Les constitutions actuelles reposent sur un modèle vertical et centralisé qui présente plusieurs limites structurelles. Ces limites ne sont pas des fautes humaines : elles proviennent de la manière dont le système est conçu.
+    </p>
+
+    <h4>1. Pouvoir durable</h4>
+    <p>Le modèle repose sur des fonctions stables et prolongées, créant une asymétrie entre pouvoir exercé et contrôle citoyen.</p>
+
+    <h4>2. Absence de rotation</h4>
+    <p>L’absence de rotation systématique entraîne une accumulation d’influence et une difficulté à renouveler les perspectives.</p>
+
+    <h4>3. Transparence limitée</h4>
+    <p>Le modèle ne prévoit pas la transparence en temps réel ni la traçabilité complète des décisions.</p>
+
+    <h4>4. Immunités institutionnelles</h4>
+    <p>
+        Certaines fonctions publiques bénéficient d’immunités temporaires. Structurellement, cela crée une asymétrie entre pouvoir et responsabilité.
+    </p>
+
+    <h4>5. Absence de contrôle citoyen permanent</h4>
+    <p>Le système repose sur une délégation longue, limitant la participation continue.</p>
+
+    <h4>6. Centralisation du pouvoir</h4>
+    <p>La centralisation crée des points de fragilité et une dépendance à quelques acteurs.</p>
+
+    <h4>Conclusion</h4>
+    <p>
+        Ces limites ne sont pas des erreurs humaines, mais les conséquences d’un modèle vertical qui ne correspond plus aux besoins d’une société moderne.
+    </p>
+</section>
+
+<!-- =============================== -->
+<!-- ARTICLES — PRINCIPES -->
+<!-- =============================== -->
+<section id="articles-principes">
+    <h2>Articles — Principes structurels</h2>
+
+    <!-- ARTICLE 1 -->
+    <details>
+        <summary>Article 1 — Principe de non‑fixation du pouvoir</summary>
+        <p>
+            Le pouvoir ne peut pas se fixer. Aucun individu, groupe ou institution ne peut conserver durablement un avantage structurel.
+        </p>
+        <p>Ce principe garantit que :</p>
+        <ul>
+            <li>le pouvoir reste circulant,</li>
+            <li>aucune position ne devient un point de contrôle permanent,</li>
+            <li>la responsabilité reste symétrique,</li>
+            <li>les décisions restent vérifiables et réversibles.</li>
+        </ul>
+    </details>
+
+    <!-- ARTICLE 2 -->
+    <details>
+        <summary>Article 2 — Principe de vérifiabilité du pouvoir</summary>
+        <p>
+            Toute forme de pouvoir doit être vérifiable par le collectif. Aucune décision ne peut être exercée sans laisser une trace accessible.
+        </p>
+        <ul>
+            <li>les décisions peuvent être retracées,</li>
+            <li>les responsabilités peuvent être établies,</li>
+            <li>les abus peuvent être détectés.</li>
+        </ul>
+    </details>
+
+    <!-- ARTICLE 3 -->
+    <details>
+        <summary>Article 3 — Principe de réversibilité du pouvoir</summary>
+        <p>
+            Toute forme de pouvoir doit être réversible. Aucune décision ne peut être définitive ou soustraite à un mécanisme de retour collectif.
+        </p>
+    </details>
+
+    <!-- ARTICLE 4 -->
+    <details>
+        <summary>Article 4 — Principe de responsabilité du pouvoir délégué</summary>
+        <p>
+            Le pouvoir délégué doit être justifiable, assumé et contrôlable.
+        </p>
+    </details>
+
+    <!-- ARTICLE 5 -->
+    <details>
+        <summary>Article 5 — Principe de traçabilité des décisions</summary>
+        <p>
+            Toute décision ayant un impact collectif doit être tracée.
+        </p>
+    </details>
+
+    <!-- ARTICLE 6 -->
+    <details>
+        <summary>Article 6 — Principe de transparence des processus</summary>
+        <p>
+            La transparence garantit que les informations nécessaires à la compréhension et au contrôle citoyen sont accessibles.
+        </p>
+    </details>
+
+    <!-- ARTICLE 7 -->
+    <details>
+        <summary>Article 7 — Principe de réversibilité du pouvoir</summary>
+        <p>
+            Toute délégation de pouvoir est réversible. Le collectif peut suspendre ou retirer une délégation en cas de dérive.
+        </p>
+    </details>
+</section>
+
+<!-- =============================================== -->
+<!-- ARTICLES 7 À 13 — CONSTITUTION PEUPLITIQUE -->
+<!-- =============================================== -->
+<section id="articles-constitution">
+    <h2>Articles — Constitution Peuplitique</h2>
+
+    <details>
+        <summary>Article 7 — Réversibilité des décisions</summary>
+        <p>
+            Toute décision est réversible si elle devient contraire à l’intérêt général.
+        </p>
+    </details>
+
+    <details>
+        <summary>Article 8 — Traçabilité avancée</summary>
+        <p>
+            Chaque action, analyse ou décision est enregistrée de manière vérifiable et inaltérable.
+        </p>
+    </details>
+
+    <details>
+        <summary>Article 9 — Transparence avancée</summary>
+        <p>
+            Les informations nécessaires à la compréhension et au contrôle citoyen doivent être publiées.
+        </p>
+    </details>
+
+    <details>
+        <summary>Article 10 — Participation citoyenne</summary>
+        <p>
+            Chaque citoyen peut contribuer, proposer, consulter, alerter et voter.
+        </p>
+    </details>
+
+    <details>
+        <summary>Article 11 — Conseil intersectoriel</summary>
+        <p>
+            Instance temporaire assurant la cohérence entre secteurs.
+        </p>
+    </details>
+
+    <details>
+        <summary>Article 12 — Révision du Protocole</summary>
+        <p>
+            Le Protocole peut être révisé selon un processus transparent et participatif.
+        </p>
+    </details>
+
+    <details>
+        <summary>Article 13 — Révision citoyenne de la Constitution</summary>
+        <p>
+            La Constitution peut être révisée à tout moment par le peuple.
+        </p>
+    </details>
+</section>
+
+<!-- ========================= -->
+<!-- LIEN VERS ORGANISATION -->
+<!-- ========================= -->
+<section id="lien-organisation" class="sommaire">
+    <h2>Étape suivante</h2>
+    <p>
+        La compréhension de la Constitution ouvre naturellement vers l’<strong>organisation structurelle du pouvoir partagé</strong>.
+    </p>
+    <p><a href="organisation-structurelle.html" class="btn">Accéder à l’organisation structurelle</a></p>
+</section>
+
+</main>
+
+</body>
+</html>
