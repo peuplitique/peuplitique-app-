@@ -7,7 +7,26 @@
 </head>
 
 <body>
+<script>
+let token = null;
+let actif = false;
 
+function generer() {
+    token = "TKN-" + Math.floor(Math.random() * 999999);
+    actif = true;
+    document.getElementById("t").innerText = "Token : " + token;
+    document.getElementById("r").innerText = "";
+}
+
+function valider() {
+    if (!actif) {
+        document.getElementById("r").innerText = "Token invalide ou déjà utilisé.";
+        return;
+    }
+    actif = false;
+    document.getElementById("r").innerText = "Token validé et détruit.";
+}
+</script>
 <div class="zone">
     <h1>Test Token</h1>
 
