@@ -7,7 +7,9 @@
 </head>
 
 <body>
+
 <script src="script.js"></script>
+
 <script>
 let token = null;
 let actif = false;
@@ -18,7 +20,7 @@ function generer() {
     document.getElementById("t").innerText = "Token : " + token;
     document.getElementById("r").innerText = "";
 }
-</script>
+
 function valider() {
     if (!actif) {
         document.getElementById("r").innerText = "Token invalide ou déjà utilisé.";
