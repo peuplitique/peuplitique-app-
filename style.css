@@ -5,42 +5,38 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 /* HEADER */
 .header {
   background-color: #0a3d78; /* même bleu que Gouvernance Partagée */
   text-align: center;
   padding: 10px;
   color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .header h1 {
   margin: 0;
   color: white;
   font-size: 1.5em;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  
 }
 
 /* Barres uniformes */
 header,
 nav.menu {
-   background-color: #0a3d78; /* même bleu que Gouvernance Partagée */
-   color: white;   
-   text-align: center;        /* texte centré */
-   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* typo plus douce */
+   background-color: #0a3d78;
+   color: white;
+   text-align: center;
 }
 
 /* Footer spécifique */
 footer {
-  background-color: #0a3d78; /* bleu foncé uniforme */
+  background-color: #0a3d78;
   color: white;
   text-align: center;
   padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;  
 }
+
 /* Zone bleue foncée */
 .zone-bleue {
   background-color: #0a3d78;
@@ -48,14 +44,12 @@ footer {
   padding: 40px 20px;
   margin-bottom: 40px;
   text-align: center;
- font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;   
 }
 
 /* Sommaire gris clair */
 .sommaire {
     background: #f5f5f5;
     padding: 10px 0;
-   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
 }
 .sommaire ul {
     list-style: none;
@@ -64,13 +58,11 @@ footer {
     gap: 20px;
     padding: 0;
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .sommaire a {
     color: #0a3d78;
     text-decoration: none;
     font-weight: 600;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Menu principal */
@@ -81,26 +73,22 @@ footer {
     gap: 20px;
     padding: 10px 0;
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Sous-titre et ligne turquoise */
 .sous-titre {
     color: #3FD1C2;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .ligne {
     width: 80px;
     height: 3px;
     background-color: #3FD1C2;
     margin: 10px auto;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Contenu principal */
@@ -108,9 +96,9 @@ footer {
     max-width: 900px;
     margin: auto;
     padding: 20px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-/* Force le centrage du titre dans le header */
+
+/* Centrage du header */
 .header h1,
 .header .sous-titre,
 .header .ligne {
@@ -119,7 +107,38 @@ footer {
     margin-right: auto;
 }
 
-/* Si c'est le bloc bleu qui doit centrer le titre */
+/* Zone bleue centrée */
 .zone-bleue {
     text-align: center;
+}
+
+/* ------------------------------------------------------ */
+/* AJOUT FINAL : STYLE POUR LA PAGE TEST TOKEN            */
+/* ------------------------------------------------------ */
+
+.zone {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #0a3d78; /* ton bleu */
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.zone button {
+    background: #3FD1C2; /* ton turquoise */
+    color: #0a3d78;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.zone p {
+    font-size: 18px;
+    margin-top: 15px;
 }
