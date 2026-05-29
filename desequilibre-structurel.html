@@ -18,74 +18,21 @@
     <a href="?lang=cn">CN</a>
 </div>
 
-<!-- FOOTER (PLACÉ CORRECTEMENT DANS LE BODY) -->
-<footer class="footer">
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
-</footer>
-
-<!-- SCRIPT MULTILINGUE (FERMÉ CORRECTEMENT) -->
-<script>
-const translations = {
-    "en": {
-        "footer": "© 2026 Peuplitique – All rights reserved"
-    },
-    "es": {
-        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-    },
-    "ru": {
-        "footer": "© 2026 Peuplitique – Все права защищены"
-    },
-    "cn": {
-        "footer": "© 2026 Peuplitique – 版权所有"
-    }
-};
-
-function applyTranslation(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-}
-
-const params = new URLSearchParams(window.location.search);
-const lang = params.get("lang");
-if (lang) applyTranslation(lang);
-</script>
-
 <!-- HEADER -->
 <header class="header-blue">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
 
-  <nav class="menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-        <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
-        <li><a href="organisation-economique.html">Organisation économique</a></li>
-        <li><a href="protocole.html">Protocole</a></li>
-        <li><a href="glossaire.html">Glossaire</a></li>
-    </ul>
-</nav>
-
-<!-- ZONE BLEUE -->
-<section class="zone-bleue">
-    <h1>Peuplitique — Gouvernance partagée</h1>
-
-    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
-
-    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
-
-    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
-
-    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
-</section>
-    <h1>Peuplitique</h1>
-    <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
-
-    
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+            <li><a href="desequilibre-structurel.html" class="active">Déséquilibres structurels</a></li>
+            <li><a href="organisation-economique.html">Organisation économique</a></li>
+            <li><a href="protocole.html">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- ZONE BLEUE -->
@@ -167,6 +114,27 @@ if (lang) applyTranslation(lang);
     </ul>
 
 </main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+<!-- SCRIPT MULTILINGUE -->
+<script>
+const translations = {
+    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
+    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
+    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
+    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
+};
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang");
+if (lang && translations[lang]) {
+    document.querySelector("[data-i18n='footer']").textContent = translations[lang]["footer"];
+}
+</script>
 
 </body>
 </html>
