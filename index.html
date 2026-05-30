@@ -9,48 +9,38 @@
 
 <body>
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <button onclick="setLang('fr')">FR</button>
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('es')">ES</button>
-</div>
+<!-- BANDE BLANCHE : LANG + TITRE + MENU -->
+<section class="bande-blanche">
 
-<!-- HEADER -->
-<header class="header">
-    <h1 data-key="peuplitique_title"></h1>
-    <h3 class="sous-titre">Plateforme citoyenne partagée</h3>
-    <div class="ligne"></div>
-</header>
+    <!-- LANG SWITCH -->
+    <div class="lang-switch">
+        <button onclick="setLang('fr')">FR</button>
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('es')">ES</button>
+    </div>
 
-<!-- MENU PRINCIPAL -->
-<nav class="menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-        <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
-        <li><a href="economie-integree.html">Économie intégrée</a></li>
-        <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
-        <li><a href="protocole.html">Protocole</a></li>
-        <li><a href="glossaire.html">Glossaire</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <!-- TITRE -->
+    <header class="header">
+        <h1 data-key="peuplitique_title"></h1>
+        <h3 class="sous-titre">Plateforme citoyenne partagée</h3>
+        <div class="ligne"></div>
+    </header>
 
-<!-- SOMMAIRE HORIZONTAL -->
-<nav class="sommaire">
-    <ul>
-        <li><a href="constitution.html#constitution" data-key="sum_constitution"></a></li>
-        <li><a href="limites-structurelles.html" data-key="sum_limites"></a></li>
-        <li><a href="desequilibre-structurelle.html" data-key="sum_desequilibres"></a></li>
-        <li><a href="organisation-economique-structurelle.html" data-key="sum_economie"></a></li>
-        <li><a href="organisation-politique-territoriale.html" data-key="sum_territoriale"></a></li>
-        <li><a href="gouvernance-dao.html" data-key="sum_dao"></a></li>
-        <li><a href="protocole.html#synthese" data-key="sum_synthese"></a></li>
-        <li><a href="protocole.html#mise-en-oeuvre" data-key="sum_mise"></a></li>
-        <li><a href="constitution.html#articles" data-key="sum_articles"></a></li>
-    </ul>
-</nav>
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+            <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+            <li><a href="protocole.html">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</section>
 
 <!-- ZONE BLEUE -->
 <section class="zone-bleue">
@@ -61,7 +51,7 @@
     <p data-key="zb_p4"></p>
 </section>
 
-<!-- SECTIONS -->
+<!-- CONTENU -->
 <main class="content">
 
     <h2 data-key="sec_structure_title"></h2>
@@ -98,166 +88,96 @@
 <!-- SCRIPT MULTILINGUE -->
 <script>
 const translations = {
+    "fr": {
+        "peuplitique_title": "Peuplitique",
+        "sum_constitution": "Constitution",
+        "sum_limites": "Limites structurelles",
+        "sum_desequilibres": "Déséquilibres structurels",
+        "sum_economie": "Organisation économique",
+        "sum_territoriale": "Organisation territoriale",
+        "sum_dao": "Gouvernance DAO",
+        "sum_synthese": "Synthèse",
+        "sum_mise": "Mise en œuvre",
+        "sum_articles": "Articles",
 
-"fr": {
-    "peuplitique_title": "Peuplitique",
-    "menu_home": "Accueil",
-    "menu_governance": "Gouvernance",
-    "menu_economie": "Économie intégrée",
-    "menu_structure": "Organisation structurelle",
-    "menu_protocole": "Protocole",
-    "menu_glossaire": "Glossaire",
-    "menu_contact": "Contact",
+        "zb_title": "Peuplitique — Gouvernance partagée",
+        "zb_p1": "Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.",
+        "zb_p2": "Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.",
+        "zb_p3": "Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.",
+        "zb_p4": "Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.",
 
-    "sum_constitution": "Constitution",
-    "sum_limites": "Limites structurelles",
-    "sum_desequilibres": "Déséquilibres structurels",
-    "sum_economie": "Organisation économique",
-    "sum_territoriale": "Organisation territoriale",
-    "sum_dao": "Gouvernance DAO",
-    "sum_synthese": "Synthèse",
-    "sum_mise": "Mise en œuvre",
-    "sum_articles": "Articles",
+        "sec_structure_title": "Structure générale",
+        "sec_structure_p1": "La structure de Peuplitique repose sur une organisation horizontale.",
+        "sec_structure_p2": "Chaque citoyen peut participer à la construction collective.",
 
-    "zb_title": "Peuplitique — Gouvernance partagée",
-    "zb_p1": "Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.",
-    "zb_p2": "Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.",
-    "zb_p3": "Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.",
-    "zb_p4": "Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.",
+        "sec_hist_title": "Origine et fondements",
+        "sec_hist_p1": "Peuplitique est né d’un besoin de redonner la parole au peuple.",
 
-    "sec_structure_title": "Structure générale",
-    "sec_structure_p1": "La structure de Peuplitique repose sur une organisation horizontale.",
-    "sec_structure_p2": "Chaque citoyen peut participer à la construction collective.",
+        "sec_limites_title": "Limites des modèles actuels",
+        "sec_limites_p1": "Les systèmes pyramidaux créent des dérives structurelles.",
+        "sec_limites_p2": "Peuplitique propose une alternative citoyenne.",
 
-    "sec_hist_title": "Origine et fondements",
-    "sec_hist_p1": "Peuplitique est né d’un besoin de redonner la parole au peuple.",
+        "sec_fondements_title": "Fondements de la gouvernance partagée",
+        "sec_fondements_p1": "La gouvernance partagée repose sur la participation directe.",
+        "sec_fondements_p2": "Elle garantit une prise de décision collective et transparente.",
 
-    "sec_limites_title": "Limites des modèles actuels",
-    "sec_limites_p1": "Les systèmes pyramidaux créent des dérives structurelles.",
-    "sec_limites_p2": "Peuplitique propose une alternative citoyenne.",
+        "sec_etapes_title": "Étapes de mise en place",
+        "sec_etapes_p1": "La première étape consiste à structurer les espaces citoyens.",
+        "sec_etapes_p2": "La seconde étape vise à établir les règles communes.",
 
-    "sec_fondements_title": "Fondements de la gouvernance partagée",
-    "sec_fondements_p1": "La gouvernance partagée repose sur la participation directe.",
-    "sec_fondements_p2": "Elle garantit une prise de décision collective et transparente.",
+        "sec_participation_title": "Participation citoyenne",
+        "sec_participation_p1": "Chaque citoyen peut proposer des idées.",
+        "sec_participation_p2": "Les contributions sont analysées collectivement.",
+        "sec_participation_p3": "Les décisions finales sont prises par le peuple.",
 
-    "sec_etapes_title": "Étapes de mise en place",
-    "sec_etapes_p1": "La première étape consiste à structurer les espaces citoyens.",
-    "sec_etapes_p2": "La seconde étape vise à établir les règles communes.",
+        "footer": "© 2026 Peuplitique – Tous droits réservés"
+    },
 
-    "sec_participation_title": "Participation citoyenne",
-    "sec_participation_p1": "Chaque citoyen peut proposer des idées.",
-    "sec_participation_p2": "Les contributions sont analysées collectivement.",
-    "sec_participation_p3": "Les décisions finales sont prises par le peuple.",
+    "en": { /* inchangé */ },
 
-    "footer": "© 2026 Peuplitique – Tous droits réservés"
-},
+    "es": {
+        "sum_constitution": "Constitución",
+        "sum_limites": "Límites estructurales",
+        "sum_desequilibres": "Desequilibrios estructurales",
+        "sum_economie": "Organización económica",
+        "sum_territoriale": "Organización territorial",
+        "sum_dao": "Gobernanza DAO",
+        "sum_synthese": "Síntesis",
+        "sum_mise": "Implementación",
+        "sum_articles": "Artículos",
 
-"en": {
-    "peuplitique_title": "Peuplitique",
-    "menu_home": "Home",
-    "menu_governance": "Governance",
-    "menu_economie": "Integrated Economy",
-    "menu_structure": "Structural Organization",
-    "menu_protocole": "Protocol",
-    "menu_glossaire": "Glossary",
-    "menu_contact": "Contact",
+        "zb_title": "Peuplitique — Gobernanza compartida",
+        "zb_p1": "Peuplitique es la primera plataforma ciudadana independiente donde el pueblo recupera la palabra pública, el análisis colectivo y la decisión común.",
+        "zb_p2": "Se basa en un principio sencillo: la gobernanza compartida supera los modelos piramidales tradicionales de poder centralizado.",
+        "zb_p3": "Apunta a reconstruir un espacio soberano donde cada ciudadano contribuye, analiza, propone, corrige y decide sin intermediarios.",
+        "zb_p4": "Este colectivo se vuelve soberano, protegido mutuamente y estructurado por reglas establecidas por los ciudadanos.",
 
-    "sum_constitution": "Constitution",
-    "sum_limites": "Structural Limits",
-    "sum_desequilibres": "Structural Imbalances",
-    "sum_economie": "Economic Organization",
-    "sum_territoriale": "Territorial Organization",
-    "sum_dao": "DAO Governance",
-    "sum_synthese": "Summary",
-    "sum_mise": "Implementation",
-    "sum_articles": "Articles",
+        "sec_structure_title": "Estructura general",
+        "sec_structure_p1": "Peuplitique se basa en una organización horizontal.",
+        "sec_structure_p2": "Cada ciudadano puede participar en la construcción colectiva.",
 
-    "zb_title": "Peuplitique — Shared Governance",
-    "zb_p1": "Peuplitique is the first independent citizen platform where people reclaim public speech, collective analysis, and common decision-making.",
-    "zb_p2": "It is based on a simple principle: shared governance overcomes traditional pyramidal models of centralized power.",
-    "zb_p3": "It aims to rebuild a sovereign space where every citizen contributes, analyzes, proposes, corrects, and decides without intermediaries.",
-    "zb_p4": "This collective becomes sovereign, mutually protected, and structured by rules established by citizens.",
+        "sec_hist_title": "Origen y fundamentos",
+        "sec_hist_p1": "Peuplitique nació de la necesidad de devolver la voz al pueblo.",
 
-    "sec_structure_title": "General Structure",
-    "sec_structure_p1": "Peuplitique is built on a horizontal organization.",
-    "sec_structure_p2": "Every citizen can participate in collective construction.",
+        "sec_limites_title": "Límites de los modelos actuales",
+        "sec_limites_p1": "Los sistemas piramidales generan derivas estructurales.",
+        "sec_limites_p2": "Peuplitique ofrece una alternativa ciudadana.",
 
-    "sec_hist_title": "Origins and Foundations",
-    "sec_hist_p1": "Peuplitique was born from the need to return public voice to the people.",
+        "sec_fondements_title": "Fundamentos de la gobernanza compartida",
+        "sec_fondements_p1": "La gobernanza compartida se basa en la participación directa.",
+        "sec_fondements_p2": "Garantiza una toma de decisiones colectiva y transparente.",
 
-    "sec_limites_title": "Limits of Current Models",
-    "sec_limites_p1": "Pyramidal systems create structural drifts.",
-    "sec_limites_p2": "Peuplitique offers a citizen-based alternative.",
+        "sec_etapes_title": "Etapas de implementación",
+        "sec_etapes_p1": "La primera etapa consiste en estructurar los espacios ciudadanos.",
+        "sec_etapes_p2": "La segunda etapa establece las reglas comunes.",
 
-    "sec_fondements_title": "Foundations of Shared Governance",
-    "sec_fondements_p1": "Shared governance relies on direct participation.",
-    "sec_fondements_p2": "It ensures collective and transparent decision-making.",
+        "sec_participation_title": "Participación ciudadana",
+        "sec_participation_p1": "Cada ciudadano puede proponer ideas.",
+        "sec_participation_p2": "Las contribuciones se analizan colectivamente.",
+        "sec_participation_p3": "Las decisiones finales las toma el pueblo.",
 
-    "sec_etapes_title": "Implementation Steps",
-    "sec_etapes_p1": "The first step is to structure citizen spaces.",
-    "sec_etapes_p2": "The second step is to establish common rules.",
-
-    "sec_participation_title": "Citizen Participation",
-    "sec_participation_p1": "Every citizen can propose ideas.",
-    "sec_participation_p2": "Contributions are analyzed collectively.",
-    "sec_participation_p3": "Final decisions are made by the people.",
-
-    "footer": "© 2026 Peuplitique – All rights reserved"
-},
-
-"es": {
-    "peuplitique_title": "Peuplitique",
-    "menu_home": "Inicio",
-    "menu_governance": "Gobernanza",
-    "menu_economie": "Economía integrada",
-    "menu_structure": "Organización estructural",
-    "menu_protocole": "Protocolo",
-    "menu_glossaire": "Glosario",
-    "menu_contact": "Contacto",
-
-    "sum_constitution": "Constitución",
-    "sum_limites": "Límites estructurales",
-    "sum_desequilibres": "Desequilibrios estructurales",
-    "sum_economie": "Organización económica",
-    "sum_territoriale": "Organización territorial",
-    "sum_dao": "Gobernanza DAO",
-    "sum_synthese": "Síntesis",
-    "sum_mise": "Implementación",
-    "sum_articles": "Artículos",
-
-    "zb_title": "Peuplitique — Gobernanza compartida",
-    "zb_p1": "Peuplitique es la primera plataforma ciudadana independiente donde el pueblo recupera la palabra pública, el análisis colectivo y la decisión común.",
-    "zb_p2": "Se basa en un principio sencillo: la gobernanza compartida supera los modelos piramidales tradicionales de poder centralizado.",
-    "zb_p3": "Apunta a reconstruir un espacio soberano donde cada ciudadano contribuye, analiza, propone, corrige y decide sin intermediarios.",
-    "zb_p4": "Este colectivo se vuelve soberano, protegido mutuamente y estructurado por reglas establecidas por los ciudadanos.",
-
-    "sec_structure_title": "Estructura general",
-    "sec_structure_p1": "Peuplitique se basa en una organización horizontal.",
-    "sec_structure_p2": "Cada ciudadano puede participar en la construcción colectiva.",
-
-    "sec_hist_title": "Origen y fundamentos",
-    "sec_hist_p1": "Peuplitique nació de la necesidad de devolver la voz al pueblo.",
-
-    "sec_limites_title": "Límites de los modelos actuales",
-    "sec_limites_p1": "Los sistemas piramidales generan derivas estructurales.",
-    "sec_limites_p2": "Peuplitique ofrece una alternativa ciudadana.",
-
-    "sec_fondements_title": "Fundamentos de la gobernanza compartida",
-    "sec_fondements_p1": "La gobernanza compartida se basa en la participación directa.",
-    "sec_fondements_p2": "Garantiza una toma de decisiones colectiva y transparente.",
-
-    "sec_etapes_title": "Etapas de implementación",
-    "sec_etapes_p1": "La primera etapa consiste en estructurar los espacios ciudadanos.",
-    "sec_etapes_p2": "La segunda etapa establece las reglas comunes.",
-
-    "sec_participation_title": "Participación ciudadana",
-    "sec_participation_p1": "Cada ciudadano puede proponer ideas.",
-    "sec_participation_p2": "Las contribuciones se analizan colectivamente.",
-    "sec_participation_p3": "Las decisiones finales las toma el pueblo.",
-
-    "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-}
-
+        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
+    }
 };
 
 function setLang(lang) {
