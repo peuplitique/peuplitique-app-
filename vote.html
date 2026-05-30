@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Vote citoyen – Peuplitique</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- BANDE BLANCHE -->
+<section class="bande-blanche">
+
+    <!-- LANG SWITCH -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a>
+    </div>
+
+    <!-- TITRE -->
+    <header class="header">
+        <h1>Peuplitique</h1>
+        <p class="sous-titre">Vote citoyen</p>
+        <div class="ligne"></div>
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+            <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+            <li><a href="protocole.html">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="vot-tokn.html">Test Token</a></li>
+            <li><a href="vote.html">Vote</a></li>
+        </ul>
+    </nav>
+
+</section>
+
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1>Vote citoyen</h1>
+    <p>Choisissez une option et validez votre vote.</p>
+</section>
+
+<!-- CONTENU -->
+<main class="content">
+
+    <div class="zone">
+        <h2>Votre vote</h2>
+
+        <select id="vote">
+            <option value="">-- Choisir --</option>
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
+            <option value="Abstention">Abstention</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="envoyerVote()">Envoyer le vote</button>
+
+        <p id="resultat"></p>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
