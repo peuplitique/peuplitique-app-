@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="economique">
 
 <!-- LANG SWITCH -->
 <div class="lang-switch">
@@ -17,60 +17,6 @@
     <a href="?lang=ru">RU</a> |
     <a href="?lang=cn">CN</a>
 </div>
-
-<!-- FOOTER (PLACÉ CORRECTEMENT DANS LE BODY) -->
-<footer class="footer">
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
-</footer>
-
-<!-- SCRIPT MULTILINGUE (FERMÉ CORRECTEMENT) -->
-<script>
-const translations = {
-    "en": {
-        "menu_home": "Home",
-        "menu_limits": "Structural Limits",
-        "menu_governance": "Shared Governance",
-        "menu_protocol": "Protocol",
-        "footer": "© 2026 Peuplitique – All rights reserved"
-    },
-    "es": {
-        "menu_home": "Inicio",
-        "menu_limits": "Límites Estructurales",
-        "menu_governance": "Gobernanza Compartida",
-        "menu_protocol": "Protocolo",
-        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-    },
-    "ru": {
-        "menu_home": "Главная",
-        "menu_limits": "Структурные ограничения",
-        "menu_governance": "Совместное управление",
-        "menu_protocol": "Протокол",
-        "footer": "© 2026 Peuplitique – Все права защищены"
-    },
-    "cn": {
-        "menu_home": "首页",
-        "menu_limits": "结构限制",
-        "menu_governance": "共享治理",
-        "menu_protocol": "协议",
-        "footer": "© 2026 Peuplitique – 版权所有"
-    }
-};
-function applyTranslation(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-}
-const params = new URLSearchParams(window.location.search);
-const lang = params.get("lang");
-if (lang) applyTranslation(lang);
-</script>
-
-
-
-<body class="economique">
 
 <!-- HEADER GLOBAL -->
 <header class="header-blue">
@@ -91,14 +37,6 @@ if (lang) applyTranslation(lang);
     </nav>
 </header>
 
-<!-- SOMMAIRE -->
-<section class="sommaire">
-    <ul>
-        <li><a href="organisation-economique-structurelle.html">Organisation économique structurelle</a></li>
-        <li><a href="desequilibres-structurels.html">Déséquilibres structurels</a></li>
-    </ul>
-</section>
-
 <!-- ZONE BLEUE -->
 <section class="zone-bleue">
     <h2>Économie intégrée</h2>
@@ -106,22 +44,14 @@ if (lang) applyTranslation(lang);
 
 <main class="content">
 
-<!-- INTRODUCTION -->
 <section class="section">
     <h2>Introduction</h2>
     <p>
         L’économie intégrée relie les décisions publiques, les impacts économiques et les réalités
-        sectorielles dans un système cohérent, traçable et compréhensible par tous. Elle rend visibles
-        les flux, les effets et les interactions entre secteurs afin de permettre une gouvernance
-        réellement informée et symétrique.
-    </p>
-    <p>
-        Pour comprendre les limites du modèle économique actuel et les raisons du changement proposé,
-        voir : <a href="desequilibre-structurelle.html">Déséquilibre structurel</a>.
+        sectorielles dans un système cohérent, traçable et compréhensible par tous.
     </p>
 </section>
 
-<!-- OBJECTIFS -->
 <section class="section">
     <h2>Objectifs</h2>
     <ul>
@@ -130,12 +60,9 @@ if (lang) applyTranslation(lang);
         <li>Éviter les distorsions et déséquilibres structurels.</li>
         <li>Permettre une participation citoyenne informée.</li>
         <li>Créer un modèle stable, transparent et équitable.</li>
-</ul>
-
-
+    </ul>
 </section>
 
-<!-- SCHÉMA ASCII -->
 <section class="section">
     <h2>Schéma général (ASCII)</h2>
     <pre>
@@ -166,116 +93,89 @@ if (lang) applyTranslation(lang);
     </pre>
 </section>
 
-<!-- ARCHITECTURE -->
 <section class="section">
     <h2>Architecture de l’économie intégrée</h2>
 
-<h2>Principes</h2>
+    <h3>Principes</h3>
     <p>
-        Une économie intégrée repose sur la coordination, la transparence, la participation citoyenne et la gestion collective des ressources essentielles.
+        Une économie intégrée repose sur la coordination, la transparence, la participation citoyenne
+        et la gestion collective des ressources essentielles.
+    </p>
 
-<h2>Définition</h2>
-    <p>L’économie intégrée vise à relier les secteurs, les ressources, les responsabilités et les décisions dans un système cohérent, transparent et équilibré
-.</p>
+    <h3>Définition</h3>
+    <p>
+        L’économie intégrée vise à relier les secteurs, les ressources, les responsabilités et les
+        décisions dans un système cohérent, transparent et équilibré.
+    </p>
 
     <h3>1. Banque coopérative</h3>
     <p>
-        La banque coopérative constitue le socle financier du modèle. Elle ne vise pas l’accumulation
-        spéculative mais la circulation des ressources au service des besoins réels, des transitions
-        et des projets collectifs.
+        La banque coopérative constitue le socle financier du modèle.
     </p>
-Pour une compréhension complète du fonctionnement financier du pays,
-consultez également :
-<a href="organisation-economique-structurelle.html">
-Organisation économique et structurelle — Banque coopérative et DAO
-</a>.
-</p>
 
     <h3>2. Flux économiques intégrés</h3>
     <p>
-        Les flux entre secteurs (énergie, alimentation, santé, éducation, innovation, etc.) sont
-        cartographiés pour rendre visibles les interdépendances et anticiper les effets en cascade.
+        Les flux entre secteurs sont cartographiés pour rendre visibles les interdépendances.
     </p>
 
     <h3>3. Tokens et pondération</h3>
     <p>
-        Les pondérations sectorielles permettent d’ajuster les priorités selon les besoins réels.
-        Elles sont transparentes, vérifiables et contrôlées par le collectif.
+        Les pondérations sectorielles ajustent les priorités selon les besoins réels.
     </p>
 
     <h3>4. Marchés citoyens</h3>
     <p>
-        Les marchés citoyens garantissent une allocation équitable des ressources, sans asymétrie
-        d’information ni capture par des acteurs dominants.
+        Ils garantissent une allocation équitable des ressources.
     </p>
 
     <h3>5. Innovation & énergie</h3>
     <p>
-        L’innovation et l’énergie sont traitées comme des leviers structurants permettant au système
-        de rester soutenable, adaptable et résilient.
+        L’innovation et l’énergie sont des leviers structurants.
     </p>
 
     <h3>6. Scénarios économiques</h3>
     <p>
-        Les scénarios (croissance, transition, crise, résilience) permettent de simuler les effets
-        des décisions avant leur mise en œuvre.
+        Ils permettent de simuler les effets des décisions avant leur mise en œuvre.
     </p>
 
-    <h3>7. Organisation économique et structurelle</h3>
-    <p>
-        Cette section décrit la manière dont les secteurs, les flux, les décisions et les responsabilités
-        s’articulent dans un ensemble cohérent. Elle vise à empêcher la concentration du pouvoir et les
-        asymétries structurelles durables.
-<h3>7.3 — Dynamique interne du système économique</h3>
-    <p>
-        La dynamique interne repose sur la circulation continue des ressources, la pondération
-        adaptative et la rétroaction citoyenne. Elle empêche la capture du pouvoir économique.
-    </p>
-
-    <h3>7.4 — Flux de gouvernance économique</h3>
-    <p>
-        Les décisions suivent un flux clair : observation, analyse distribuée, pondération citoyenne,
-        décision collective et traçabilité. Chaque étape est vérifiable.
-    </p>
-
-    <h3>7.5 — Stabilisation du modèle</h3>
-    <p>
-        Le modèle intègre des seuils de sécurité, des amortisseurs automatiques et des réserves
-        coopératives pour éviter les crises structurelles.
-    </p>
-
-    <h3>7.6 — Prévention des dérives structurelles</h3>
-    <p>
-        Des garde‑fous empêchent la concentration du capital, la capture institutionnelle et la
-        manipulation des flux. Ils reposent sur la transparence, la symétrie du pouvoir et la
-        responsabilité distribuée.
-    </p>
-</section>
-<nav>
-    </p>
 </section>
 
-<!-- CONCLUSION -->
 <section class="section">
     <h2>Conclusion</h2>
     <p>
         L’économie intégrée constitue un socle décisionnel moderne, transparent et équitable.
-        Elle permet de comprendre, d’anticiper et de corriger les effets économiques de manière
-        continue, au service du bien commun.
     </p>
 </section>
-</p>
-</section>
-
-    <h2>Principes</h2>
-    <p>Une économie intégrée repose sur la coordination, la transparence, la participation citoyenne et la gestion collective des ressources essentielles.</p>
 
 </main>
 
-<footer>
-    Peuplitique – Plateforme citoyenne • 2026
-    <p>Peuplitique — Plateforme citoyenne indépendante créée sans financement, fondée sur l’intelligence collective.</p>
-    <p><a href="https://github.com/peuplitique/peuplitique.github.io">Code source sur GitHub</a></p>
+<!-- FOOTER GLOBAL -->
+<footer class="footer">
+    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
+<!-- SCRIPT MULTILINGUE -->
+<script>
+const translations = {
+    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
+    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
+    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
+    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
+};
+
+function applyTranslation(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+const params = new URLSearchParams(window.location.search);
+const lang = params.get("lang");
+if (lang) applyTranslation(lang);
+</script>
+
 </body>
+</html>
