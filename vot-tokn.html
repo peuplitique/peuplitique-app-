@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Test Token – Peuplitique</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote – Peuplitique</title>
+    <link rel="stylesheet" href="style.css?v=9999">
+
+    <!-- Anti-cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 </head>
 
 <body>
 
-<!-- BANDE BLANCHE : LANG + TITRE + MENU -->
+<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
 
-    <!-- LANG SWITCH -->
+    <!-- LANG -->
     <div class="lang-switch">
         <a href="?lang=fr">FR</a> |
         <a href="?lang=en">EN</a> |
@@ -21,7 +27,7 @@
     <!-- TITRE -->
     <header class="header">
         <h1>Peuplitique</h1>
-        <p class="sous-titre">Plateforme citoyenne – Test Token</p>
+        <p class="sous-titre">Plateforme citoyenne – Vote sécurisé</p>
         <div class="ligne"></div>
     </header>
 
@@ -35,7 +41,7 @@
             <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
             <li><a href="protocole.html">Protocole</a></li>
             <li><a href="glossaire.html">Glossaire</a></li>
-            <li><a href="vot-tokn.html">Test Token</a></li>
+            <li><a href="vote-token.html" class="actif">Vote</a></li>
         </ul>
     </nav>
 
@@ -43,20 +49,28 @@
 
 <!-- ZONE BLEUE -->
 <section class="zone-bleue">
-    <h1>Test Token</h1>
-    <p>Génération et validation d’un token unique</p>
+    <h1>Vote citoyen</h1>
+    <p>Un token unique. Un vote. Une preuve vérifiable.</p>
 </section>
 
 <!-- CONTENU -->
 <main class="content">
 
 <div class="zone">
-    <h1>Test Token</h1>
+    <h1>Génération du token</h1>
 
     <button onclick="generer()">Générer un token</button>
     <p id="t"></p>
 
-    <button onclick="valider()">Valider</button>
+    <h2>Choix du vote</h2>
+    <form id="vote-form">
+        <label><input type="radio" name="choix" value="option_A" required> Option A</label><br>
+        <label><input type="radio" name="choix" value="option_B"> Option B</label><br>
+        <label><input type="radio" name="choix" value="abstention"> Abstention</label><br><br>
+
+        <button type="submit">Valider mon vote</button>
+    </form>
+
     <p id="r"></p>
 </div>
 
@@ -67,26 +81,66 @@
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT TOKEN -->
+<!-- SCRIPT -->
 <script>
 let token = null;
 let actif = false;
 
+// UUID v4
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+// SHA-256
+async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
 function generer() {
-    token = "TKN-" + Math.floor(Math.random() * 999999);
+    token = uuidv4();
     actif = true;
     document.getElementById("t").innerText = "Token : " + token;
     document.getElementById("r").innerText = "";
 }
 
-function valider() {
+document.getElementById("vote-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
     if (!actif) {
-        document.getElementById("r").innerText = "Token invalide ou déjà utilisé.";
+        document.getElementById("r").innerText = "Génère ton token avant de voter.";
         return;
     }
+
+    const choix = new FormData(e.target).get("choix");
+    const timestamp = new Date().toISOString();
+
+    const hashToken = await sha256(token);
+    const signature = await sha256(token + "|" + choix + "|" + timestamp);
+
+    // stockage local
+    const vote = { hashToken, signature, choix, timestamp };
+    const votes = JSON.parse(localStorage.getItem("votes") || "[]");
+    votes.push(vote);
+    localStorage.setItem("votes", JSON.stringify(votes));
+
     actif = false;
-    document.getElementById("r").innerText = "Token validé et détruit.";
-}
+    token = null;
+
+    document.getElementById("t").innerText = "";
+    document.getElementById("r").innerHTML =
+        "<strong>Vote enregistré.</strong><br>" +
+        "hashToken : " + hashToken + "<br>" +
+        "signature : " + signature + "<br>" +
+        "choix : " + choix + "<br>" +
+        "timestamp : " + timestamp;
+});
 </script>
 
 </body>
