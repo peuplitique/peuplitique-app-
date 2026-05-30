@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote – Peuplitique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- MENU BLEU -->
+    <header class="menu-bleu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+                <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+                <li><a href="limites-structurelles.html">Limites structurelles</a></li>
+                <li><a href="protocole.html">Protocole</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+                <li><a href="vote-token.html" class="actif">Vote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ZONE BLEUE -->
+    <section class="zone-bleue">
+        <h1 class="titre-page">Vote citoyen</h1>
+        <p>Un token, un vote, une trace vérifiable – sans identité.</p>
+    </section>
+
+    <!-- CONTENU -->
+    <section class="contenu-page">
+
+        <h2 class="sous-titre">1. Génération du token citoyen</h2>
+        <p>
+            Ce token est généré localement dans ton navigateur. Il n’est jamais envoyé en clair, 
+            ni stocké sur un serveur. Il sert une seule fois pour signer ton vote.
+        </p>
+
+        <button id="btn-generate-token">Générer mon token</button>
+
+        <div id="token-zone" style="margin-top:1rem; display:none;">
+            <p><strong>Ton token (à usage unique) :</strong></p>
+            <p id="token-value" style="word-break:break-all;"></p>
+            <p><em>Note : il sera détruit après validation du vote.</em></p>
+        </div>
+
+        <hr>
+
+        <h2 class="sous-titre">2. Choix de la proposition</h2>
+        <form id="vote-form">
+            <p>Choisis une option :</p>
+
+            <label>
+                <input type="radio" name="choix" value="option_A" required>
+                Option A – Pour la proposition
+            </label><br>
+
+            <label>
+                <input type="radio" name="choix" value="option_B">
+                Option B – Contre la proposition
+            </label><br>
+
+            <label>
+                <input type="radio" name="choix" value="abstention">
+                Abstention
+            </label><br><br>
+
+            <button type="submit">Valider mon vote</button>
+        </form>
+
+        <div id="vote-result" style="margin-top:1.5rem;"></div>
+
+        <hr>
+
+        <h2 class="sous-titre">3. Transparence et vérifiabilité</h2>
+        <p>
+            Ton vote est enregistré localement dans ton navigateur sous forme de données anonymes :
+        </p>
+        <ul>
+            <li><strong>hashToken :</strong> empreinte du token (SHA‑256)</li>
+            <li><strong>signature :</strong> SHA‑256(token + choix + timestamp)</li>
+            <li><strong>choix :</strong> option sélectionnée</li>
+            <li><strong>timestamp :</strong> date/heure du vote</li>
+        </ul>
+
+        <p>
+            Ces données peuvent ensuite être exportées ou envoyées à une API minimale pour publication 
+            dans un registre public (JSON).
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Peuplitique – Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // --- Utilitaires ---
+
+        // Génération d’un UUID v4 simple
+        function generateUUIDv4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0;
+                const v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        // Encodage texte -> Uint8Array
+        function encodeText(text) {
+            return new TextEncoder().encode(text);
+        }
+
+        // Hash SHA-256 -> hex
+        async function sha256Hex(message) {
+            const msgBuffer = encodeText(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        // Sauvegarde locale des votes (localStorage)
+        function saveVoteLocally(voteObject) {
+            const existing = localStorage.getItem('peuplitique_votes');
+            let votes = [];
+            if (existing) {
+                try {
+                    votes = JSON.parse(existing);
+                } catch (e) {
+                    votes = [];
+                }
+            }
+            votes.push(voteObject);
+            localStorage.setItem('peuplitique_votes', JSON.stringify(votes));
+        }
+
+        // Sauvegarde locale des tokens utilisés (hash uniquement)
+        function saveTokenHashLocally(hashToken) {
+            const existing = localStorage.getItem('peuplitique_tokens_utilises');
+            let tokens = [];
+            if (existing) {
+                try {
+                    tokens = JSON.parse(existing);
+                } catch (e) {
+                    tokens = [];
+                }
+            }
+            tokens.push({
+                hashToken: hashToken,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('peuplitique_tokens_utilises', JSON.stringify(tokens));
+        }
+
+        // --- Logique de la page ---
+
+        let currentToken = null;
+
+        const btnGenerate = document.getElementById('btn-generate-token');
+        const tokenZone = document.getElementById('token-zone');
+        const tokenValue = document.getElementById('token-value');
+        const voteForm = document.getElementById('vote-form');
+        const voteResult = document.getElementById('vote-result');
+
+        btnGenerate.addEventListener('click', () => {
+            currentToken = generateUUIDv4();
+            tokenValue.textContent = currentToken;
+            tokenZone.style.display = 'block';
+            voteResult.textContent = '';
+        });
+
+        voteForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            if (!currentToken) {
+                voteResult.innerHTML = "<p style='color:red;'>Tu dois d’abord générer ton token.</p>";
+                return;
+            }
+
+            const formData = new FormData(voteForm);
+            const choix = formData.get('choix');
+            const timestamp = new Date().toISOString();
+
+            // Hash du token
+            const hashToken = await sha256Hex(currentToken);
+
+            // Signature du vote : hash(token + choix + timestamp)
+            const signature = await sha256Hex(currentToken + '|' + choix + '|' + timestamp);
+
+            // Objet vote
+            const voteObject = {
+                hashToken: hashToken,
+                signature: signature,
+                choix: choix,
+                timestamp: timestamp
+            };
+
+            // Sauvegarde locale
+            saveVoteLocally(voteObject);
+            saveTokenHashLocally(hashToken);
+
+            // Destruction du token en mémoire
+            currentToken = null;
+            tokenValue.textContent = '';
+            tokenZone.style.display = 'none';
+
+            // Feedback visuel
+            voteResult.innerHTML = `
+                <p style="color:green;"><strong>Vote enregistré.</strong></p>
+                <p><strong>hashToken :</strong> ${voteObject.hashToken}</p>
+                <p><strong>signature :</strong> ${voteObject.signature}</p>
+                <p><strong>choix :</strong> ${voteObject.choix}</p>
+                <p><strong>timestamp :</strong> ${voteObject.timestamp}</p>
+                <p><em>Les données sont stockées dans ton navigateur (localStorage) sous 
+                <code>peuplitique_votes</code> et <code>peuplitique_tokens_utilises</code>.</em></p>
+            `;
+
+            // Réinitialiser le formulaire
+            voteForm.reset();
+        });
+    </script>
+
+</body>
+</html>
