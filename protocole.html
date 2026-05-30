@@ -9,58 +9,48 @@
 
 <body>
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <a href="?lang=fr">FR</a> |
-    <a href="?lang=en">EN</a> |
-    <a href="?lang=es">ES</a> |
-    <a href="?lang=ru">RU</a> |
-    <a href="?lang=cn">CN</a>
-</div>
+<!-- BANDE BLANCHE : LANG + TITRE + MENU -->
+<section class="bande-blanche">
 
-<header class="header-blue">
-    <section class="zone-bleue">
-    <h1>Peuplitique — Gouvernance partagée</h1>
+    <!-- LANG SWITCH -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        <a href="?lang=ru">RU</a> |
+        <a href="?lang=cn">CN</a>
+    </div>
 
-    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
+    <!-- TITRE -->
+    <header class="header">
+        <h1>Peuplitique</h1>
+        <p class="sous-titre">Protocole citoyen</p>
+        <div class="ligne"></div>
+    </header>
 
-    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
-
-    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
-
-    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
-</section>
-    <h1>Peuplitique</h1>
-    <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
-
+    <!-- MENU -->
     <nav class="menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-        <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
-        <li><a href="economie-integree.html">Économie intégrée</a></li>
-        <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
-        <li><a href="protocole.html">Protocole</a></li>
-        <li><a href="glossaire.html">Glossaire</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-</header>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+            <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+            <li><a href="protocole.html">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- SOMMAIRE -->
-<section class="sommaire">
-    <ul>
-        <li><a href="#articles">Articles 1 à 10</a></li>
-        <li><a href="#fiscalite">Fiscalité & Gouvernance financière</a></li>
-        <li><a href="#schema">Schéma général</a></li>
-        <li><a href="#dao">DAO citoyenne</a></li>
-    </ul>
 </section>
 
+<!-- ZONE BLEUE -->
 <section class="zone-bleue">
-    <h2>Protocole citoyen</h2>
+    <h1>Protocole citoyen</h1>
+    <p>Règles, transparence, traçabilité et gouvernance distribuée.</p>
 </section>
 
+<!-- CONTENU -->
 <main class="content">
 
     <h2>Introduction</h2>
@@ -143,7 +133,8 @@
 
 </main>
 
-<section id="ia-mobile">
+<!-- IA MOBILE -->
+<section id="ia-mobile" class="content">
     <h2>IA – Version Téléphone</h2>
 
     <p>Une interface rapide, légère et directe. L’IA analyse, vérifie et simplifie les informations pour un usage immédiat sur mobile.</p>
@@ -158,24 +149,17 @@
     <p>Une IA conçue pour aller droit au but, sans surcharge, utilisable d’une seule main.</p>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
     <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
 <script>
 const translations = {
-    "en": {
-        "footer": "© 2026 Peuplitique – All rights reserved"
-    },
-    "es": {
-        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-    },
-    "ru": {
-        "footer": "© 2026 Peuplitique – Все права защищены"
-    },
-    "cn": {
-        "footer": "© 2026 Peuplitique – 版权所有"
-    }
+    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
+    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
+    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
+    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
 };
 
 function applyTranslation(lang) {
