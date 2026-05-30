@@ -9,67 +9,48 @@
 
 <body class="light-bg">
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <a href="?lang=fr">FR</a> |
-    <a href="?lang=en">EN</a> |
-    <a href="?lang=es">ES</a> |
-    <a href="?lang=ru">RU</a> |
-    <a href="?lang=cn">CN</a>
-</div>
+<!-- BANDE BLANCHE : LANG + TITRE + MENU -->
+<section class="bande-blanche">
 
-<!-- HEADER + MENU -->
-<header>
+    <!-- LANG SWITCH -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        <a href="?lang=ru">RU</a> |
+        <a href="?lang=cn">CN</a>
+    </div>
+
+    <!-- TITRE -->
+    <header class="header">
+        <h1>Peuplitique</h1>
+        <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
+        <div class="ligne"></div>
+    </header>
+
+    <!-- MENU -->
     <nav class="menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-        <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
-        <li><a href="economie-integree.html">Économie intégrée</a></li>
-        <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
-        <li><a href="protocole.html">Protocole</a></li>
-        <li><a href="glossaire.html">Glossaire</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-</header>
-</header>
-</header>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+            <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+            <li><a href="protocole.html">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</section>
 
 <!-- ZONE BLEUE -->
 <section class="zone-bleue">
-    <h1>Peuplitique — Gouvernance partagée</h1>
-
-    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
-
-    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
-
-    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
-
-    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
-</section>
-
-<!-- CONTENU -->
-<main class="content">
-<!-- ZONE BLEUE -->
-<section class="zone-bleue">
-    <h1>Peuplitique — Gouvernance partagée</h1>
-
-    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
-
-    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
-
-    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
-
-    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
-</section>
-
-<!-- CONTENU -->
-<main class="content">
-<!-- CONTENU -->
-<main class="content">
-
     <h1>Organisation économique structurelle</h1>
+</section>
+
+<!-- CONTENU -->
+<main class="content">
 
     <section>
         <p>
@@ -121,18 +102,10 @@
 <!-- SCRIPT MULTILINGUE -->
 <script>
 const translations = {
-    "en": {
-        "footer": "© 2026 Peuplitique – All rights reserved"
-    },
-    "es": {
-        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-    },
-    "ru": {
-        "footer": "© 2026 Peuplitique – Все права защищены"
-    },
-    "cn": {
-        "footer": "© 2026 Peuplitique – 版权所有"
-    }
+    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
+    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
+    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
+    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
 };
 
 function applyTranslation(lang) {
