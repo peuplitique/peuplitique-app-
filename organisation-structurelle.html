@@ -9,47 +9,50 @@
 
 <body class="structurelle">
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <a href="?lang=fr">FR</a> |
-    <a href="?lang=en">EN</a> |
-    <a href="?lang=es">ES</a> |
-    <a href="?lang=ru">RU</a> |
-    <a href="?lang=cn">CN</a>
-</div>
+<!-- BANDE BLANCHE : LANG + TITRE + MENU -->
+<section class="bande-blanche">
 
-<header class="header-blue">
-    <section class="zone-bleue">
-    <h1>Peuplitique — Gouvernance partagée</h1>
+    <!-- LANG SWITCH -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        <a href="?lang=ru">RU</a> |
+        <a href="?lang=cn">CN</a>
+    </div>
 
-    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
+    <!-- TITRE -->
+    <header class="header">
+        <h1>Peuplitique</h1>
+        <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
+        <div class="ligne"></div>
+    </header>
 
-    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
+    <!-- MENU -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+            <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
+            <li><a href="economie-integree.html">Économie intégrée</a></li>
+            <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+            <li><a href="protocole.html">Protocole</a></li>
+            <li><a href="glossaire.html">Glossaire</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
-
-    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
 </section>
-    <h1>Peuplitique</h1>
-    <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
 
-   <nav class="menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-        <li><a href="desequilibre-structurel.html">Déséquilibres structurels</a></li>
-        <li><a href="economie-integree.html">Économie intégrée</a></li>
-        <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
-        <li><a href="protocole.html">Protocole</a></li>
-        <li><a href="glossaire.html">Glossaire</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav> 
-</header>
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1>Organisation structurelle</h1>
+</section>
 
-<main>
-    <h2 class="section-title">Organisation structurelle</h2>
- <p class="intro">
+<!-- CONTENU -->
+<main class="content">
+
+    <p class="intro">
         L’organisation structurelle décrit comment Peuplitique articule les niveaux de décision, les rôles, 
         les flux d’information et les mécanismes fiscaux et financiers. Elle vise à rendre visible ce qui est 
         habituellement opaque : qui décide, avec quelles ressources, pour quels effets, et sous quel contrôle citoyen.
@@ -211,37 +214,23 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
     <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
+
 <script>
 const translations = {
     "en": {
-        "menu_home": "Home",
-        "menu_limits": "Structural Limits",
-        "menu_governance": "Shared Governance",
-        "menu_protocol": "Protocol",
         "footer": "© 2026 Peuplitique – All rights reserved"
     },
     "es": {
-        "menu_home": "Inicio",
-        "menu_limits": "Límites Estructurales",
-        "menu_governance": "Gobernanza Compartida",
-        "menu_protocol": "Protocolo",
         "footer": "© 2026 Peuplitique – Todos los derechos reservados"
     },
     "ru": {
-        "menu_home": "Главная",
-        "menu_limits": "Структурные ограничения",
-        "menu_governance": "Совместное управление",
-        "menu_protocol": "Протокол",
         "footer": "© 2026 Peuplitique – Все права защищены"
     },
     "cn": {
-        "menu_home": "首页",
-        "menu_limits": "结构限制",
-        "menu_governance": "共享治理",
-        "menu_protocol": "协议",
         "footer": "© 2026 Peuplitique – 版权所有"
     }
 };
@@ -258,8 +247,7 @@ function applyTranslation(lang) {
 const params = new URLSearchParams(window.location.search);
 const lang = params.get("lang");
 if (lang) applyTranslation(lang);
-
 </script>
-    
+
 </body>
 </html>
