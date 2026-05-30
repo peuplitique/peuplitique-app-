@@ -9,22 +9,14 @@
 
 <body>
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <a href="?lang=fr">FR</a> |
-    <a href="?lang=en">EN</a> |
-    <a href="?lang=es">ES</a> |
-    <a href="?lang=ru">RU</a> |
-    <a href="?lang=cn">CN</a>
-</div>
-
 <!-- HEADER BLEU -->
 <header class="header-blue">
     <h1 class="title-main">PEUPLITIQUE</h1>
     <p class="title-sub">Constitution, limites structurelles et articles</p>
     <div class="header-line"></div>
 </header>
-<!-- MENU LANGUES (LE BON) -->
+
+<!-- MENU LANGUES (NOUVEAU, CORRECT) -->
 <div class="lang-switch">
     <button id="btn-fr">FR</button>
     <button id="btn-en">EN</button>
@@ -32,6 +24,7 @@
     <button id="btn-ru">RU</button>
     <button id="btn-cn">CN</button>
 </div>
+
 <!-- ZONE BLEUE -->
 <section class="zone-bleue">
     <h1>Peuplitique — Gouvernance partagée</h1>
@@ -98,7 +91,7 @@
         <li>Article 3 — Transparence et traçabilité ;</li>
         <li>Article 4 — Processus de modification de la constitution ;</li>
         <li>Article 5 — Garanties d’égalité et de neutralité.</li>
-        <li><a href="vot-token.html" class="actif">Vote</a></li>
+        <li><a href="vote-token.html" class="actif">Vote</a></li>
     </ul>
 
     <p>
@@ -201,13 +194,6 @@
             La transparence garantit que les informations nécessaires à la compréhension et au contrôle citoyen sont accessibles.
         </p>
     </details>
-
-    <details>
-        <summary>Article 7 — Principe de réversibilité du pouvoir</summary>
-        <p>
-            Toute délégation de pouvoir est réversible. Le collectif peut suspendre ou retirer une délégation en cas de dérive.
-        </p>
-    </details>
 </section>
 
 <!-- =============================================== -->
@@ -281,31 +267,11 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT MULTILINGUE -->
-<script>
-const translations = {
-    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
-    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
-    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
-    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
-};
-
-function applyTranslation(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-}
-
-const params = new URLSearchParams(window.location.search);
-const lang = params.get("lang");
-if (lang) applyTranslation(lang);
-</script>
+<!-- SCRIPT MULTILINGUE GLOBAL -->
+<script src="lang.js"></script>
 
 </body>
 </html>
