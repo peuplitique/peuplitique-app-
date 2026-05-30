@@ -9,7 +9,38 @@
 
 <body>
 
-<!-- MENU HARMONISÉ (version stabilisée, pas APPLI) -->
+<!-- HEADER BLEU -->
+<header class="header-blue">
+    <h1 class="title-main">PEUPLITIQUE</h1>
+    <p class="title-sub">Contact</p>
+    <div class="header-line"></div>
+</header>
+
+<!-- MENU LANGUES (PLACÉ AU BON ENDROIT) -->
+<div class="lang-switch">
+    <button id="btn-fr">FR</button>
+    <button id="btn-en">EN</button>
+    <button id="btn-es">ES</button>
+    <button id="btn-ru">RU</button>
+    <button id="btn-cn">CN</button>
+</div>
+
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1 data-lang="fr">Contactez Peuplitique</h1>
+    <h1 data-lang="en">Contact Peuplitique</h1>
+    <h1 data-lang="es">Contactar a Peuplitique</h1>
+    <h1 data-lang="ru">Связаться с Peuplitique</h1>
+    <h1 data-lang="cn">联系 Peuplitique</h1>
+
+    <p data-lang="fr">Pour toute question, suggestion ou collaboration, vous pouvez nous écrire.</p>
+    <p data-lang="en">For any question, suggestion or collaboration, you can write to us.</p>
+    <p data-lang="es">Para cualquier pregunta, sugerencia o colaboración, puede escribirnos.</p>
+    <p data-lang="ru">Для любых вопросов, предложений или сотрудничества вы можете написать нам.</p>
+    <p data-lang="cn">如有任何问题、建议或合作意向，欢迎联系我们。</p>
+</section>
+
+<!-- MENU HARMONISÉ -->
 <nav class="menu">
     <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -19,20 +50,10 @@
         <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
         <li><a href="protocole.html">Protocole</a></li>
         <li><a href="glossaire.html">Glossaire</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
         <li><a href="vote-token.html">Vote</a></li>
     </ul>
 </nav>
-
-<!-- ZONE BLEUE -->
-<section class="zone-bleue">
-    <h1>Peuplitique — Gouvernance partagée</h1>
-
-    <p>Peuplitique est la première plateforme citoyenne indépendante où le peuple reprend la parole publique, l’analyse collective et la décision commune.</p>
-    <p>Elle repose sur un principe simple : une gouvernance partagée permet de dépasser les modèles pyramidaux traditionnels d’un pouvoir centralisé.</p>
-    <p>Elle vise à reconstruire un espace souverain où chaque citoyen contribue, analyse, propose, corrige et décide, sans intermédiaire.</p>
-    <p>Ce collectif devient alors souverain, protégé mutuellement et structuré par des règles établies par les citoyens.</p>
-</section>
 
 <!-- CONTENU -->
 <section class="content">
@@ -73,18 +94,10 @@
 <!-- SCRIPT MULTILINGUE -->
 <script>
 const translations = {
-    "en": {
-        "footer": "© 2026 Peuplitique – All rights reserved"
-    },
-    "es": {
-        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-    },
-    "ru": {
-        "footer": "© 2026 Peuplitique – Все права защищены"
-    },
-    "cn": {
-        "footer": "© 2026 Peuplitique – 版权所有"
-    }
+    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
+    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
+    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
+    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
 };
 
 function applyTranslation(lang) {
