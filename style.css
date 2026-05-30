@@ -119,3 +119,58 @@ footer {
     font-size: 18px;
     margin-top: 15px;
 }
+/* --- VERSION MOBILE OPTIMISÉE --- */
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* MENU BLEU */
+    .menu-bleu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-bleu li {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* ZONE BLEUE */
+    .zone-bleue {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    /* CONTENU */
+    .contenu-page {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1.titre-page {
+        font-size: 1.8rem;
+    }
+
+    h2.sous-titre {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    /* FORMULAIRES & BOUTONS */
+    button, input, select {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+        box-sizing: border-box;
+    }
+}
