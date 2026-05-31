@@ -9,15 +9,6 @@
 
 <body class="light-bg">
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <a href="?lang=fr">FR</a> |
-    <a href="?lang=en">EN</a> |
-    <a href="?lang=es">ES</a> |
-    <a href="?lang=ru">RU</a> |
-    <a href="?lang=cn">CN</a>
-</div>
-
 <!-- HEADER -->
 <header class="header-blue">
     <h1>Peuplitique</h1>
@@ -36,20 +27,56 @@
     </nav>
 </header>
 
+<!-- MENU LANGUES -->
+<div class="lang-switch">
+    <button id="btn-fr">FR</button>
+    <button id="btn-en">EN</button>
+    <button id="btn-es">ES</button>
+    <button id="btn-ru">RU</button>
+    <button id="btn-cn">CN</button>
+</div>
+
 <!-- ZONE BLEUE -->
 <section class="zone-bleue">
-    <h2>Déséquilibres structurels</h2>
+    <h2 data-lang="fr">Déséquilibres structurels</h2>
+    <h2 data-lang="en">Structural Imbalances</h2>
+    <h2 data-lang="es">Desequilibrios estructurales</h2>
+    <h2 data-lang="ru">Структурные дисбалансы</h2>
+    <h2 data-lang="cn">结构性失衡</h2>
 </section>
 
 <!-- CONTENU -->
 <main class="content">
 
-    <h2>Définition</h2>
-    <p>
+    <!-- DÉFINITION -->
+    <h2 data-lang="fr">Définition</h2>
+    <h2 data-lang="en">Definition</h2>
+    <h2 data-lang="es">Definición</h2>
+    <h2 data-lang="ru">Определение</h2>
+    <h2 data-lang="cn">定义</h2>
+
+    <p data-lang="fr">
         Les déséquilibres structurels désignent les ruptures internes d’un système : économiques, politiques, institutionnelles, sociales ou territoriales.
     </p>
+    <p data-lang="en">
+        Structural imbalances refer to internal ruptures within a system: economic, political, institutional, social or territorial.
+    </p>
+    <p data-lang="es">
+        Los desequilibrios estructurales son rupturas internas de un sistema: económicas, políticas, institucionales, sociales o territoriales.
+    </p>
+    <p data-lang="ru">
+        Структурные дисбалансы — это внутренние разрывы системы: экономические, политические, институциональные, социальные или территориальные.
+    </p>
+    <p data-lang="cn">
+        结构性失衡指系统内部的断裂：经济、政治、制度、社会或区域方面。
+    </p>
 
-    <h2>Schéma général (ASCII)</h2>
+    <!-- SCHÉMA -->
+    <h2 data-lang="fr">Schéma général (ASCII)</h2>
+    <h2 data-lang="en">General diagram (ASCII)</h2>
+    <h2 data-lang="es">Esquema general (ASCII)</h2>
+    <h2 data-lang="ru">Общая схема (ASCII)</h2>
+    <h2 data-lang="cn">总体示意图 (ASCII)</h2>
 
 <pre>
 ┌──────────────────────────────┐
@@ -77,65 +104,161 @@
 └──────────────────────────────┘
 </pre>
 
-    <h2>Principaux déséquilibres</h2>
+    <!-- PRINCIPAUX DÉSÉQUILIBRES -->
+    <h2 data-lang="fr">Principaux déséquilibres</h2>
+    <h2 data-lang="en">Main imbalances</h2>
+    <h2 data-lang="es">Principales desigualdades</h2>
+    <h2 data-lang="ru">Основные дисбалансы</h2>
+    <h2 data-lang="cn">主要失衡</h2>
 
-    <h3>1. Économiques</h3>
+    <!-- 1. ÉCONOMIQUES -->
+    <h3 data-lang="fr">1. Économiques</h3>
+    <h3 data-lang="en">1. Economic</h3>
+    <h3 data-lang="es">1. Económicos</h3>
+    <h3 data-lang="ru">1. Экономические</h3>
+    <h3 data-lang="cn">1. 经济方面</h3>
+
     <ul>
-        <li>Concentration excessive des richesses</li>
-        <li>Dépendance aux marchés financiers</li>
-        <li>Endettement structurel</li>
+        <li data-lang="fr">Concentration excessive des richesses</li>
+        <li data-lang="en">Excessive concentration of wealth</li>
+        <li data-lang="es">Concentración excesiva de riqueza</li>
+        <li data-lang="ru">Чрезмерная концентрация богатства</li>
+        <li data-lang="cn">财富过度集中</li>
+
+        <li data-lang="fr">Dépendance aux marchés financiers</li>
+        <li data-lang="en">Dependence on financial markets</li>
+        <li data-lang="es">Dependencia de los mercados financieros</li>
+        <li data-lang="ru">Зависимость от финансовых рынков</li>
+        <li data-lang="cn">对金融市场的依赖</li>
+
+        <li data-lang="fr">Endettement structurel</li>
+        <li data-lang="en">Structural debt</li>
+        <li data-lang="es">Endeudamiento estructural</li>
+        <li data-lang="ru">Структурная задолженность</li>
+        <li data-lang="cn">结构性债务</li>
     </ul>
 
-    <h3>2. Institutionnels</h3>
+    <!-- 2. INSTITUTIONNELS -->
+    <h3 data-lang="fr">2. Institutionnels</h3>
+    <h3 data-lang="en">2. Institutional</h3>
+    <h3 data-lang="es">2. Institucionales</h3>
+    <h3 data-lang="ru">2. Институциональные</h3>
+    <h3 data-lang="cn">2. 制度方面</h3>
+
     <ul>
-        <li>Lenteur décisionnelle</li>
-        <li>Rigidité des cadres juridiques</li>
-        <li>Manque de transparence</li>
+        <li data-lang="fr">Lenteur décisionnelle</li>
+        <li data-lang="en">Slow decision-making</li>
+        <li data-lang="es">Lentitud en la toma de decisiones</li>
+        <li data-lang="ru">Медленное принятие решений</li>
+        <li data-lang="cn">决策缓慢</li>
+
+        <li data-lang="fr">Rigidité des cadres juridiques</li>
+        <li data-lang="en">Rigidity of legal frameworks</li>
+        <li data-lang="es">Rigidez de los marcos jurídicos</li>
+        <li data-lang="ru">Жесткость правовых рамок</li>
+        <li data-lang="cn">法律框架僵化</li>
+
+        <li data-lang="fr">Manque de transparence</li>
+        <li data-lang="en">Lack of transparency</li>
+        <li data-lang="es">Falta de transparencia</li>
+        <li data-lang="ru">Недостаток прозрачности</li>
+        <li data-lang="cn">缺乏透明度</li>
     </ul>
 
-    <h3>3. Territoriaux</h3>
+    <!-- 3. TERRITORIAUX -->
+    <h3 data-lang="fr">3. Territoriaux</h3>
+    <h3 data-lang="en">3. Territorial</h3>
+    <h3 data-lang="es">3. Territoriales</h3>
+    <h3 data-lang="ru">3. Территориальные</h3>
+    <h3 data-lang="cn">3. 区域方面</h3>
+
     <ul>
-        <li>Fractures régionales</li>
-        <li>Inégalités d’accès aux services</li>
-        <li>Concentration des ressources</li>
+        <li data-lang="fr">Fractures régionales</li>
+        <li data-lang="en">Regional fractures</li>
+        <li data-lang="es">Fracturas regionales</li>
+        <li data-lang="ru">Региональные разрывы</li>
+        <li data-lang="cn">区域断层</li>
+
+        <li data-lang="fr">Inégalités d’accès aux services</li>
+        <li data-lang="en">Inequalities in access to services</li>
+        <li data-lang="es">Desigualdad en el acceso a los servicios</li>
+        <li data-lang="ru">Неравный доступ к услугам</li>
+        <li data-lang="cn">服务获取不平等</li>
+
+        <li data-lang="fr">Concentration des ressources</li>
+        <li data-lang="en">Concentration of resources</li>
+        <li data-lang="es">Concentración de recursos</li>
+        <li data-lang="ru">Концентрация ресурсов</li>
+        <li data-lang="cn">资源集中</li>
     </ul>
 
-    <h3>4. Sociaux</h3>
+    <!-- 4. SOCIAUX -->
+    <h3 data-lang="fr">4. Sociaux</h3>
+    <h3 data-lang="en">4. Social</h3>
+    <h3 data-lang="es">4. Sociales</h3>
+    <h3 data-lang="ru">4. Социальные</h3>
+    <h3 data-lang="cn">4. 社会方面</h3>
+
     <ul>
-        <li>Fragmentation de la société</li>
-        <li>Tensions culturelles</li>
-        <li>Perte de confiance dans les institutions</li>
+        <li data-lang="fr">Fragmentation de la société</li>
+        <li data-lang="en">Fragmentation of society</li>
+        <li data-lang="es">Fragmentación de la sociedad</li>
+        <li data-lang="ru">Фрагментация общества</li>
+        <li data-lang="cn">社会分裂</li>
+
+        <li data-lang="fr">Tensions culturelles</li>
+        <li data-lang="en">Cultural tensions</li>
+        <li data-lang="es">Tensiones culturales</li>
+        <li data-lang="ru">Культурные напряжения</li>
+        <li data-lang="cn">文化紧张</li>
+
+        <li data-lang="fr">Perte de confiance dans les institutions</li>
+        <li data-lang="en">Loss of trust in institutions</li>
+        <li data-lang="es">Pérdida de confianza en las instituciones</li>
+        <li data-lang="ru">Потеря доверия к институтам</li>
+        <li data-lang="cn">对机构失去信任</li>
     </ul>
 
-    <h3>5. De gouvernance</h3>
+    <!-- 5. GOUVERNANCE -->
+    <h3 data-lang="fr">5. De gouvernance</h3>
+    <h3 data-lang="en">5. Governance</h3>
+    <h3 data-lang="es">5. Gobernanza</h3>
+    <h3 data-lang="ru">5. Управление</h3>
+    <h3 data-lang="cn">5. 治理方面</h3>
+
     <ul>
-        <li>Centralisation excessive</li>
-        <li>Manque de participation citoyenne</li>
-        <li>Opacité des décisions</li>
+        <li data-lang="fr">Centralisation excessive</li>
+        <li data-lang="en">Excessive centralization</li>
+        <li data-lang="es">Centralización excesiva</li>
+        <li data-lang="ru">Чрезмерная централизация</li>
+        <li data-lang="cn">过度集中</li>
+
+        <li data-lang="fr">Manque de participation citoyenne</li>
+        <li data-lang="en">Lack of citizen participation</li>
+        <li data-lang="es">Falta de participación ciudadana</li>
+        <li data-lang="ru">Недостаток участия граждан</li>
+        <li data-lang="cn">公民参与不足</li>
+
+        <li data-lang="fr">Opacité des décisions</li>
+        <li data-lang="en">Opacity of decisions</li>
+        <li data-lang="es">Opacidad de las decisiones</li>
+        <li data-lang="ru">Непрозрачность решений</li>
+        <li data-lang="cn">决策不透明</li>
     </ul>
 
 </main>
 
 <!-- FOOTER -->
 <footer class="footer">
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+    <p data-lang="fr">© 2026 Peuplitique – Tous droits réservés</p>
+    <p data-lang="en">© 2026 Peuplitique – All rights reserved</p>
+    <p data-lang="es">© 2026 Peuplitique – Todos los derechos reservados</p>
+    <p data-lang="ru">© 2026 Peuplitique – Все права защищены</p>
+    <p data-lang="cn">© 2026 Peuplitique – 版权所有</p>
 </footer>
 
-<!-- SCRIPT MULTILINGUE -->
-<script>
-const translations = {
-    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
-    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
-    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
-    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
-};
-
-const params = new URLSearchParams(window.location.search);
-const lang = params.get("lang");
-if (lang && translations[lang]) {
-    document.querySelector("[data-i18n='footer']").textContent = translations[lang]["footer"];
-}
-</script>
+<!-- SCRIPT MULTILINGUE GLOBAL -->
+<script src="lang.js"></script>
 
 </body>
 </html>
