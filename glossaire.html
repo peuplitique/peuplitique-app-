@@ -9,16 +9,16 @@
 
 <body class="glossaire">
 
-<!-- BANDE BLANCHE : LANG + TITRE + MENU -->
+<!-- BANDE BLANCHE : TITRE + MENU -->
 <section class="bande-blanche">
 
-    <!-- LANG SWITCH -->
+    <!-- MENU LANGUES (NOUVEAU, CORRECT) -->
     <div class="lang-switch">
-        <a href="?lang=fr">FR</a> |
-        <a href="?lang=en">EN</a> |
-        <a href="?lang=es">ES</a> |
-        <a href="?lang=ru">RU</a> |
-        <a href="?lang=cn">CN</a>
+        <button id="btn-fr">FR</button>
+        <button id="btn-en">EN</button>
+        <button id="btn-es">ES</button>
+        <button id="btn-ru">RU</button>
+        <button id="btn-cn">CN</button>
     </div>
 
     <!-- TITRE -->
@@ -89,6 +89,7 @@
     <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
+<!-- SCRIPT MULTILINGUE -->
 <script>
 const translations = {
     "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
@@ -108,4 +109,3 @@ if (lang && translations[lang]) {
 </script>
 
 </body>
-</html>
