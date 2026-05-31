@@ -9,15 +9,6 @@
 
 <body class="economique">
 
-<!-- LANG SWITCH -->
-<div class="lang-switch">
-    <a href="?lang=fr">FR</a> |
-    <a href="?lang=en">EN</a> |
-    <a href="?lang=es">ES</a> |
-    <a href="?lang=ru">RU</a> |
-    <a href="?lang=cn">CN</a>
-</div>
-
 <!-- HEADER GLOBAL -->
 <header class="header-blue">
     <h1>Peuplitique</h1>
@@ -38,9 +29,22 @@
     </nav>
 </header>
 
-<!-- ZONE BLEUE -->
+<!-- MENU LANGUES (CORRECTION TECHNIQUE) -->
+<div class="lang-switch">
+    <button id="btn-fr">FR</button>
+    <button id="btn-en">EN</button>
+    <button id="btn-es">ES</button>
+    <button id="btn-ru">RU</button>
+    <button id="btn-cn">CN</button>
+</div>
+
+<!-- ZONE BLEUE (TON TEXTE, JUSTE MULTILINGUE) -->
 <section class="zone-bleue">
-    <h2>Économie intégrée</h2>
+    <h2 data-lang="fr">Économie intégrée</h2>
+    <h2 data-lang="en">Integrated Economy</h2>
+    <h2 data-lang="es">Economía integrada</h2>
+    <h2 data-lang="ru">Интегрированная экономика</h2>
+    <h2 data-lang="cn">综合经济体系</h2>
 </section>
 
 <main class="content">
@@ -156,27 +160,7 @@
 </footer>
 
 <!-- SCRIPT MULTILINGUE -->
-<script>
-const translations = {
-    "en": { "footer": "© 2026 Peuplitique – All rights reserved" },
-    "es": { "footer": "© 2026 Peuplitique – Todos los derechos reservados" },
-    "ru": { "footer": "© 2026 Peuplitique – Все права защищены" },
-    "cn": { "footer": "© 2026 Peuplitique – 版权所有" }
-};
-
-function applyTranslation(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-}
-
-const params = new URLSearchParams(window.location.search);
-const lang = params.get("lang");
-if (lang) applyTranslation(lang);
-</script>
+<script src="lang.js"></script>
 
 </body>
 </html>
