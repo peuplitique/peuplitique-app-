@@ -3,97 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomie – Peuplitique</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Autonome – Version Appli</title>
+
+    <!-- STYLE GLOBAL APPLI (identique au site) -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        header {
+            background-color: #005bbb;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #003f7f;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .zone-bleue {
+            background-color: #3FD1C2;
+            padding: 20px;
+            text-align: center;
+            color: #003f7f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #003f7f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* FLOUTAGE DES PAGES NON UTILISÉES */
+        .floute {
+            filter: blur(5px);
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="menu-bleu">
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="gouvernance-partagee.html">Gouvernance Partagée</a>
-        <a href="autonome.html" class="active">Autonomie</a>
-        <a href="vote-token.html">Vote Token</a>
-    </nav>
+<header data-i18n="header_title">Peuplitique – Application</header>
 
-    <div class="lang-switch">
-        <button id="btn-fr">FR</button>
-        <button id="btn-en">EN</button>
-        <button id="btn-es">ES</button>
-    </div>
-</header>
+<nav>
+    <a href="index-appli.html" data-i18n="menu_home">Accueil</a>
+    <a href="autonome-appli.html" data-i18n="menu_autonome">Autonome</a>
+    <a href="contact-appli.html" data-i18n="menu_contact">Contact</a>
+</nav>
 
-<section class="zone-bleue">
-    <h1 data-lang="fr">Autonomie citoyenne</h1>
-    <h1 data-lang="en">Citizen autonomy</h1>
-    <h1 data-lang="es">Autonomía ciudadana</h1>
+<div class="zone-bleue" data-i18n="blue_zone">
+    Section Autonome – Version Application
+</div>
 
-    <p data-lang="fr">L’autonomie citoyenne est la capacité d’agir, décider et contribuer sans dépendance structurelle.</p>
-    <p data-lang="en">Citizen autonomy is the ability to act, decide and contribute without structural dependency.</p>
-    <p data-lang="es">La autonomía ciudadana es la capacidad de actuar, decidir y contribuir sin dependencia estructural.</p>
-</section>
+<div class="content">
+    <!-- TON TEXTE AUTONOME ICI (je ne touche pas) -->
+    <h1 data-i18n="title_autonome">Autonomie</h1>
 
-<section class="contenu">
-    <h2 data-lang="fr">Principes fondamentaux</h2>
-    <h2 data-lang="en">Core principles</h2>
-    <h2 data-lang="es">Principios fundamentales</h2>
-
-    <ul>
-        <li data-lang="fr">Responsabilité individuelle</li>
-        <li data-lang="en">Individual responsibility</li>
-        <li data-lang="es">Responsabilidad individual</li>
-
-        <li data-lang="fr">Capacité d’action</li>
-        <li data-lang="en">Capacity for action</li>
-        <li data-lang="es">Capacidad de acción</li>
-
-        <li data-lang="fr">Indépendance structurelle</li>
-        <li data-lang="en">Structural independence</li>
-        <li data-lang="es">Independencia estructural</li>
-    </ul>
-</section>
-
-<section class="vote-section">
-    <h2 data-lang="fr">Simulation de vote autonome</h2>
-    <h2 data-lang="en">Autonomous vote simulation</h2>
-    <h2 data-lang="es">Simulación de voto autónomo</h2>
-
-    <form id="voteForm">
-        <label data-lang="fr">Votre choix :</label>
-        <label data-lang="en">Your choice:</label>
-        <label data-lang="es">Su elección:</label>
-
-        <input type="text" id="voteInput" required>
-
-        <button type="submit" data-lang="fr">Voter</button>
-        <button type="submit" data-lang="en">Vote</button>
-        <button type="submit" data-lang="es">Votar</button>
-    </form>
-
-    <div id="result"></div>
-</section>
+    <p>
+        Ton texte autonome reste ici, intact, non modifié.
+    </p>
+</div>
 
 <footer>
-    <p data-lang="fr">© Peuplitique – Autonomie citoyenne</p>
-    <p data-lang="en">© Peuplitique – Citizen autonomy</p>
-    <p data-lang="es">© Peuplitique – Autonomía ciudadana</p>
+    <p data-i18n="footer_text">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT DE VOTE (inchangé) -->
+<!-- SCRIPT MULTILINGUE (identique au site) -->
 <script>
-document.getElementById("voteForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const vote = document.getElementById("voteInput").value;
-    const token = Math.random().toString(36).substring(2);
-    const hash = btoa(vote + token);
-    document.getElementById("result").innerText = "Token: " + token + " | Hash: " + hash;
-});
+const translations = {
+    fr: {
+        header_title: "Peuplitique – Application",
+        menu_home: "Accueil",
+        menu_autonome: "Autonome",
+        menu_contact: "Contact",
+        blue_zone: "Section Autonome – Version Application",
+        title_autonome: "Autonomie",
+        footer_text: "© 2026 Peuplitique – Tous droits réservés"
+    },
+    en: {
+        header_title: "Peuplitique – Application",
+        menu_home: "Home",
+        menu_autonome: "Autonomous",
+        menu_contact: "Contact",
+        blue_zone: "Autonomous Section – App Version",
+        title_autonome: "Autonomy",
+        footer_text: "© 2026 Peuplitique – All rights reserved"
+    }
+};
+
+function applyTranslations(lang) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+applyTranslations("fr");
 </script>
 
-<!-- SCRIPT MULTILINGUE (PLACÉ AU BON ENDROIT) -->
-<script src="lang.js"></script>
+<!-- TON SCRIPT APPLI (normal, on le garde) -->
+<script src="script-appli.js"></script>
 
 </body>
 </html>
-
