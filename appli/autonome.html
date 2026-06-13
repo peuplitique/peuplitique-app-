@@ -3,153 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonome – Version Appli</title>
+    <meta name="google" content="notranslate">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        header {
-            background-color: #005bbb;
-            padding: 15px;
-            color: white;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        nav {
-            background-color: #003f7f;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .zone-bleue {
-            background-color: #3FD1C2;
-            padding: 20px;
-            text-align: center;
-            color: #003f7f;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-
-        footer {
-            margin-top: 40px;
-            background: #003f7f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <title data-i18n="title_autonome">Autonomie — Peuplitique</title>
+    <link rel="stylesheet" href="../style-appli.css?v=9999">
 </head>
 
 <body>
 
-<header data-i18n="header_title">Peuplitique – Application</header>
+<!-- BANDE BLANCHE -->
+<section class="bande-blanche">
 
-<nav>
-    <a href="index-appli.html" data-i18n="menu_home">Accueil</a>
-    <a href="autonome-appli.html" data-i18n="menu_autonome">Autonome</a>
-    <a href="contact-appli.html" data-i18n="menu_contact">Contact</a>
-</nav>
-
-<div class="zone-bleue" data-i18n="blue_zone">
-    Section Autonome – Version Application
-</div>
-
-<div class="content">
-
-    <!-- FR -->
-    <div class="lang-block" id="fr">
-        <h1>Autonomie</h1>
-        <p>Ton texte autonome reste ici, intact, non modifié.</p>
+    <!-- LANG -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        <a href="?lang=ru">RU</a> |
+        <a href="?lang=cn">CN</a>
     </div>
 
-    <!-- EN -->
-    <div class="lang-block" id="en" style="display:none;">
-        <h1>Autonomy</h1>
-        <p>Your autonomy text stays here, intact and unchanged.</p>
-    </div>
+    <!-- TITRE -->
+    <header class="header">
+        <h1>PEUPLITIQUE</h1>
+        <p class="sous-titre" data-i18n="subtitle_autonome">Autonomie</p>
+        <div class="ligne"></div>
+    </header>
 
-    <!-- ES -->
-    <div class="lang-block" id="es" style="display:none;">
-        <h1>Autonomía</h1>
-        <p>Tu texto de autonomía permanece aquí, intacto y sin modificar.</p>
-    </div>
+    <!-- MENU APPLI -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index-appli.html" data-i18n="menu_home">Accueil</a></li>
+            <li><a href="gouvernance-partagee-appli.html" data-i18n="menu_governance">Gouvernance partagée</a></li>
+            <li><a href="limites-structurelles-appli.html" data-i18n="menu_limits">Limites structurelles</a></li>
+            <li><a href="organisation-economique-appli.html" data-i18n="menu_economy">Organisation économique</a></li>
+            <li><a href="organisation-structurelle-appli.html" data-i18n="menu_structure">Organisation structurelle</a></li>
+            <li><a href="organisation-politique-territoriale-appli.html" data-i18n="menu_territory">Organisation politique territoriale</a></li>
+            <li><a href="plateforme-appli.html" data-i18n="menu_platform">Plateforme</a></li>
+            <li><a href="vote-token-appli.html" data-i18n="menu_vote">Vote Token</a></li>
+            <li><a href="contact-appli.html" data-i18n="menu_contact">Contact</a></li>
+            <li><a href="autonome-appli.html" class="active" data-i18n="menu_autonome">Autonomie</a></li>
+        </ul>
+    </nav>
 
-</div>
+</section>
 
+<!-- ZONE BLEUE -->
+<section class="zone-bleue">
+    <h1 data-i18n="autonome_title">Section Autonome</h1>
+    <p data-i18n="autonome_subtitle">Version application — espace dédié à l’autonomie citoyenne.</p>
+</section>
+
+<!-- CONTENU -->
+<main class="content">
+
+    <h2 data-i18n="autonome_h2">Autonomie citoyenne</h2>
+
+    <p data-i18n="autonome_p1">
+        L’autonomie représente la capacité d’un individu ou d’un collectif à agir, décider et organiser
+        son environnement sans dépendance excessive à des structures externes.
+    </p>
+
+    <p data-i18n="autonome_p2">
+        Dans Peuplitique, l’autonomie est un pilier fondamental : elle permet à chaque citoyen de
+        comprendre, analyser et participer activement à la construction du nouvel écosystème.
+    </p>
+
+</main>
+
+<!-- FOOTER -->
 <footer>
-    <p data-i18n="footer_text">© 2026 Peuplitique – Tous droits réservés</p>
+    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<script>
-const translations = {
-    fr: {
-        header_title: "Peuplitique – Application",
-        menu_home: "Accueil",
-        menu_autonome: "Autonome",
-        menu_contact: "Contact",
-        blue_zone: "Section Autonome – Version Application",
-        footer_text: "© 2026 Peuplitique – Tous droits réservés"
-    },
-    en: {
-        header_title: "Peuplitique – Application",
-        menu_home: "Home",
-        menu_autonome: "Autonomous",
-        menu_contact: "Contact",
-        blue_zone: "Autonomous Section – App Version",
-        footer_text: "© 2026 Peuplitique – All rights reserved"
-    },
-    es: {
-        header_title: "Peuplitique – Aplicación",
-        menu_home: "Inicio",
-        menu_autonome: "Autonomía",
-        menu_contact: "Contacto",
-        blue_zone: "Sección Autónoma – Versión Aplicación",
-        footer_text: "© 2026 Peuplitique – Todos los derechos reservados"
-    }
-};
-
-function setLang(lang) {
-    document.querySelectorAll('.lang-block').forEach(b => b.style.display = 'none');
-    document.getElementById(lang).style.display = 'block';
-    applyTranslations(lang);
-}
-
-function applyTranslations(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-}
-
-applyTranslations("fr");
-</script>
-
-<script src="script-appli.js"></script>
+<!-- SCRIPT MULTILINGUE -->
+<script src="../script-appli.js"></script>
 
 </body>
 </html>
