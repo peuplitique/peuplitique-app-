@@ -278,19 +278,24 @@ L’organisation économique structurelle de Peuplitique propose un modèle où 
 <p>
 En articulant production, distribution, régulation et révision continue, le modèle permet d’anticiper les dérives, de corriger les déséquilibres et d’optimiser l’usage des ressources. L’économie n’est plus un domaine réservé à quelques experts : elle devient un espace collectif, démocratique et évolutif.
 </p>
+</div> <!-- fin du content -->
 
-</div>
-     
-
-</main>
-
-<footer>
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<script src="../doc/script-appli.js"></script>
+<!-- SCRIPT SWITCH LANG -->
+<script>
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
+    });
+});
+</script>
 
 </body>
 </html>
-
-
