@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peuplitique – Application</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a3d78;
+            color: white;
+        }
+
+        header {
+            background-color: #005bbb;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu-haut,
+        .menu-bas {
+            background-color: #003f7f;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .menu-haut a,
+        .menu-bas a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-haut a.actif {
+            text-decoration: underline;
+        }
+
+        .zone-bleue {
+            background-color: #3FD1C2;
+            color: #003f7f;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .bande-blanche {
+            background: white;
+            color: #003f7f;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; }
+        .header p { margin: 5px 0 10px; }
+
+        .ligne {
+            width: 80px;
+            height: 3px;
+            background-color: #3FD1C2;
+            margin: 10px auto 0;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 25px auto;
+            background: white;
+            color: black;
+            padding: 25px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header data-i18n="header_title">Peuplitique – Application</header>
+
+<!-- MENU HAUT -->
+<nav class="menu-haut">
+    <a href="index-appli.html" class="actif">Accueil</a>
+    <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
+    <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
+</nav>
+
+<!-- ZONE BLEUE -->
+<div class="zone-bleue">
+    Peuplitique — Gouvernance partagée
+</div>
+
+<!-- BANDE BLANCHE -->
+<section class="bande-blanche">
+    <div class="lang-switch">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="es">ES</button>
+    </div>
+
+    <header class="header">
+        <h1>Peuplitique</h1>
+        <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
+        <div class="ligne"></div>
+    </header>
+</section>
+
+<!-- CONTENU -->
+<div class="content">
+
+    <div class="lang-block" id="fr">
+
+        <h2 data-i18n="platform_title_1">1. Une plateforme citoyenne souveraine</h2>
+        <p data-i18n="platform_p1">
+            Peuplitique offre un espace indépendant où le peuple reprend la maîtrise de l’information, de l’analyse et de la décision.
+        </p>
+
+        <h2 data-i18n="platform_title_2">2. Les espaces de la plateforme</h2>
+        <p data-i18n="platform_p2">
+            La plateforme est organisée en espaces nationaux, internationaux, économiques, sociaux, culturels et énergétiques.
+        </p>
+
+        <h2 data-i18n="platform_title_3">3. L’arbre du nouvel écosystème</h2>
+        <pre data-i18n="platform_schema">
+(NOUVEL ÉCOSYSTÈME CITOYEN)
+│
+├── Analyse collective
+├── Gouvernance partagée
+├── Économie intégrée
+│
+├── Innovation & énergie
+├── Scénarios comparés
+│
+└── Vote via tokens
+    └── Culture, forums & IA citoyenne
+        </pre>
+
+        <h2 data-i18n="platform_title_4">4. Objectif : souveraineté citoyenne</h2>
+        <p data-i18n="platform_p4">
+            La plateforme redonne au peuple la capacité de comprendre, décider et agir ensemble.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- MENU BAS -->
+<footer class="menu-bas">
+    <a href="organisation-economique-appli.html">Organisation économique</a>
+    <a href="organisation-politique-territoriale-appli.html">Organisation politique territoriale</a>
+    <a href="limites-structurelles-appli.html">Limites structurelles</a>
+    <a href="desequilibre-structurel-appli.html">Déséquilibres structurels</a>
+    <a href="protocole-appli.html">Protocole</a>
+    <a href="glossaire-appli.html">Glossaire</a>
+    <a href="vote-token-appli.html">Vote Token</a>
+    <a href="plateforme-vote-appli.html">Plateforme de vote</a>
+    <a href="contact-appli.html">Contact</a>
+</footer>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
