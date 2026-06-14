@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="style-appli.css">
 
     <style>
-        body {
+    body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #0a3d78; /* BLEU DU SITE */
+            background-color: #0a3d78;
             color: white;
         }
 
-        /* MENU PRINCIPAL */
-        nav.menu {
+        header {
+            background-color: #005bbb;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu-haut,
+        .menu-bas {
             background-color: #003f7f;
             padding: 12px;
             display: flex;
@@ -24,70 +33,102 @@
             gap: 22px;
         }
 
-        nav.menu a {
+        .menu-haut a,
+        .menu-bas a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
 
-        nav.menu a.actif {
+        .menu-haut a.actif {
             text-decoration: underline;
         }
 
-        /* ZONE BLEUE (TURQUOISE) */
         .zone-bleue {
             background-color: #3FD1C2;
-            padding: 25px;
-            text-align: center;
             color: #003f7f;
-            font-size: 22px;
+            text-align: center;
+            padding: 20px;
             font-weight: bold;
         }
 
-        /* CONTENU BLANC CENTRÉ */
+        .bande-blanche {
+            background: white;
+            color: #003f7f;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; }
+        .header p { margin: 5px 0 10px; }
+
+        .ligne {
+            width: 80px;
+            height: 3px;
+            background-color: #3FD1C2;
+            margin: 10px auto 0;
+        }
+
         .content {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 25px auto;
             background: white;
             color: black;
             padding: 25px;
             border-radius: 8px;
-        }
-
-        footer {
-            margin-top: 40px;
-            background: #003f7f;
-            color: white;
-            padding: 20px;
-            text-align: center;
         }
     </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<header data-i18n="header_title">Peuplitique – Application</header>
+
+<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html">Accueil</a>
+    <a href="index-appli.html" class="actif">Accueil</a>
     <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
     <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
 </nav>
- <!-- ZONE BLEUE : titre correct -->
-<div class="zone-bleue">
-    Limites structurelles – Version Application
-</div>   
-<footer class="menu-bas">
-    <a href="organisation-economique-appli.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale-appli.html">Organisation politique territoriale</a>
-    <a href="limites-structurelles-appli.html">Limites structurelles</a>
-    <a href="desequilibre-structurel-appli.html">Déséquilibres structurels</a>
-    <a href="protocole-appli.html">Protocole</a>
-    <a href="glossaire-appli.html">Glossaire</a>
-    <a href="vote-token-appli.html">Vote Token</a>
-    <a href="plateforme-vote-appli.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
 
-<div class="content">
+<!-- ZONE BLEUE -->
+<div class="zone-bleue">
+    Peuplitique — Gouvernance partagée
+</div>
+
+<!-- BANDE BLANCHE -->
+<section class="bande-blanche">
+    <div class="lang-switch">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="es">ES</button>
+    </div>
+
+    <header class="header">
+
+    <!-- LANG -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        <a href="?lang=ru">RU</a> |
+        <a href="?lang=cn">CN</a>
+    </div>
+
+    <!-- TITRE -->
+    <header class="header">
+        <h1>PEUPLITIQUE</h1>
+        <p class="sous-titre" data-i18n="subtitle_contact">Contact</p>
+        <div class="ligne"></div>
+    </header>
+
+</section>
+
+<!-- CONTENU -->
+<main class="content">
+
+  
 
     <!-- FR -->
     <div class="lang-block" id="fr">
