@@ -3,42 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google" content="notranslate">
+    <title>Peuplitique – Application</title>
 
-    <title data-i18n="title_contact">Contact — Peuplitique</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a3d78;
+            color: white;
+        }
 
-    <!-- STYLE APPLI (corrigé) -->
-    <link rel="stylesheet" href="../appli/style-appli.css">
+        header {
+            background-color: #005bbb;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu-haut,
+        .menu-bas {
+            background-color: #003f7f;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .menu-haut a,
+        .menu-bas a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-haut a.actif {
+            text-decoration: underline;
+        }
+
+        .zone-bleue {
+            background-color: #3FD1C2;
+            color: #003f7f;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .bande-blanche {
+            background: white;
+            color: #003f7f;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; }
+        .header p { margin: 5px 0 10px; }
+
+        .ligne {
+            width: 80px;
+            height: 3px;
+            background-color: #3FD1C2;
+            margin: 10px auto 0;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 25px auto;
+            background: white;
+            color: black;
+            padding: 25px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER APPLI -->
-<header class="header-site" data-i18n="header_title">
-    Peuplitique – Application
-</header>
+<!-- HEADER -->
+<header data-i18n="header_title">Peuplitique – Application</header>
 
-<!-- MENU HAUT APPLI (corrigé et complet) -->
+<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index-appli.html" data-i18n="menu_home">Accueil</a>
-    <a href="gouvernance-partagee-appli.html" data-i18n="menu_governance">Gouvernance partagée</a>
-    <a href="organisation-structurelle-appli.html" data-i18n="menu_structure">Organisation structurelle</a>
-    <a href="organisation-economique-appli.html" data-i18n="menu_economy">Organisation économique</a>
-    <a href="organisation-politique-territoriale-appli.html" data-i18n="menu_territory">Organisation politique territoriale</a>
-    <a href="limites-structurelles-appli.html" data-i18n="menu_limits">Limites structurelles</a>
-    <a href="vote-token-appli.html" data-i18n="menu_vote">Vote Token</a>
-    <a href="plateforme-vote-appli.html" data-i18n="menu_platform">Plateforme de vote</a>
-    <a href="contact-appli.html" class="actif" data-i18n="menu_contact">Contact</a>
+    <a href="index-appli.html" class="actif">Accueil</a>
+    <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
+    <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
 </nav>
 
 <!-- ZONE BLEUE -->
-<section class="zone-bleue">
-    <h1 data-i18n="contact_title">Contactez Peuplitique</h1>
-    <p data-i18n="contact_subtitle">Pour toute question, suggestion ou collaboration.</p>
-</section>
+<div class="zone-bleue">
+    Peuplitique — Gouvernance partagée
+</div>
 
 <!-- BANDE BLANCHE -->
 <section class="bande-blanche">
+    <div class="lang-switch">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="es">ES</button>
+    </div>
+
+    <header class="header">
 
     <!-- LANG -->
     <div class="lang-switch">
