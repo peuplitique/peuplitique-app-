@@ -174,12 +174,24 @@
         <h4>7. Équité et inclusion</h4>
         <p>La gouvernance partagée garantit que les minorités sont entendues et que les décisions restent argumentées.</p>
     </section>
+</div> <!-- fin du content -->
 
-</main>
-
-<footer>
+<!-- FOOTER -->
+<footer class="footer">
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
+
+<!-- SCRIPT SWITCH LANG -->
+<script>
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
+    });
+});
+</script>
 
 </body>
 </html>
