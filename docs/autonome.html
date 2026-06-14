@@ -132,14 +132,26 @@
         comprendre, analyser et participer activement à la construction du nouvel écosystème.
     </p>
 
-</main>
-
-<!-- FOOTER -->
 <footer>
     <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT MULTILINGUE -->
+<script>
+function showLang(lang) {
+    document.querySelectorAll("[data-lang]").forEach(el => {
+        el.style.display = (el.dataset.lang === lang) ? "block" : "none";
+    });
+}
+
+document.querySelectorAll(".lang-switch button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        showLang(btn.dataset.lang);
+    });
+});
+
+showLang("fr");
+</script>
+
 <script src="../script-appli.js"></script>
 
 </body>
