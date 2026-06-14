@@ -108,3 +108,17 @@ body {
     font-weight: bold;
     font-size: 14px;
 }
+/* Empêche le débordement des menus sur mobile */
+.menu-haut, .menu-bas {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Ajuste la taille des liens sur téléphone */
+@media (max-width: 600px) {
+    .menu-haut a, .menu-bas a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}
