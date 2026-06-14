@@ -4,52 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gouvernance Partagée – Application Peuplitique</title>
-<link rel="stylesheet" href="style-appli.css">
+
+    <link rel="stylesheet" href="style-appli.css">
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f7f7f7;
-        }
-
-        header {
-            background-color: #005bbb;
-            padding: 15px;
+            background-color: #0a3d78; /* BLEU DU SITE */
             color: white;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
         }
 
-        nav {
+        /* MENU PRINCIPAL */
+        nav.menu {
             background-color: #003f7f;
-            padding: 10px;
+            padding: 12px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 22px;
         }
 
-        nav a {
+        nav.menu a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
 
+        nav.menu a.actif {
+            text-decoration: underline;
+        }
+
+        /* ZONE BLEUE (TURQUOISE) */
         .zone-bleue {
             background-color: #3FD1C2;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             color: #003f7f;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
         }
 
+        /* CONTENU BLANC CENTRÉ */
         .content {
             max-width: 900px;
-            margin: auto;
+            margin: 30px auto;
             background: white;
+            color: black;
             padding: 25px;
-            margin-top: 20px;
             border-radius: 8px;
         }
 
@@ -64,28 +65,27 @@
 </head>
 
 <body>
-<nav class="menu">
+
+<nav class="menu-haut">
     <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
     <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
+</nav>
+ <!-- ZONE BLEUE : titre correct -->
+<div class="zone-bleue">
+    Limites structurelles – Version Application
+</div>   
+<footer class="menu-bas">
     <a href="organisation-economique-appli.html">Organisation économique</a>
     <a href="organisation-politique-territoriale-appli.html">Organisation politique territoriale</a>
     <a href="limites-structurelles-appli.html">Limites structurelles</a>
+    <a href="desequilibre-structurel-appli.html">Déséquilibres structurels</a>
+    <a href="protocole-appli.html">Protocole</a>
+    <a href="glossaire-appli.html">Glossaire</a>
     <a href="vote-token-appli.html">Vote Token</a>
     <a href="plateforme-vote-appli.html">Plateforme de vote</a>
     <a href="contact.html">Contact</a>
-</nav>
-<header data-i18n="header_title">Peuplitique – Application</header>
-
-<nav>
-    <a href="index-appli.html" data-i18n="menu_home">Accueil</a>
-    <a href="gouvernance-partagee-appli.html" data-i18n="menu_gouv">Gouvernance partagée</a>
-    <a href="contact-appli.html" data-i18n="menu_contact">Contact</a>
-</nav>
-
-<div class="zone-bleue" data-i18n="blue_zone">
-    Gouvernance partagée – Version Application
-</div>
+</footer>
 
 <div class="content">
 
