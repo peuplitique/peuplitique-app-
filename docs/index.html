@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peuplitique – Application</title>
 
+    /* Empêche le débordement des menus sur mobile */
+.menu-haut, .menu-bas {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Ajuste la taille des liens sur téléphone */
+@media (max-width: 600px) {
+    .menu-haut a, .menu-bas a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+}
     <style>
         body {
             margin: 0;
