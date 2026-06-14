@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title_political_territorial">Organisation politique territoriale – Application Peuplitique</title>
-<link rel="stylesheet" href="../appli/style-appli.css">
+    <title>Peuplitique – Application</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f7f7f7;
+            background-color: #0a3d78;
+            color: white;
         }
 
         header {
@@ -21,82 +22,96 @@
             font-weight: bold;
         }
 
-        nav {
+        .menu-haut,
+        .menu-bas {
             background-color: #003f7f;
-            padding: 10px;
+            padding: 12px;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 22px;
         }
 
-        nav a {
+        .menu-haut a,
+        .menu-bas a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
 
+        .menu-haut a.actif {
+            text-decoration: underline;
+        }
+
         .zone-bleue {
             background-color: #3FD1C2;
-            padding: 20px;
-            text-align: center;
             color: #003f7f;
-            font-size: 20px;
+            text-align: center;
+            padding: 20px;
             font-weight: bold;
+        }
+
+        .bande-blanche {
+            background: white;
+            color: #003f7f;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; }
+        .header p { margin: 5px 0 10px; }
+
+        .ligne {
+            width: 80px;
+            height: 3px;
+            background-color: #3FD1C2;
+            margin: 10px auto 0;
         }
 
         .content {
             max-width: 900px;
-            margin: auto;
+            margin: 25px auto;
             background: white;
+            color: black;
             padding: 25px;
-            margin-top: 20px;
             border-radius: 8px;
-        }
-
-        footer {
-            margin-top: 40px;
-            background: #003f7f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        pre {
-            background: #eee;
-            padding: 15px;
-            border-radius: 6px;
-            overflow-x: auto;
         }
     </style>
 </head>
 
 <body>
-<nav class="menu">
-    <a href="index.html">Accueil</a>
-    <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
-    <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
-    <a href="organisation-economique-appli.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale-appli.html">Organisation politique territoriale</a>
-    <a href="limites-structurelles-appli.html">Limites structurelles</a>
-    <a href="vote-token-appli.html">Vote Token</a>
-    <a href="plateforme-vote-appli.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</nav>
+
+<!-- HEADER -->
 <header data-i18n="header_title">Peuplitique – Application</header>
 
-<nav>
-    <a href="index-appli.html" data-i18n="menu_home">Accueil</a>
-    <a href="gouvernance-partagee-appli.html" data-i18n="menu_gouv">Gouvernance partagée</a>
-    <a href="organisation-politique-territoriale-appli.html" data-i18n="menu_pol_terr">Organisation territoriale</a>
-    <a href="contact-appli.html" data-i18n="menu_contact">Contact</a>
+<!-- MENU HAUT (TA VERSION EXACTE) -->
+<nav class="menu-haut">
+    <a href="index-appli.html" class="actif">Accueil</a>
+    <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
+    <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
 </nav>
 
-<div class="zone-bleue" data-i18n="blue_zone">
-    Organisation politique territoriale – Version Application
+<!-- ZONE BLEUE -->
+<div class="zone-bleue">
+    Peuplitique — Gouvernance partagée
 </div>
 
-<div class="content">
+<!-- BANDE BLANCHE -->
+<section class="bande-blanche">
+    <div class="lang-switch">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="es">ES</button>
+    </div>
 
+    <header class="header">
+        <h1>Peuplitique</h1>
+        <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
+        <div class="ligne"></div>
+    </header>
+</section>
+
+<!-- CONTENU (corrigé) -->
+<main class="content">
     <!-- FR -->
     <div class="lang-block" id="fr">
         <h1>Organisation politique territoriale et communautaire</h1>
