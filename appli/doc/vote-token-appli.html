@@ -14,17 +14,88 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="header-site" data-i18n="header_title">
-    Peuplitique – Application
-</header>
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a3d78;
+            color: white;
+        }
 
-<!-- MENU -->
+        header {
+            background-color: #005bbb;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu-haut,
+        .menu-bas {
+            background-color: #003f7f;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .menu-haut a,
+        .menu-bas a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-haut a.actif {
+            text-decoration: underline;
+        }
+
+        .zone-bleue {
+            background-color: #3FD1C2;
+            color: #003f7f;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .bande-blanche {
+            background: white;
+            color: #003f7f;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; }
+        .header p { margin: 5px 0 10px; }
+
+        .ligne {
+            width: 80px;
+            height: 3px;
+            background-color: #3FD1C2;
+            margin: 10px auto 0;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 25px auto;
+            background: white;
+            color: black;
+            padding: 25px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header data-i18n="header_title">Peuplitique – Application</header>
+
+<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="../index-appli.html">Accueil</a>
-    <a href="../gouvernance-partagee-appli.html">Gouvernance partagée</a>
-    <a href="../organisation-structurelle-appli.html">Organisation structurelle</a>
-    <a href="vote-token-appli.html" class="actif">Vote Token</a>
+    <a href="index-appli.html" class="actif">Accueil</a>
+    <a href="gouvernance-partagee-appli.html">Gouvernance partagée</a>
+    <a href="organisation-structurelle-appli.html">Organisation structurelle</a>
 </nav>
 
 <!-- ZONE BLEUE -->
@@ -41,6 +112,35 @@
     </div>
 
     <header class="header">
+
+    <!-- LANG -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        
+    </div>
+ <!-- LANG LINKS -->
+    <div class="lang-switch">
+        <a href="?lang=fr">FR</a> |
+        <a href="?lang=en">EN</a> |
+        <a href="?lang=es">ES</a> |
+        <a href="?lang=ru">RU</a> |
+        <a href="?lang=cn">CN</a>
+    </div>
+    <!-- TITRE -->
+    <header class="header">
+        <h1>PEUPLITIQUE</h1>
+        <p class="sous-titre" data-i18n="subtitle_contact">Contact</p>
+        <div class="ligne"></div>
+    </header>
+
+</section>
+
+<!-- CONTENU -->
+<main class="content">
+
+ <header class="header">
         <h1 data-i18n="vote_token_header">Token de Vote</h1>
         <p data-i18n="vote_token_subtitle">Générez votre identifiant anonyme pour voter</p>
         <div class="ligne"></div>
@@ -84,165 +184,49 @@
 
 <div class="zone">
     <h1 data-i18n="token_title">Génération du token</h1>
+<button onclick="generer()" class="btn-generer" data-i18n="generate_button">
+            Générer un token
+        </button>
 
-    <button onclick="generer()" data-i18n="btn_generate">Générer un token</button>
-    <p id="t"></p>
+        <p id="token-display" class="token-display"></p>
+    </div>
 
-    <h2 data-i18n="vote_choice_title">Choix du vote</h2>
-    <form id="vote-form">
-        <label><input type="radio" name="choix" value="option_A" required> <span data-i18n="opt_A">Option A</span></label><br>
-        <label><input type="radio" name="choix" value="option_B"> <span data-i18n="opt_B">Option B</span></label><br>
-        <label><input type="radio" name="choix" value="abstention"> <span data-i18n="opt_abs">Abstention</span></label><br><br>
+    <div class="zone" style="margin-top:30px;">
+        <h2 data-i18n="vote_section">Voter</h2>
 
-        <button type="submit" data-i18n="btn_validate">Valider mon vote</button>
-    </form>
+        <form id="vote-form">
+            <label for="choix" data-i18n="choose_option">Choisissez une option :</label>
+            <select id="choix" required>
+                <option value="" disabled selected data-i18n="select_option">Sélectionner…</option>
+                <option value="oui" data-i18n="yes">Oui</option>
+                <option value="non" data-i18n="no">Non</option>
+                <option value="abstention" data-i18n="abstain">Abstention</option>
+            </select>
 
-    <p id="r"></p>
-</div>
+            <button type="submit" class="btn-voter" data-i18n="vote_button">
+                Envoyer le vote
+            </button>
+        </form>
+
+        <p id="vote-result" class="vote-result"></p>
+    </div>
 
 </main>
-
+   
 <!-- FOOTER -->
 <footer>
     <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT MULTILINGUE -->
+
+    <!-- SCRIPT MULTILINGUE -->
 <script>
-const translations = {
-    "en": {
-        "title_vote": "Vote – Peuplitique",
-        "subtitle_vote": "Citizen platform – Secure voting",
-
-        "menu_home": "Home",
-        "menu_governance": "Shared Governance",
-        "menu_imbalance": "Structural Imbalances",
-        "menu_economy": "Integrated Economy",
-        "menu_structure": "Structural Organisation",
-        "menu_protocol": "Protocol",
-        "menu_glossary": "Glossary",
-        "menu_vote": "Vote Token",
-
-        "vote_title": "Citizen Vote",
-        "vote_subtitle": "One token. One vote. One verifiable proof.",
-
-        "token_title": "Token generation",
-        "btn_generate": "Generate a token",
-
-        "vote_choice_title": "Choose your vote",
-        "opt_A": "Option A",
-        "opt_B": "Option B",
-        "opt_abs": "Abstention",
-
-        "btn_validate": "Validate my vote",
-
-        "footer": "© 2026 Peuplitique – All rights reserved"
-    },
-
-    "es": {
-        "title_vote": "Voto – Peuplitique",
-        "subtitle_vote": "Plataforma ciudadana – Voto seguro",
-
-        "menu_home": "Inicio",
-        "menu_governance": "Gobernanza compartida",
-        "menu_imbalance": "Desequilibrios estructurales",
-        "menu_economy": "Economía integrada",
-        "menu_structure": "Organización estructural",
-        "menu_protocol": "Protocolo",
-        "menu_glossary": "Glosario",
-        "menu_vote": "Token de Voto",
-
-        "vote_title": "Voto ciudadano",
-        "vote_subtitle": "Un token. Un voto. Una prueba verificable.",
-
-        "token_title": "Generación del token",
-        "btn_generate": "Generar un token",
-
-        "vote_choice_title": "Elige tu voto",
-        "opt_A": "Opción A",
-        "opt_B": "Opción B",
-        "opt_abs": "Abstención",
-
-        "btn_validate": "Validar mi voto",
-
-        "footer": "© 2026 Peuplitique – Todos los derechos reservados"
-    }
-};
-
-function applyTranslation(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-}
-
-const params = new URLSearchParams(window.location.search);
-const lang = params.get("lang");
-if (lang) applyTranslation(lang);
+...
 </script>
 
 <!-- SCRIPT TOKEN + VOTE -->
 <script>
-let token = null;
-let actif = false;
-
-// UUID v4
-function uuidv4() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-        const r = Math.random() * 16 | 0;
-        const v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
-}
-
-// SHA-256
-async function sha256(message) {
-    const msgBuffer = new TextEncoder().encode(message);
-    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
-}
-
-function generer() {
-    token = uuidv4();
-    actif = true;
-    document.getElementById("t").innerText = "Token : " + token;
-    document.getElementById("r").innerText = "";
-}
-
-document.getElementById("vote-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    if (!actif) {
-        document.getElementById("r").innerText = "Génère ton token avant de voter.";
-        return;
-    }
-
-    const choix = new FormData(e.target).get("choix");
-    const timestamp = new Date().toISOString();
-
-    const hashToken = await sha256(token);
-    const signature = await sha256(token + "|" + choix + "|" + timestamp);
-
-    const vote = { hashToken, signature, choix, timestamp };
-    const votes = JSON.parse(localStorage.getItem("votes") || "[]");
-    votes.push(vote);
-    localStorage.setItem("votes", JSON.stringify(votes));
-
-    actif = false;
-    token = null;
-
-    document.getElementById("t").innerText = "";
-    document.getElementById("r").innerHTML =
-        "<strong>Vote enregistré.</strong><br>" +
-        "hashToken : " + hashToken + "<br>" +
-        "signature : " + signature + "<br>" +
-        "choix : " + choix + "<br>" +
-        "timestamp : " + timestamp;
-});
+...
 </script>
-
 </body>
 </html>
