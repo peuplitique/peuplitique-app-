@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Application</title>
+    <title>Peuplitique – Gouvernance partagée</title>
 
     <style>
         body {
@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -36,6 +35,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            display: block;
         }
 
         .menu-haut a.actif {
@@ -57,9 +57,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -75,32 +72,55 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 600px) {
+
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
-    <a href="gouvernance-partagee.html">Gouvernance partagée</a>
+    <a href="index.html">Accueil</a>
+    <a href="gouvernance-partagee.html" class="actif">Gouvernance partagée</a>
     <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
     Peuplitique — Gouvernance partagée
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,7 +129,124 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
+<div class="content">
+
+    <!-- FR -->
+    <div class="lang-block" id="fr">
+        <h2>Gouvernance partagée</h2>
+        <p>La gouvernance partagée est un modèle où le pouvoir de décider, d’analyser et de corriger est distribué entre les citoyens plutôt que concentré dans une structure pyramidale.</p>
+
+        <p>Elle repose sur trois piliers complémentaires : l’analyse des limites structurelles, une constitution citoyenne, et une organisation distribuée soutenue par un protocole commun.</p>
+
+        <h3>Les trois piliers de la gouvernance partagée</h3>
+        <ul>
+            <li><strong>1. Limites structurelles</strong> – comprendre les dérives des modèles pyramidaux</li>
+            <li><strong>2. Constitution citoyenne</strong> – définir les règles et protections communes</li>
+            <li><strong>3. Organisation structurelle</strong> – organiser les niveaux et interactions</li>
+        </ul>
+
+        <h3>Une participation continue, structurée et transparente</h3>
+
+        <h4>1. Participation continue</h4>
+        <p>La participation citoyenne devient un processus continu. Les citoyens peuvent signaler des problèmes, proposer des solutions, analyser des enjeux, participer à des débats ou suivre les décisions.</p>
+
+        <h4>2. Délibération structurée</h4>
+        <p>La délibération devient un travail collectif de clarification. Les citoyens comparent les options, analysent les impacts, identifient les risques et formulent des arbitrages.</p>
+
+        <h4>3. Décision transparente</h4>
+        <p>Chaque décision est accompagnée de son objectif, de ses moyens, de son calendrier et d’indicateurs de suivi.</p>
+
+        <h4>4. Contrôle citoyen</h4>
+        <p>Le contrôle devient un droit continu. Les citoyens ont accès aux données, aux résultats et aux écarts entre prévisions et réalité.</p>
+
+        <h4>5. Rôle des institutions</h4>
+        <p>Les institutions ne décident plus « à la place de ». Elles mettent en œuvre les décisions issues de la plateforme.</p>
+
+        <h4>6. Traçabilité complète</h4>
+        <p>Chaque étape — contribution, analyse, arbitrage, décision, mise en œuvre — est documentée.</p>
+
+        <h4>7. Équité et inclusion</h4>
+        <p>La gouvernance partagée garantit que les minorités sont entendues et que les décisions restent argumentées.</p>
+    </div>
+
+    <!-- EN -->
+    <div class="lang-block" id="en" style="display:none;">
+        <h2>Shared Governance</h2>
+        <p>Shared governance is a model where the power to decide, analyze, and correct is distributed among citizens rather than concentrated in a pyramidal structure.</p>
+
+        <p>It relies on three complementary pillars: structural limits analysis, a citizen constitution, and a distributed organization supported by a common protocol.</p>
+
+        <h3>The three pillars of shared governance</h3>
+        <ul>
+            <li><strong>1. Structural limits</strong> – understanding the drifts of pyramidal models</li>
+            <li><strong>2. Citizen constitution</strong> – defining common rules and protections</li>
+            <li><strong>3. Structural organization</strong> – organizing levels and interactions</li>
+        </ul>
+
+        <h3>Continuous, structured and transparent participation</h3>
+
+        <h4>1. Continuous participation</h4>
+        <p>Citizen participation becomes a continuous process. Citizens can report issues, propose solutions, analyze topics, participate in debates or follow decisions.</p>
+
+        <h4>2. Structured deliberation</h4>
+        <p>Deliberation becomes a collective clarification effort. Citizens compare options, analyze impacts, identify risks and formulate trade‑offs.</p>
+
+        <h4>3. Transparent decision‑making</h4>
+        <p>Each decision is accompanied by its objective, means, timeline and monitoring indicators.</p>
+
+        <h4>4. Citizen oversight</h4>
+        <p>Oversight becomes a continuous right. Citizens have access to data, results and gaps between forecasts and reality.</p>
+
+        <h4>5. Role of institutions</h4>
+        <p>Institutions no longer decide “in place of”. They implement decisions coming from the platform.</p>
+
+        <h4>6. Full traceability</h4>
+        <p>Every step — contribution, analysis, arbitration, decision, implementation — is documented.</p>
+
+        <h4>7. Equity and inclusion</h4>
+        <p>Shared governance ensures that minorities are heard and that decisions remain reasoned.</p>
+    </div>
+
+    <!-- ES -->
+    <div class="lang-block" id="es" style="display:none;">
+        <h2>Gobernanza compartida</h2>
+        <p>La gobernanza compartida es un modelo donde el poder de decidir, analizar y corregir se distribuye entre los ciudadanos en lugar de concentrarse en una estructura piramidal.</p>
+
+        <p>Se basa en tres pilares complementarios: análisis de límites estructurales, una constitución ciudadana y una organización distribuida apoyada por un protocolo común.</p>
+
+        <h3>Los tres pilares de la gobernanza compartida</h3>
+        <ul>
+            <li><strong>1. Límites estructurales</strong> – comprender las desviaciones de los modelos piramidales</li>
+            <li><strong>2. Constitución ciudadana</strong> – definir reglas y protecciones comunes</li>
+            <li><strong>3. Organización estructural</strong> – organizar niveles e interacciones</li>
+        </ul>
+
+        <h3>Participación continua, estructurada y transparente</h3>
+
+        <h4>1. Participación continua</h4>
+        <p>La participación ciudadana se convierte en un proceso continuo. Los ciudadanos pueden señalar problemas, proponer soluciones, analizar temas, participar en debates o seguir decisiones.</p>
+
+        <h4>2. Deliberación estructurada</h4>
+        <p>La deliberación se convierte en un trabajo colectivo de clarificación. Los ciudadanos comparan opciones, analizan impactos, identifican riesgos y formulan arbitrajes.</p>
+
+        <h4>3. Decisión transparente</h4>
+        <p>Cada decisión va acompañada de su objetivo, medios, calendario e indicadores de seguimiento.</p>
+
+        <h4>4. Control ciudadano</h4>
+        <p>El control se convierte en un derecho continuo. Los ciudadanos tienen acceso a los datos, resultados y diferencias entre previsiones y realidad.</p>
+
+        <h4>5. Rol de las instituciones</h4>
+        <p>Las instituciones ya no deciden “en lugar de”. Implementan las decisiones provenientes de la plataforma.</p>
+
+        <h4>6. Trazabilidad completa</h4>
+        <p>Cada etapa — contribución, análisis, arbitraje, decisión, implementación — está documentada.</p>
+
+        <h4>7. Equidad e inclusión</h4>
+        <p>La gobernanza compartida garantiza que las minorías sean escuchadas y que las decisiones permanezcan fundamentadas.</p>
+    </div>
+
+</div>
+
 <footer class="menu-bas">
     <a href="organisation-economique.html">Organisation économique</a>
     <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
@@ -118,64 +255,20 @@
     <a href="contact.html">Contact</a>
 </footer>
 
-<!-- CONTENU -->
-    <section>
-        <h2>Gouvernance partagée</h2>
-        <p>La gouvernance partagée est un modèle où le pouvoir de décider, d’analyser et de corriger est distribué entre les citoyens plutôt que concentré dans une structure pyramidale.</p>
-        <p>Elle repose sur trois piliers complémentaires : l’analyse des limites structurelles, une constitution citoyenne, et une organisation distribuée soutenue par un protocole commun.</p>
-    </section>
-
-    <section class="sommaire">
-        <h3>Les trois piliers de la gouvernance partagée</h3>
-        <ul>
-            <li><strong>1. Limites structurelles</strong> – comprendre les dérives des modèles pyramidaux</li>
-            <li><strong>2. Constitution citoyenne</strong> – définir les règles et protections communes</li>
-            <li><strong>3. Organisation structurelle</strong> – organiser les niveaux et interactions</li>
-        </ul>
-    </section>
-
-    <h3>Une participation continue, structurée et transparente</h3>
-
-    <section id="sec1">
-        <h4>1. Participation continue</h4>
-        <p>La participation citoyenne devient un processus continu. Les citoyens peuvent signaler des problèmes, proposer des solutions, analyser des enjeux, participer à des débats ou suivre les décisions.</p>
-    </section>
-
-    <section id="sec2">
-        <h4>2. Délibération structurée</h4>
-        <p>La délibération devient un travail collectif de clarification. Les citoyens comparent les options, analysent les impacts, identifient les risques et formulent des arbitrages.</p>
-    </section>
-
-    <section id="sec3">
-        <h4>3. Décision transparente</h4>
-        <p>Chaque décision est accompagnée de son objectif, de ses moyens, de son calendrier et d’indicateurs de suivi.</p>
-    </section>
-
-    <section id="sec4">
-        <h4>4. Contrôle citoyen</h4>
-        <p>Le contrôle devient un droit continu. Les citoyens ont accès aux données, aux résultats et aux écarts entre prévisions et réalité.</p>
-    </section>
-
-    <section id="sec5">
-        <h4>5. Rôle des institutions</h4>
-        <p>Les institutions ne décident plus « à la place de ». Elles mettent en œuvre les décisions issues de la plateforme.</p>
-    </section>
-
-    <section id="sec6">
-        <h4>6. Traçabilité complète</h4>
-        <p>Chaque étape — contribution, analyse, arbitrage, décision, mise en œuvre — est documentée.</p>
-    </section>
-
-    <section id="sec7">
-        <h4>7. Équité et inclusion</h4>
-        <p>La gouvernance partagée garantit que les minorités sont entendues et que les décisions restent argumentées.</p>
-    </section>
-
-</main>
-
 <footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
+
+<script>
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
+    });
+});
+</script>
 
 </body>
 </html>
