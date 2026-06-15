@@ -25,7 +25,6 @@ if (lang) applyTranslation(lang);
 /* ============================
    TOKEN + VOTE
 ============================ */
-
 let token = null;
 let actif = false;
 
@@ -48,10 +47,10 @@ function generer() {
     token = uuidv4();
     actif = true;
 
-    const t = document.getElementById("t");
+    const t = document.getElementById("token-display");
     if (t) t.innerText = "Token : " + token;
 
-    const r = document.getElementById("r");
+    const r = document.getElementById("vote-result");
     if (r) r.innerText = "";
 }
 
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        const r = document.getElementById("r");
+        const r = document.getElementById("vote-result");
 
         if (!actif) {
             if (r) r.innerText = "Génère ton token avant de voter.";
@@ -83,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         actif = false;
         token = null;
 
-        const t = document.getElementById("t");
+        const t = document.getElementById("token-display");
         if (t) t.innerText = "";
 
         if (r) {
