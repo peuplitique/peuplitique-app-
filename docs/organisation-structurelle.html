@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Application</title>
+    <title>Peuplitique – Organisation structurelle</title>
 
     <style>
         body {
@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -36,6 +35,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            display: block;
         }
 
         .menu-haut a.actif {
@@ -57,9 +57,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -75,32 +72,53 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        @media (max-width: 600px) {
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
-   <a href="limites-structurelles.html">Limites structurelles</a> 
-    <a href="organisation-structurelle.html">Organisation structurelle</a>
+    <a href="limites-structurelles.html">Limites structurelles</a>
+    <a href="organisation-structurelle.html" class="actif">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Organisation structurelle
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,22 +127,17 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
-<footer class="menu-bas">
-    <a href="organisation-economique.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    <a href="vote-token.html">Vote Token</a>
-    <a href="plateforme.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
+<div class="content">
 
-<!-- CONTENU -->
+    <!-- FR -->
     <div class="lang-block" id="fr">
+
         <h1>Organisation structurelle</h1>
 
         <p>L’organisation structurelle décrit comment Peuplitique articule les niveaux de décision, les rôles, les flux d’information et les mécanismes fiscaux et financiers.</p>
 
         <h3>1. Niveaux de structure</h3>
+
         <h4>Niveau citoyen</h4>
         <p>Chaque personne peut signaler un problème, formuler un besoin ou proposer une idée.</p>
 
@@ -135,6 +148,7 @@
         <p>Les scénarios thématiques sont mis en cohérence pour clarifier les choix collectifs.</p>
 
         <h3>2. Rôles et responsabilités</h3>
+
         <h4>Citoyenne</h4>
         <p>Exprimer ses besoins, participer aux débats, voter, contrôler les résultats.</p>
 
@@ -145,6 +159,7 @@
         <p>Relier les décisions citoyennes aux institutions existantes.</p>
 
         <h3>3. Flux d’information</h3>
+
         <h4>De la réalité vers la décision</h4>
         <p>Les signaux du terrain sont transformés en options claires.</p>
 
@@ -171,15 +186,18 @@
 
         <h3>10. Pension & budget</h3>
         <p>Un fonds de pension citoyen garantit stabilité et transparence ; le budget national est lisible et contrôlé.</p>
+
     </div>
 
     <!-- EN -->
     <div class="lang-block" id="en" style="display:none;">
+
         <h1>Structural Organisation</h1>
 
         <p>The structural organisation explains how decision levels, roles, information flows and financial mechanisms are connected.</p>
 
         <h3>1. Structure levels</h3>
+
         <h4>Citizen level</h4>
         <p>Anyone can report issues, express needs or propose ideas.</p>
 
@@ -190,6 +208,7 @@
         <p>Thematic scenarios are aligned to clarify collective choices.</p>
 
         <h3>2. Roles and responsibilities</h3>
+
         <h4>Citizen</h4>
         <p>Express needs, participate in debates, vote and monitor results.</p>
 
@@ -200,6 +219,7 @@
         <p>Connects citizen decisions to existing institutions.</p>
 
         <h3>3. Information flows</h3>
+
         <h4>From reality to decision</h4>
         <p>Signals from the field are transformed into clear options.</p>
 
@@ -226,15 +246,18 @@
 
         <h3>10. Pension & budget</h3>
         <p>A citizen pension fund ensures stability; the national budget is readable and monitored.</p>
+
     </div>
 
     <!-- ES -->
     <div class="lang-block" id="es" style="display:none;">
+
         <h1>Organización estructural</h1>
 
         <p>La organización estructural explica cómo se conectan los niveles de decisión, los roles, los flujos de información y los mecanismos financieros.</p>
 
         <h3>1. Niveles de estructura</h3>
+
         <h4>Nivel ciudadano</h4>
         <p>Cualquier persona puede señalar problemas, expresar necesidades o proponer ideas.</p>
 
@@ -245,6 +268,7 @@
         <p>Los escenarios temáticos se alinean para clarificar las decisiones colectivas.</p>
 
         <h3>2. Roles y responsabilidades</h3>
+
         <h4>Ciudadano</h4>
         <p>Expresar necesidades, participar en debates, votar y controlar resultados.</p>
 
@@ -255,6 +279,7 @@
         <p>Conecta las decisiones ciudadanas con las instituciones existentes.</p>
 
         <h3>3. Flujos de información</h3>
+
         <h4>De la realidad a la decisión</h4>
         <p>Las señales del terreno se transforman en opciones claras.</p>
 
@@ -281,19 +306,27 @@
 
         <h3>10. Pensión y presupuesto</h3>
         <p>Un fondo de pensiones ciudadano garantiza estabilidad; el presupuesto nacional es claro y controlado.</p>
+
     </div>
 
+</div>
 
-<!-- FOOTER -->
-<footer class="footer">
+<footer class="menu-bas">
+    <a href="organisation-economique.html">Organisation économique</a>
+    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
+    <a href="vote-token.html">Vote Token</a>
+    <a href="plateforme.html">Plateforme de vote</a>
+    <a href="contact.html">Contact</a>
+</footer>
+
+<footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT SWITCH LANG -->
 <script>
 document.querySelectorAll('.lang-switch button').forEach(btn => {
     btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
+        const lang = btn.dataset.lang;
         document.querySelectorAll('.lang-block').forEach(block => {
             block.style.display = (block.id === lang) ? 'block' : 'none';
         });
