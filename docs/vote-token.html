@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Application</title>
+    <title>Peuplitique – Vote Token</title>
 
     <style>
         body {
@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -57,9 +56,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -75,32 +71,53 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        @media (max-width: 600px) {
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
     <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Vote Token
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,107 +126,92 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
+<div class="content">
+
+    <!-- FR -->
+    <div class="lang-block" id="fr">
+        <h1 data-i18n="vote_token_header">Token de Vote</h1>
+        <p data-i18n="vote_token_subtitle">Générez votre identifiant anonyme pour voter.</p>
+
+        <h2 data-i18n="generate_token">Générer un token</h2>
+        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">Générer un token</button>
+        <p id="token-display" class="token-display"></p>
+
+        <h2 data-i18n="vote_section">Voter</h2>
+        <form id="vote-form">
+            <label for="choix" data-i18n="choose_option">Choisissez une option :</label>
+            <select id="choix" required>
+                <option value="" disabled selected data-i18n="select_option">Sélectionner…</option>
+                <option value="oui" data-i18n="yes">Oui</option>
+                <option value="non" data-i18n="no">Non</option>
+                <option value="abstention" data-i18n="abstain">Abstention</option>
+            </select>
+            <button type="submit" class="btn-voter" data-i18n="vote_button">Envoyer le vote</button>
+        </form>
+        <p id="vote-result" class="vote-result"></p>
+    </div>
+
+    <!-- EN -->
+    <div class="lang-block" id="en" style="display:none;">
+        <h1 data-i18n="vote_token_header">Voting Token</h1>
+        <p data-i18n="vote_token_subtitle">Generate your anonymous identifier to vote.</p>
+
+        <h2 data-i18n="generate_token">Generate a token</h2>
+        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">Generate token</button>
+        <p id="token-display" class="token-display"></p>
+
+        <h2 data-i18n="vote_section">Vote</h2>
+        <form id="vote-form">
+            <label for="choix" data-i18n="choose_option">Choose an option:</label>
+            <select id="choix" required>
+                <option value="" disabled selected data-i18n="select_option">Select…</option>
+                <option value="oui" data-i18n="yes">Yes</option>
+                <option value="non" data-i18n="no">No</option>
+                <option value="abstention" data-i18n="abstain">Abstain</option>
+            </select>
+            <button type="submit" class="btn-voter" data-i18n="vote_button">Submit vote</button>
+        </form>
+        <p id="vote-result" class="vote-result"></p>
+    </div>
+
+    <!-- ES -->
+    <div class="lang-block" id="es" style="display:none;">
+        <h1 data-i18n="vote_token_header">Token de Voto</h1>
+        <p data-i18n="vote_token_subtitle">Genera tu identificador anónimo para votar.</p>
+
+        <h2 data-i18n="generate_token">Generar un token</h2>
+        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">Generar token</button>
+        <p id="token-display" class="token-display"></p>
+
+        <h2 data-i18n="vote_section">Votar</h2>
+        <form id="vote-form">
+            <label for="choix" data-i18n="choose_option">Elige una opción:</label>
+            <select id="choix" required>
+                <option value="" disabled selected data-i18n="select_option">Seleccionar…</option>
+                <option value="oui" data-i18n="yes">Sí</option>
+                <option value="non" data-i18n="no">No</option>
+                <option value="abstention" data-i18n="abstain">Abstención</option>
+            </select>
+            <button type="submit" class="btn-voter" data-i18n="vote_button">Enviar voto</button>
+        </form>
+        <p id="vote-result" class="vote-result"></p>
+    </div>
+
+</div>
+
 <footer class="menu-bas">
     <a href="organisation-economique.html">Organisation économique</a>
     <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    <a href="vote-token.html">Vote Token</a>
+    <a href="vote-token.html" class="actif">Vote Token</a>
     <a href="plateforme.html">Plateforme de vote</a>
     <a href="contact.html">Contact</a>
 </footer>
 
-<!-- CONTENU -->
-
-
-
- <header class="header">
-        <h1 data-i18n="vote_token_header">Token de Vote</h1>
-        <p data-i18n="vote_token_subtitle">Générez votre identifiant anonyme pour voter</p>
-        <div class="ligne"></div>
-    </header>
-</section>
-
-    <div class="zone">
-        <h2 data-i18n="generate_token">Générer un token</h2>
-
-        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">
-            Générer un token
-        </button>
-
-        <p id="token-display" class="token-display"></p>
-    </div>
-
-    <div class="zone" style="margin-top:30px;">
-        <h2 data-i18n="vote_section">Voter</h2>
-
-        <form id="vote-form">
-            <label for="choix" data-i18n="choose_option">Choisissez une option :</label>
-            <select id="choix" required>
-                <option value="" disabled selected data-i18n="select_option">Sélectionner…</option>
-                <option value="oui" data-i18n="yes">Oui</option>
-                <option value="non" data-i18n="no">Non</option>
-                <option value="abstention" data-i18n="abstain">Abstention</option>
-            </select>
-
-            <button type="submit" class="btn-voter" data-i18n="vote_button">
-                Envoyer le vote
-            </button>
-        </form>
-
-        <p id="vote-result" class="vote-result"></p>
-    </div>
-
-</main>
-
-<!-- CONTENU -->
-<main class="content">
-
-<div class="zone">
-    <h1 data-i18n="token_title">Génération du token</h1>
-<button onclick="generer()" class="btn-generer" data-i18n="generate_button">
-            Générer un token
-        </button>
-
-        <p id="token-display" class="token-display"></p>
-    </div>
-
-    <div class="zone" style="margin-top:30px;">
-        <h2 data-i18n="vote_section">Voter</h2>
-
-        <form id="vote-form">
-            <label for="choix" data-i18n="choose_option">Choisissez une option :</label>
-            <select id="choix" required>
-                <option value="" disabled selected data-i18n="select_option">Sélectionner…</option>
-                <option value="oui" data-i18n="yes">Oui</option>
-                <option value="non" data-i18n="no">Non</option>
-                <option value="abstention" data-i18n="abstain">Abstention</option>
-            </select>
-
-            <button type="submit" class="btn-voter" data-i18n="vote_button">
-                Envoyer le vote
-            </button>
-        </form>
-
-        <p id="vote-result" class="vote-result"></p>
-    </div>
-
-</main>
-   
-<!-- FOOTER -->
 <footer>
     <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-
-    <!-- SCRIPT MULTILINGUE -->
-<script>
-...
-</script>
-
-<!-- SCRIPT TOKEN + VOTE -->
-<script>
-...
-</script>
+<script src="../script.js"></script>
 </body>
 </html>
 
