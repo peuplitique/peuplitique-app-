@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Application</title>
+    <title>Peuplitique – Plateforme citoyenne</title>
 
     <style>
         body {
@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -36,6 +35,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            display: block;
         }
 
         .menu-haut a.actif {
@@ -57,9 +57,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -75,32 +72,53 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        @media (max-width: 600px) {
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
-   <a href="limites-structurelles.html">Limites structurelles</a> 
+    <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Plateforme citoyenne souveraine
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,31 +127,19 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
-<footer class="menu-bas">
-    <a href="organisation-economique.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    <a href="vote-token.html">Vote Token</a>
-    <a href="plateforme.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
+<div class="content">
 
-<!-- CONTENU -->
-
+    <!-- FR -->
     <div class="lang-block" id="fr">
 
-        <h2 data-i18n="platform_title_1">1. Une plateforme citoyenne souveraine</h2>
-        <p data-i18n="platform_p1">
-            Peuplitique offre un espace indépendant où le peuple reprend la maîtrise de l’information, de l’analyse et de la décision.
-        </p>
+        <h2>1. Une plateforme citoyenne souveraine</h2>
+        <p>Peuplitique offre un espace indépendant où le peuple reprend la maîtrise de l’information, de l’analyse et de la décision.</p>
 
-        <h2 data-i18n="platform_title_2">2. Les espaces de la plateforme</h2>
-        <p data-i18n="platform_p2">
-            La plateforme est organisée en espaces nationaux, internationaux, économiques, sociaux, culturels et énergétiques.
-        </p>
+        <h2>2. Les espaces de la plateforme</h2>
+        <p>La plateforme est organisée en espaces nationaux, internationaux, économiques, sociaux, culturels et énergétiques.</p>
 
-        <h2 data-i18n="platform_title_3">3. L’arbre du nouvel écosystème</h2>
-        <pre data-i18n="platform_schema">
+        <h2>3. L’arbre du nouvel écosystème</h2>
+<pre>
 (NOUVEL ÉCOSYSTÈME CITOYEN)
 │
 ├── Analyse collective
@@ -145,31 +151,99 @@
 │
 └── Vote via tokens
     └── Culture, forums & IA citoyenne
-        </pre>
+</pre>
 
-        <h2 data-i18n="platform_title_4">4. Objectif : souveraineté citoyenne</h2>
-        <p data-i18n="platform_p4">
-            La plateforme redonne au peuple la capacité de comprendre, décider et agir ensemble.
-        </p>
+        <h2>4. Objectif : souveraineté citoyenne</h2>
+        <p>La plateforme redonne au peuple la capacité de comprendre, décider et agir ensemble.</p>
+
+    </div>
+
+    <!-- EN -->
+    <div class="lang-block" id="en" style="display:none;">
+
+        <h2>1. A sovereign citizen platform</h2>
+        <p>Peuplitique provides an independent space where people regain control over information, analysis and decision‑making.</p>
+
+        <h2>2. Platform spaces</h2>
+        <p>The platform is organised into national, international, economic, social, cultural and energy spaces.</p>
+
+        <h2>3. The tree of the new ecosystem</h2>
+<pre>
+(NEW CITIZEN ECOSYSTEM)
+│
+├── Collective analysis
+├── Shared governance
+├── Integrated economy
+│
+├── Innovation & energy
+├── Compared scenarios
+│
+└── Token‑based voting
+    └── Culture, forums & citizen AI
+</pre>
+
+        <h2>4. Objective: citizen sovereignty</h2>
+        <p>The platform gives people the ability to understand, decide and act together.</p>
+
+    </div>
+
+    <!-- ES -->
+    <div class="lang-block" id="es" style="display:none;">
+
+        <h2>1. Una plataforma ciudadana soberana</h2>
+        <p>Peuplitique ofrece un espacio independiente donde el pueblo recupera el control de la información, el análisis y la decisión.</p>
+
+        <h2>2. Los espacios de la plataforma</h2>
+        <p>La plataforma está organizada en espacios nacionales, internacionales, económicos, sociales, culturales y energéticos.</p>
+
+        <h2>3. El árbol del nuevo ecosistema</h2>
+<pre>
+(NUEVO ECOSISTEMA CIUDADANO)
+│
+├── Análisis colectivo
+├── Gobernanza compartida
+├── Economía integrada
+│
+├── Innovación y energía
+├── Escenarios comparados
+│
+└── Voto mediante tokens
+    └── Cultura, foros e IA ciudadana
+</pre>
+
+        <h2>4. Objetivo: soberanía ciudadana</h2>
+        <p>La plataforma devuelve al pueblo la capacidad de comprender, decidir y actuar juntos.</p>
 
     </div>
 
 </div>
 
-<!-- MENU BAS -->
 <footer class="menu-bas">
-    <a href="organisation-economique-appli.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale-appli.html">Organisation politique territoriale</a>
-    <a href="limites-structurelles-appli.html">Limites structurelles</a>
-    <a href="desequilibre-structurel-appli.html">Déséquilibres structurels</a>
-    <a href="protocole-appli.html">Protocole</a>
-    <a href="glossaire-appli.html">Glossaire</a>
-    <a href="vote-token-appli.html">Vote Token</a>
-    <a href="plateforme-vote-appli.html">Plateforme de vote</a>
-    <a href="contact-appli.html">Contact</a>
+    <a href="organisation-economique.html">Organisation économique</a>
+    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
+    <a href="limites-structurelles.html">Limites structurelles</a>
+    <a href="desequilibre-structurel.html">Déséquilibres structurels</a>
+    <a href="protocole.html">Protocole</a>
+    <a href="glossaire.html">Glossaire</a>
+    <a href="vote-token.html">Vote Token</a>
+    <a href="plateforme.html" class="actif">Plateforme</a>
+    <a href="contact.html">Contact</a>
 </footer>
 
-<script src="../script.js"></script>
+<footer>
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+<script>
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
+    });
+});
+</script>
 
 </body>
 </html>
