@@ -123,73 +123,71 @@
 
     <!-- FR -->
     <div class="lang-block" id="fr">
-        <h1 data-i18n="vote_token_header">Token de Vote</h1>
-        <p data-i18n="vote_token_subtitle">Générez votre identifiant anonyme pour voter.</p>
+     <h2>Token de Vote</h2>
+    <p>Générez votre identifiant anonyme pour voter.</p>
 
-        <h2 data-i18n="generate_token">Générer un token</h2>
-        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">Générer un token</button>
-        <p id="token-display" class="token-display"></p>
+    <h3>Générer un token</h3>
+    <button onclick="generer()" class="btn-generer">Générer un token</button>
+    <p id="token-display" class="token-display"></p>
 
-        <h2 data-i18n="vote_section">Voter</h2>
-        <form id="vote-form">
-            <label for="choix" data-i18n="choose_option">Choisissez une option :</label>
-            <select id="choix" required>
-                <option value="" disabled selected data-i18n="select_option">Sélectionner…</option>
-                <option value="oui" data-i18n="yes">Oui</option>
-                <option value="non" data-i18n="no">Non</option>
-                <option value="abstention" data-i18n="abstain">Abstention</option>
-            </select>
-            <button type="submit" class="btn-voter" data-i18n="vote_button">Envoyer le vote</button>
-        </form>
-        <p id="vote-result" class="vote-result"></p>
-    </div>
+    <h3>Voter</h3>
+    <form id="vote-form">
+        <label for="choix">Choisissez une option :</label>
+        <select id="choix" required>
+            <option value="" disabled selected>Sélectionner…</option>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+            <option value="abstention">Abstention</option>
+        </select>
+        <button type="submit" class="btn-voter">Envoyer le vote</button>
+    </form>
 
-    <!-- EN -->
+    <p id="vote-result" class="vote-result"></p>
+</div>  
     <div class="lang-block" id="en" style="display:none;">
-        <h1 data-i18n="vote_token_header">Voting Token</h1>
-        <p data-i18n="vote_token_subtitle">Generate your anonymous identifier to vote.</p>
+    <h2>Voting Token</h2>
+    <p>Generate your anonymous identifier to vote.</p>
 
-        <h2 data-i18n="generate_token">Generate a token</h2>
-        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">Generate token</button>
-        <p id="token-display" class="token-display"></p>
+    <h3>Generate a token</h3>
+    <button onclick="generer()" class="btn-generer">Generate token</button>
+    <p id="token-display" class="token-display"></p>
 
-        <h2 data-i18n="vote_section">Vote</h2>
-        <form id="vote-form">
-            <label for="choix" data-i18n="choose_option">Choose an option:</label>
-            <select id="choix" required>
-                <option value="" disabled selected data-i18n="select_option">Select…</option>
-                <option value="oui" data-i18n="yes">Yes</option>
-                <option value="non" data-i18n="no">No</option>
-                <option value="abstention" data-i18n="abstain">Abstain</option>
-            </select>
-            <button type="submit" class="btn-voter" data-i18n="vote_button">Submit vote</button>
-        </form>
-        <p id="vote-result" class="vote-result"></p>
-    </div>
+    <h3>Vote</h3>
+    <form id="vote-form">
+        <label for="choix">Choose an option:</label>
+        <select id="choix" required>
+            <option value="" disabled selected>Select…</option>
+            <option value="oui">Yes</option>
+            <option value="non">No</option>
+            <option value="abstention">Abstain</option>
+        </select>
+        <button type="submit" class="btn-voter">Submit vote</button>
+    </form>
 
-    <!-- ES -->
-    <div class="lang-block" id="es" style="display:none;">
-        <h1 data-i18n="vote_token_header">Token de Voto</h1>
-        <p data-i18n="vote_token_subtitle">Genera tu identificador anónimo para votar.</p>
+    <p id="vote-result" class="vote-result"></p>
+</div>
+<div class="lang-block" id="es" style="display:none;">
+    <h2>Token de Voto</h2>
+    <p>Genera tu identificador anónimo para votar.</p>
 
-        <h2 data-i18n="generate_token">Generar un token</h2>
-        <button onclick="generer()" class="btn-generer" data-i18n="generate_button">Generar token</button>
-        <p id="token-display" class="token-display"></p>
+    <h3>Generar un token</h3>
+    <button onclick="generer()" class="btn-generer">Generar token</button>
+    <p id="token-display" class="token-display"></p>
 
-        <h2 data-i18n="vote_section">Votar</h2>
-        <form id="vote-form">
-            <label for="choix" data-i18n="choose_option">Elige una opción:</label>
-            <select id="choix" required>
-                <option value="" disabled selected data-i18n="select_option">Seleccionar…</option>
-                <option value="oui" data-i18n="yes">Sí</option>
-                <option value="non" data-i18n="no">No</option>
-                <option value="abstention" data-i18n="abstain">Abstención</option>
-            </select>
-            <button type="submit" class="btn-voter" data-i18n="vote_button">Enviar voto</button>
-        </form>
-        <p id="vote-result" class="vote-result"></p>
-    </div>
+    <h3>Votar</h3>
+    <form id="vote-form">
+        <label for="choix">Elige una opción:</label>
+        <select id="choix" required>
+            <option value="" disabled selected>Seleccionar…</option>
+            <option value="oui">Sí</option>
+            <option value="non">No</option>
+            <option value="abstention">Abstención</option>
+        </select>
+        <button type="submit" class="btn-voter">Enviar voto</button>
+    </form>
 
+    <p id="vote-result" class="vote-result"></p>
+</div>
 </div> <!-- FIN CONTENT -->
 
 <footer>
