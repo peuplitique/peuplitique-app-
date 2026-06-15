@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peuplitique – Application</title>
 
-    /* Empêche le débordement des menus sur mobile */
-.menu-haut, .menu-bas {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-}
-
-/* Ajuste la taille des liens sur téléphone */
-@media (max-width: 600px) {
-    .menu-haut a, .menu-bas a {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-}
     <style>
         body {
             margin: 0;
@@ -30,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -50,6 +35,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            display: block;
         }
 
         .menu-haut a.actif {
@@ -71,9 +57,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -89,32 +72,55 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 600px) {
+
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
     <a href="index.html" class="actif">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
-    <a href="limites-structurelles.html">Limites structurelles</a> 
+    <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Accueil
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -123,45 +129,92 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
+<div class="content">
+
+    <!-- FR -->
+    <div class="lang-block" id="fr">
+        <h2>Bienvenue sur Peuplitique</h2>
+        <p>Peuplitique est une plateforme citoyenne indépendante dédiée à la participation directe, à l’analyse collective et à la prise de décision commune.</p>
+
+        <h2>Pourquoi Peuplitique ?</h2>
+        <p>Pour redonner la parole au peuple, structurer l’intelligence collective et dépasser les modèles pyramidaux traditionnels.</p>
+
+        <h2>Principes fondamentaux</h2>
+        <ul>
+            <li>Gouvernance partagée</li>
+            <li>Transparence totale</li>
+            <li>Participation citoyenne</li>
+            <li>Décision collective</li>
+        </ul>
+
+        <h2>Commencer</h2>
+        <p>Explorez les sections du menu pour découvrir la gouvernance partagée, l’organisation structurelle et les mécanismes citoyens.</p>
+    </div>
+
+    <!-- EN -->
+    <div class="lang-block" id="en" style="display:none;">
+        <h2>Welcome to Peuplitique</h2>
+        <p>Peuplitique is an independent citizen platform dedicated to direct participation, collective analysis, and shared decision-making.</p>
+
+        <h2>Why Peuplitique?</h2>
+        <p>To give the people a voice, structure collective intelligence, and move beyond traditional hierarchical models.</p>
+
+        <h2>Core Principles</h2>
+        <ul>
+            <li>Shared governance</li>
+            <li>Total transparency</li>
+            <li>Citizen participation</li>
+            <li>Collective decision-making</li>
+        </ul>
+
+        <h2>Get Started</h2>
+        <p>Explore the menu sections to discover shared governance, structural organization, and citizen mechanisms.</p>
+    </div>
+
+    <!-- ES -->
+    <div class="lang-block" id="es" style="display:none;">
+        <h2>Bienvenido a Peuplitique</h2>
+        <p>Peuplitique es una plataforma ciudadana independiente dedicada a la participación directa, el análisis colectivo y la toma de decisiones compartida.</p>
+
+        <h2>¿Por qué Peuplitique?</h2>
+        <p>Para devolver la voz al pueblo, estructurar la inteligencia colectiva y superar los modelos jerárquicos tradicionales.</p>
+
+        <h2>Principios fundamentales</h2>
+        <ul>
+            <li>Gobernanza compartida</li>
+            <li>Transparencia total</li>
+            <li>Participación ciudadana</li>
+            <li>Decisión colectiva</li>
+        </ul>
+
+        <h2>Comenzar</h2>
+        <p>Explore las secciones del menú para descubrir la gobernanza compartida, la organización estructural y los mecanismos ciudadanos.</p>
+    </div>
+
+</div>
+
 <footer class="menu-bas">
     <a href="organisation-economique.html">Organisation économique</a>
     <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-   
     <a href="vote-token.html">Vote Token</a>
     <a href="plateforme.html">Plateforme de vote</a>
     <a href="contact.html">Contact</a>
 </footer>
 
-<!-- CONTENU -->
-
-    <h2>Bienvenue sur Peuplitique</h2>
-    <p>Peuplitique est une plateforme citoyenne indépendante dédiée à la participation directe, à l’analyse collective et à la prise de décision commune.</p>
-
-    <h2>Pourquoi Peuplitique ?</h2>
-    <p>Pour redonner la parole au peuple, structurer l’intelligence collective et dépasser les modèles pyramidaux traditionnels.</p>
-
-    <h2>Principes fondamentaux</h2>
-    <ul>
-        <li>Gouvernance partagée</li>
-        <li>Transparence totale</li>
-        <li>Participation citoyenne</li>
-        <li>Décision collective</li>
-    </ul>
-  
-
-    <h2>Commencer</h2>
-    <p>Explorez les sections du menu pour découvrir la gouvernance partagée, l’organisation structurelle et les mécanismes citoyens.</p>
-</main>
-
 <footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<script src="script-appli.js"></script>
+<script>
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
+    });
+});
+</script>
 
 </body>
 </html>
-
-
-
