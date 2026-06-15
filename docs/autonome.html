@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -57,9 +56,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -80,27 +76,23 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
     <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Autonomie citoyenne
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,52 +101,54 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
-<footer class="menu-bas">
-    <a href="organisation-economique.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    
-    <a href="vote-token.html">Vote Token</a>
-    <a href="plateforme.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
+<div class="content">
 
-<!-- CONTENU -->
-    
-    <h2 data-i18n="autonome_h2">Autonomie citoyenne</h2>
+    <!-- FR -->
+    <div class="lang-block" id="fr">
+        <h2>Autonomie citoyenne</h2>
+        <p>L’autonomie représente la capacité d’un individu ou d’un collectif à agir, décider et organiser
+        son environnement sans dépendance excessive à des structures externes.</p>
 
-    <p data-i18n="autonome_p1">
-        L’autonomie représente la capacité d’un individu ou d’un collectif à agir, décider et organiser
-        son environnement sans dépendance excessive à des structures externes.
-    </p>
+        <p>Dans Peuplitique, l’autonomie est un pilier fondamental : elle permet à chaque citoyen de
+        comprendre, analyser et participer activement à la construction du nouvel écosystème.</p>
+    </div>
 
-    <p data-i18n="autonome_p2">
-        Dans Peuplitique, l’autonomie est un pilier fondamental : elle permet à chaque citoyen de
-        comprendre, analyser et participer activement à la construction du nouvel écosystème.
-    </p>
+    <!-- EN -->
+    <div class="lang-block" id="en" style="display:none;">
+        <h2>Citizen Autonomy</h2>
+        <p>Autonomy represents the ability of an individual or a collective to act, decide, and organize
+        their environment without excessive dependence on external structures.</p>
+
+        <p>In Peuplitique, autonomy is a fundamental pillar: it enables every citizen to understand,
+        analyze, and actively participate in building the new ecosystem.</p>
+    </div>
+
+    <!-- ES -->
+    <div class="lang-block" id="es" style="display:none;">
+        <h2>Autonomía ciudadana</h2>
+        <p>La autonomía representa la capacidad de un individuo o colectivo para actuar, decidir y organizar
+        su entorno sin una dependencia excesiva de estructuras externas.</p>
+
+        <p>En Peuplitique, la autonomía es un pilar fundamental: permite a cada ciudadano comprender,
+        analizar y participar activamente en la construcción del nuevo ecosistema.</p>
+    </div>
+
+</div>
 
 <footer>
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
 <script>
-function showLang(lang) {
-    document.querySelectorAll("[data-lang]").forEach(el => {
-        el.style.display = (el.dataset.lang === lang) ? "block" : "none";
-    });
-}
-
-document.querySelectorAll(".lang-switch button").forEach(btn => {
-    btn.addEventListener("click", () => {
-        showLang(btn.dataset.lang);
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
     });
 });
-
-showLang("fr");
 </script>
-
-<script src="../script-appli.js"></script>
 
 </body>
 </html>
-
