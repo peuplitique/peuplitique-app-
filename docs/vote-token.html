@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Vote Token</title>
+    <title>Peuplitique – Application</title>
 
     <style>
         body {
@@ -16,11 +16,12 @@
         header {
             background-color: #005bbb;
             padding: 15px;
+            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
         }
-
+/* MENUS — anti-débordement */
         .menu-haut,
         .menu-bas {
             background-color: #003f7f;
@@ -56,6 +57,9 @@
             text-align: center;
         }
 
+        .header h1 { margin: 0; }
+        .header p { margin: 5px 0 10px; }
+
         .ligne {
             width: 80px;
             height: 3px;
@@ -71,53 +75,32 @@
             padding: 25px;
             border-radius: 8px;
         }
-
-        @media (max-width: 600px) {
-            .menu-haut,
-            .menu-bas {
-                flex-wrap: wrap;
-                gap: 12px;
-                padding: 15px 10px;
-            }
-
-            .menu-haut a,
-            .menu-bas a {
-                font-size: 14px;
-                padding: 6px 4px;
-            }
-
-            .zone-bleue {
-                font-size: 16px;
-                padding: 15px;
-            }
-
-            .content {
-                margin: 15px;
-                padding: 20px;
-            }
-        }
     </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
+<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html">Accueil</a>
+    <a href="index.html" class="actif">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
     <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
+<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Vote Token
+    Peuplitique — Gouvernance partagée
 </div>
 
+<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -126,6 +109,16 @@
     </div>
 </section>
 
+<!-- MENU BAS -->
+<footer class="menu-bas">
+    <a href="organisation-economique.html">Organisation économique</a>
+    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
+    <a href="vote-token.html">Vote Token</a>
+    <a href="plateforme.html">Plateforme de vote</a>
+    <a href="contact.html">Contact</a>
+</footer>
+
+!-- CONTENU -->
 <div class="content">
 
     <!-- FR -->
@@ -197,24 +190,25 @@
         <p id="vote-result" class="vote-result"></p>
     </div>
 
-</div>
-
-<footer class="menu-bas">
-    <a href="organisation-economique.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    <a href="vote-token.html" class="actif">Vote Token</a>
-    <a href="plateforme.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
+</div> <!-- FIN CONTENT -->
 
 <footer>
-    <p data-i18n="footer">© 2026 Peuplitique – Tous droits réservés</p>
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<script src="../script.js"></script>
+<script>
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-block').forEach(block => {
+            block.style.display = (block.id === lang) ? 'block' : 'none';
+        });
+    });
+});
+</script>
+
 </body>
 </html>
-
 
 
 
