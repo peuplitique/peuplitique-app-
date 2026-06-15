@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Application</title>
+    <title>Peuplitique – Organisation économique</title>
 
     <style>
         body {
@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -36,6 +35,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            display: block;
         }
 
         .menu-haut a.actif {
@@ -57,9 +57,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -75,32 +72,54 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 600px) {
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
     <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Organisation économique structurelle
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,48 +128,24 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
-<footer class="menu-bas">
-    <a href="organisation-economique.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    
-    <a href="vote-token.html">Vote Token</a>
-    <a href="plateforme.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
+<div class="content">
 
-<!-- CONTENU -->
-<!-- FR -->
-<div class="lang-block" id="fr">
+    <!-- FR -->
+    <div class="lang-block" id="fr">
 
 <h1>Organisation économique structurelle</h1>
 
-<h2>Introduction</h2>
-<p>
-L’organisation économique structurelle définit la manière dont les ressources, les flux, les productions et les échanges sont organisés dans un modèle intégré, transparent et démocratique. Elle vise à rendre visibles les circuits économiques, à limiter les concentrations de pouvoir et à aligner les décisions économiques sur l’intérêt général plutôt que sur des intérêts particuliers.
-</p>
-
-<p>
-Dans Peuplitique, l’économie n’est pas un bloc séparé de la gouvernance : elle est imbriquée dans les mécanismes de décision, de contrôle et de participation citoyenne. Chaque flux, chaque budget, chaque allocation de ressource peut être relié à une décision, un mandat, une responsabilité.
-</p>
-
-<h2>1. Les trois piliers économiques</h2>
-
-<p>
-L’économie structurelle de Peuplitique repose sur trois piliers fondamentaux qui fonctionnent comme un cycle continu. Ils ne sont jamais isolés : chaque pilier influence les deux autres, ce qui permet d’éviter les dérives classiques des systèmes économiques centralisés ou opaques.
-</p>
-
-<h3>Production</h3>
+<h2>1. Production</h2>
 <p>
 Création de biens, services, connaissances et infrastructures. Elle est orientée par des besoins collectifs identifiés, des mandats transparents et des objectifs mesurables. La production n’est pas guidée par la spéculation mais par l’utilité réelle et la cohérence avec les ressources disponibles.
 </p>
 
-<h3>Distribution</h3>
+<h2>2. Distribution</h2>
 <p>
 Circulation des ressources matérielles, financières et informationnelles. Elle repose sur des règles explicites, traçables et accessibles à tous. La distribution vise à garantir l’équité, à éviter les monopoles et à assurer que les ressources atteignent les secteurs où elles sont réellement nécessaires.
 </p>
 
-<h3>Régulation</h3>
+<h2>3. Régulation</h2>
 <p>
 Mécanismes d’équilibre, de transparence et de correction. La régulation n’est pas punitive : elle est préventive. Elle détecte les déséquilibres, les abus, les concentrations de pouvoir et les inefficacités. Elle permet d’ajuster les flux, de corriger les erreurs et de maintenir un fonctionnement stable dans le temps.
 </p>
@@ -276,18 +271,26 @@ L’organisation économique structurelle de Peuplitique propose un modèle où 
 <p>
 En articulant production, distribution, régulation et révision continue, le modèle permet d’anticiper les dérives, de corriger les déséquilibres et d’optimiser l’usage des ressources. L’économie n’est plus un domaine réservé à quelques experts : elle devient un espace collectif, démocratique et évolutif.
 </p>
-</div> <!-- fin du content -->
 
-<!-- FOOTER -->
-<footer class="footer">
+    </div>
+</div>
+
+<footer class="menu-bas">
+    <a href="organisation-economique.html" class="actif">Organisation économique</a>
+    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
+    <a href="vote-token.html">Vote Token</a>
+    <a href="plateforme.html">Plateforme de vote</a>
+    <a href="contact.html">Contact</a>
+</footer>
+
+<footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT SWITCH LANG -->
 <script>
 document.querySelectorAll('.lang-switch button').forEach(btn => {
     btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
+        const lang = btn.dataset.lang;
         document.querySelectorAll('.lang-block').forEach(block => {
             block.style.display = (block.id === lang) ? 'block' : 'none';
         });
