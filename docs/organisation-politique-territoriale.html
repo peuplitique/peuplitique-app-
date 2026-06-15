@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Application</title>
+    <title>Peuplitique – Organisation politique territoriale</title>
 
     <style>
         body {
@@ -16,7 +16,6 @@
         header {
             background-color: #005bbb;
             padding: 15px;
-            color: white;
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -36,6 +35,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            display: block;
         }
 
         .menu-haut a.actif {
@@ -57,9 +57,6 @@
             text-align: center;
         }
 
-        .header h1 { margin: 0; }
-        .header p { margin: 5px 0 10px; }
-
         .ligne {
             width: 80px;
             height: 3px;
@@ -75,32 +72,54 @@
             padding: 25px;
             border-radius: 8px;
         }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 600px) {
+            .menu-haut,
+            .menu-bas {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 15px 10px;
+            }
+
+            .menu-haut a,
+            .menu-bas a {
+                font-size: 14px;
+                padding: 6px 4px;
+            }
+
+            .zone-bleue {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .content {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <h1>Peuplitique</h1>
     <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
     <div class="ligne"></div>
 </header>
 
-<!-- MENU HAUT -->
 <nav class="menu-haut">
-    <a href="index.html" class="actif">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="gouvernance-partagee.html">Gouvernance partagée</a>
     <a href="limites-structurelles.html">Limites structurelles</a>
     <a href="organisation-structurelle.html">Organisation structurelle</a>
 </nav>
 
-<!-- ZONE BLEUE -->
 <div class="zone-bleue">
-    Peuplitique — Gouvernance partagée
+    Peuplitique — Organisation politique territoriale et communautaire
 </div>
 
-<!-- BANDE BLANCHE -->
 <section class="bande-blanche">
     <div class="lang-switch">
         <button data-lang="fr">FR</button>
@@ -109,21 +128,11 @@
     </div>
 </section>
 
-<!-- MENU BAS -->
-<footer class="menu-bas">
-    <a href="organisation-economique.html">Organisation économique</a>
-    <a href="organisation-politique-territoriale.html">Organisation politique territoriale</a>
-    
-    <a href="vote-token.html">Vote Token</a>
-    <a href="plateforme.html">Plateforme de vote</a>
-    <a href="contact.html">Contact</a>
-</footer>
-
-<!-- CONTENU -->
 <div class="content">
 
-    <!-- FR -->   
+    <!-- FR -->
     <div class="lang-block" id="fr">
+
         <h1>Organisation politique territoriale et communautaire</h1>
 
         <p>L’organisation politique territoriale définit la manière dont les citoyens structurent leur gouvernance locale, territoriale et nationale.</p>
@@ -161,10 +170,12 @@
             <li>Garantir la cohérence entre besoins locaux et stratégie nationale.</li>
             <li>Prévenir les déséquilibres structurels.</li>
         </ul>
+
     </div>
 
     <!-- EN -->
     <div class="lang-block" id="en" style="display:none;">
+
         <h1>Territorial and Community Political Organisation</h1>
 
         <p>This structure defines how citizens organise governance at local, territorial and national levels.</p>
@@ -172,7 +183,7 @@
         <h2>1. Governance levels</h2>
         <ul>
             <li><strong>Community level</strong> — local decisions, immediate needs.</li>
-            <li><strong>Territorial level</strong> — inter community coordination, infrastructures.</li>
+            <li><strong>Territorial level</strong> — inter‑community coordination, infrastructures.</li>
             <li><strong>National level</strong> — structural coherence, major arbitration.</li>
         </ul>
 
@@ -202,10 +213,12 @@
             <li>Align local needs with national strategy.</li>
             <li>Prevent structural imbalances.</li>
         </ul>
+
     </div>
 
     <!-- ES -->
     <div class="lang-block" id="es" style="display:none;">
+
         <h1>Organización política territorial y comunitaria</h1>
 
         <p>Define cómo los ciudadanos estructuran la gobernanza local, territorial y nacional.</p>
@@ -243,19 +256,27 @@
             <li>Garantizar coherencia entre necesidades locales y estrategia nacional.</li>
             <li>Prevenir desequilibrios estructurales.</li>
         </ul>
-    </div>
-</div> <!-- fin content -->
 
-<!-- FOOTER -->
-<footer class="footer">
+    </div>
+
+</div>
+
+<footer class="menu-bas">
+    <a href="organisation-economique.html">Organisation économique</a>
+    <a href="organisation-politique-territoriale.html" class="actif">Organisation politique territoriale</a>
+    <a href="vote-token.html">Vote Token</a>
+    <a href="plateforme.html">Plateforme de vote</a>
+    <a href="contact.html">Contact</a>
+</footer>
+
+<footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
 
-<!-- SCRIPT SWITCH LANG -->
 <script>
 document.querySelectorAll('.lang-switch button').forEach(btn => {
     btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
+        const lang = btn.dataset.lang;
         document.querySelectorAll('.lang-block').forEach(block => {
             block.style.display = (block.id === lang) ? 'block' : 'none';
         });
@@ -263,10 +284,9 @@ document.querySelectorAll('.lang-switch button').forEach(btn => {
 });
 </script>
 
-<script src="script-appli.js"></script>
-
 </body>
 </html>
+    
 
 
 
