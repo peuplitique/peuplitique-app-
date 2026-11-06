@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peuplitique – Application</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Peuplitique</h1>
+    <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
+    <div class="ligne"></div>
+</header>
+
+<nav class="menu-haut">
+    <a href="index.html">Accueil</a>
+    <a href="gouvernance-partagee.html">Gouvernance</a>
+    <a href="identite-numerique.html">Citoyenneté numérique</a>
+    <a href="debats.html">Participation</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="zone-bleue">
+    Peuplitique – Application Citoyenne
+</div>
+
+<section class="bande-blanche">
+
+<div class="lang-switch">
+    <button data-lang="fr">FR</button>
+    <button data-lang="en">EN</button>
+</div>
+
+</section>
+
+<nav class="menu-bas">
+
+<a href="glossaire.html">Glossaire</a>
+
+<a href="constitution.html">Constitution</a>
+
+<a href="vote-numerique.html">Vote numérique</a>
+
+<a href="vote-token.html">Token citoyen</a>
+
+<a href="referendums.html">Référendums</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="content">
+
+<div class="lang-block" id="fr">
+<h2>Commissions Citoyennes</h2>
+<p>
+Les commissions citoyennes regroupent
+des citoyens volontaires et des compétences
+dans un domaine spécifique.
+</p>
+
+<ul>
+<li>Santé</li>
+<li>Éducation</li>
+<li>Énergie</li>
+<li>Eau</li>
+<li>Agriculture</li>
+<li>Économie</li>
+</ul>
+
+<p>
+Leur mission est d'analyser,
+formuler des recommandations
+et contribuer aux décisions collectives.
+</p>
+</div>
+
+<div class="lang-block" id="en" style="display:none;">
+
+<!-- VERSION ANGLAISE -->
+<h2>Citizen Commissions</h2>
+
+<p>
+Commissions bring together citizens
+and expertise around a specific topic.
+</p>
+</div>
+<!-- FIN CONTENT -->
+<footer>
+    <p>© 2026 Peuplitique – Tous droits réservés</p>
+</footer>
+
+<script>
+
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        const lang = btn.dataset.lang;
+
+        document.querySelectorAll('.lang-block').forEach(block => {
+
+            block.style.display =
+            block.id === lang ? 'block' : 'none';
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
+
+
