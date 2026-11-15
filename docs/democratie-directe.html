@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeuplitiK</title>
+    <title>PeuplitiK | Démocratie directe</title>
 
     <link rel="stylesheet" href="style.css?v=9999">
 
@@ -759,38 +759,21 @@ Ciudadanos, expertos e instituciones participan conjuntamente en la elaboración
     <p>© 2026 Peuplitique - Tous droits réservés</p>
 </footer>
 
-<script>
+    <script>
+        function showLang(lang) {
 
-function showLang(lang){
+            document.querySelectorAll('.lang-block').forEach(block => {
+                block.style.display = 'none';
+            });
 
-    document.querySelectorAll('.lang-block')
-    .forEach(block => {
-        block.style.display = 'none';
-    });
+            document.getElementById(lang).style.display = 'block';
+        }
 
-    document.getElementById(lang)
-    .style.display = 'block';
-}
-
-showLang('fr');
-
-function toggleMenu(){
-
-    var menu =
-    document.getElementById("mobileDropdown");
-
-    if(menu.style.display === "block"){
-
-        menu.style.display = "none";
-
-    } else {
-
-        menu.style.display = "block";
-    }
-
-}
-
-</script>
+        showLang('fr');
+    </script>
 
 </body>
+
 </html>
+
+
