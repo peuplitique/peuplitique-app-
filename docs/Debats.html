@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peuplitik – Application</title>
+<title>Peuplitik - Débats Citoyens</title>
    
     <link rel="stylesheet" href="style.css?v=9999">
 
@@ -441,32 +441,25 @@ o enriquecer una iniciativa colectiva.
 <footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
-
 <script>
+function showLang(lang) {
 
-document.querySelectorAll('.lang-switch button').forEach(btn => {
-
-    btn.addEventListener('click', () => {
-
-        const lang = btn.dataset.lang;
-
-        document.querySelectorAll('.lang-block').forEach(block => {
-
-            block.style.display =
-            block.id === lang ? 'block' : 'none';
-
-        });
-
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = 'none';
     });
 
-});
+    document.getElementById(lang).style.display = 'block';
+}
 
+showLang('fr');
 </script>
 
 </body>
-
 </html>
 
+
+
+  
 
 
 
