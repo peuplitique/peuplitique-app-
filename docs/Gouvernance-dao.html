@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeuplitiK – Gouvernance & DAO</title>
+    <title>PeuplitiK – Gouvernance-DAO</title>
     
        <link rel="stylesheet" href="style.css?v=9999">
 
@@ -295,10 +295,6 @@
 
 </main>
 
-<footer>
-    <p>© 2026 Peuplitique – All rights reserved</p>
-</footer>
-
 </div>
 <!-- FIN EN -->
 
@@ -399,31 +395,34 @@
         <li>adaptación a las realidades locales;</li>
         <li>integración de nuevas herramientas de participación.</li>
     </ul>
+
 </section>
-
 </main>
+
 </div>
-<!-- FIN ES -->
-<footer>
-    <p>© 2026 Peuplitique – Todos los derechos reservados</p>
+<!-- FIN ES -->  
+   </section> 
+  <footer>
+    <p>© 2026 Peuplitique - Tous droits réservés</p>
 </footer>
+<script>
+function showLang(lang) {
 
-    <script>
-        function showLang(lang) {
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = 'none';
+    });
 
-            document.querySelectorAll('.lang-block').forEach(block => {
-                block.style.display = 'none';
-            });
+    document.getElementById(lang).style.display = 'block';
+}
 
-            document.getElementById(lang).style.display = 'block';
-        }
-
-        showLang('fr');
-    </script>
+showLang('fr');
+</script>
 
 </body>
-
 </html>
+
+
+
 
 
 
