@@ -559,30 +559,20 @@ El objetivo es garantizar simultáneamente la seguridad, la igualdad, la transpa
   <footer>
     <p>© 2026 Peuplitique – Tous droits réservés</p>
 </footer>
+ <script>
+        function showLang(lang) {
 
-<script>
+            document.querySelectorAll('.lang-block').forEach(block => {
+                block.style.display = 'none';
+            });
 
-document.querySelectorAll('.lang-switch button').forEach(btn => {
+            document.getElementById(lang).style.display = 'block';
+        }
 
-    btn.addEventListener('click', () => {
-
-        const lang = btn.dataset.lang;
-
-        document.querySelectorAll('.lang-block').forEach(block => {
-
-            block.style.display =
-            block.id === lang ? 'block' : 'none';
-
-        });
-
-    });
-
-});
-
-</script>
+        showLang('fr');
+    </script>
 
 </body>
 
 </html>
-
 
