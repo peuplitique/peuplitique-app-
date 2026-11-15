@@ -5,11 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peuplitique – Constitution</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    .mobile-menu{
+        display:none;
+    }
+
+    .menu-btn{
+        width:100%;
+        padding:15px;
+        background:#003f7f;
+        color:white;
+        border:none;
+        font-size:18px;
+        cursor:pointer;
+    }
+
+    .mobile-dropdown{
+        display:none;
+        background:#002f5f;
+    }
+
+    .mobile-dropdown a{
+        display:block;
+        color:white;
+        padding:12px;
+        text-decoration:none;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-dropdown a:hover{
+        background:#3FD1C2;
+        color:#003f7f;
+    }
+
+    @media (max-width:768px){
+
+        .mobile-menu{
+            display:block;
+        }
+
+        .menu,
+        .sommaire-horizontal{
+            display:none;
+        }
+
+    }
+
+</style>
+
 </head>
 
 <body>
 
-<!-- LANG SWITCH -->
+<!-- LANGUES -->
+
 <div class="lang-switch">
     <button onclick="showLang('fr')">FR</button>
     <button onclick="showLang('en')">EN</button>
