@@ -3,18 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peuplitique – Glossaire</title>
+    <title>PeuplitiK – Glossaire</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css?v=9999">
+
+    <style>
+
+    .mobile-menu{
+        display:none;
+    }
+
+    .menu-btn{
+        width:100%;
+        padding:15px;
+        background:#003f7f;
+        color:white;
+        border:none;
+        font-size:18px;
+        cursor:pointer;
+    }
+
+    .mobile-dropdown{
+        display:none;
+        background:#002f5f;
+    }
+
+    .mobile-dropdown a{
+        display:block;
+        color:white;
+        padding:12px;
+        text-decoration:none;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-dropdown a:hover{
+        background:#3FD1C2;
+        color:#003f7f;
+    }
+
+    @media (max-width:768px){
+
+        .mobile-menu{
+            display:block;
+        }
+
+        .menu,
+        .sommaire-horizontal{
+            display:none;
+        }
+
+    }
+
+</style>
+
 </head>
 
 <body>
 
-<!-- LANG SWITCH -->
+<!-- LANGUES -->
+
 <div class="lang-switch">
     <button onclick="showLang('fr')">FR</button>
     <button onclick="showLang('en')">EN</button>
     <button onclick="showLang('es')">ES</button>
 </div>
+
 
 <!-- ===================================================== -->
 <!-- ======================  FR  ========================== -->
@@ -22,34 +76,84 @@
 <div id="fr" class="lang-block">
 
 <header class="header">
-    <h1>Peuplitique</h1>
+    <h1>Peuplitik</h1>
     <h3 class="sous-titre">Première plateforme citoyenne indépendante – Gouvernance partagée – Décision commune</h3>
     <div class="ligne"></div>
 </header>
 
+            <div class="ligne"></div>
+        </header>
 <nav class="menu">
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-        <li><a href="organisation-politique-territoriale.html">Organisation politique territoriale</a></li>
-        <li><a href="economie-integree.html">Économie intégrée</a></li>
-        <li><a href="protocole.html">Protocole</a></li>
-        <li><a href="glossaire.html" class="active">Glossaire</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="constitution.html">Constitution</a></li>
+    <li><a href="gouvernance-partagee.html">Gouvernance</a></li>
+    <li><a href="vote-numerique.html">Vote numérique</a></li>
+    <li><a href="vote-token.html">Vote & Token</a></li>
+    <li><a href="debats.html">Débats</a></li>
+    <li><a href="referendums.html">Référendums</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
-    
 
 <nav class="sommaire-horizontal">
-    
-    <ul>
-        <li><a href="constitution.html">Constitution</a></li>
-        <li><a href="limites-structurelles.html">Limites structurelles</a></li>
-        <li><a href="desequilibres-structurels.html">Déséquilibres structurels</a></li>
-        <li><a href="organisation-economique.html">Organisation économique</a></li>
-        <li><a href="organisation-politique-territoriale.html">Organisation politique territoriale</a></li>
-        <li><a href="gouvernance-dao.html">Gouvernance DAO</a></li>
-    </ul>
+<ul>
+
+<li><a href="index.html">Accueil</a></li>
+
+<li><a href="glossaire.html">Glossaire</a></li>
+
+<li><a href="protocole.html">Protocole</a></li>
+
+<li><a href="desequilibres-structurels.html">Déséquilibres structurels</a></li>
+
+<li><a href="limites-structurelles.html">Limites structurelles</a></li>
+
+<li><a href="democratie-directe.html">Démocratie directe</a></li>
+
+<li><a href="constitution.html">Constitution</a></li>
+
+<li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
+
+<li><a href="gouvernance-dao.html">Gouvernance DAO</a></li>
+
+<li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+
+<li><a href="organisation-politique-territoriale.html">Organisation territoriale</a></li>
+
+<li><a href="organisation-economique.html">Organisation économique</a></li>
+
+<li><a href="economie-integree.html">Économie intégrée</a></li>
+
+<li><a href="autonome.html">Autonomie alimentaire</a></li>
+
+<li><a href="systeme-hydrique.html">Système hydrique</a></li>
+
+<li><a href="identite-numerique.html">Identité numérique</a></li>
+
+<li><a href="vote-numerique.html">Vote numérique</a></li>
+
+<li><a href="anonymat-du-vote.html">Anonymat du vote</a></li>
+
+<li><a href="vote-token.html">Infrastructure Token</a></li>
+
+<li><a href="debats.html">Débats citoyens</a></li>
+
+<li><a href="commissions.html">Commissions citoyennes</a></li>
+
+<li><a href="initiatives.html">Initiatives citoyennes</a></li>
+
+<li><a href="referendums.html">Référendums</a></li>
+
+<li><a href="resultats.html">Résultats publics</a></li>
+
+<li><a href="simulateur.html">Simulateur de décision</a></li>
+
+<li><a href="plateforme.html">Plateforme</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
 </nav>
 
 <section class="zone-bleue">
@@ -84,40 +188,89 @@
 <!-- FIN FR -->
 
 
-
 <!-- ===================================================== -->
 <!-- ======================  EN  ========================== -->
 <!-- ===================================================== -->
 <div id="en" class="lang-block" style="display:none;">
 
 <header class="header">
-    <h1>Peuplitique</h1>
+    <h1>Peuplitik</h1>
     <h3 class="sous-titre">First independent citizen platform – Shared governance – Common decision</h3>
     <div class="ligne"></div>
 </header>
-
 <nav class="menu">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gouvernance-partagee.html">Shared Governance</a></li>
-        <li><a href="gouvernance-dao.html">Governance & DAO</a></li>
-        <li><a href="organisation-politique-territoriale.html">Territorial Political Organization</a></li>
-        <li><a href="economie-integree.html">Integrated Economy</a></li>
-        <li><a href="protocole.html">Protocol</a></li>
-        <li><a href="glossaire.html" class="active">Glossary</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="constitution.html">Constitution</a></li>
+    <li><a href="gouvernance-partagee.html">Governance</a></li>
+    <li><a href="vote-numerique.html">Digital Voting</a></li>
+    <li><a href="vote-token.html">Voting & Token</a></li>
+    <li><a href="debats.html">Debates</a></li>
+    <li><a href="referendums.html">Referendums</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
 
 <nav class="sommaire-horizontal">
-    <ul>
-        <li><a href="constitution.html">Constitution</a></li>
-        <li><a href="limites-structurelles.html">Structural Limits</a></li>
-        <li><a href="desequilibres-structurels.html">Structural Imbalances</a></li>
-        <li><a href="organisation-politique-territoriale.html">Territorial Political Organization</a></li>
-        <li><a href="gouvernance-dao.html">DAO Governance</a></li>
-    </ul>
-</nav>
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="glossaire.html">Glossary</a></li>
+
+<li><a href="protocole.html">Protocol</a></li>
+
+<li><a href="desequilibres-structurels.html">Structural Imbalances</a></li>
+
+<li><a href="limites-structurelles.html">Structural Limits</a></li>
+
+<li><a href="democratie-directe.html">Direct Democracy</a></li>
+
+<li><a href="constitution.html">Constitution</a></li>
+
+<li><a href="gouvernance-partagee.html">Shared Governance</a></li>
+
+<li><a href="gouvernance-dao.html">DAO Governance</a></li>
+
+<li><a href="organisation-structurelle.html">Structural Organization</a></li>
+
+<li><a href="organisation-politique-territoriale.html">Territorial Organization</a></li>
+
+<li><a href="organisation-economique.html">Economic Organization</a></li>
+
+<li><a href="economie-integree.html">Integrated Economy</a></li>
+
+<li><a href="autonome.html">Food Autonomy</a></li>
+
+<li><a href="systeme-hydrique.html">Water System</a></li>
+
+<li><a href="identite-numerique.html">Digital Identity</a></li>
+
+<li><a href="vote-numerique.html">Digital Voting</a></li>
+
+<li><a href="anonymat-du-vote.html">Voting Anonymity</a></li>
+
+<li><a href="vote-token.html">Token Infrastructure</a></li>
+
+<li><a href="debats.html">Citizen Debates</a></li>
+
+<li><a href="commissions.html">Citizen Commissions</a></li>
+
+<li><a href="initiatives.html">Citizen Initiatives</a></li>
+
+<li><a href="referendums.html">Referendums</a></li>
+
+<li><a href="resultats.html">Public Results</a></li>
+
+<li><a href="simulateur.html">Decision Simulator</a></li>
+
+<li><a href="plateforme.html">Platform</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+</nav>    
+    
 
 <section class="zone-bleue">
     <h1>Glossary</h1>
@@ -164,28 +317,77 @@
 </header>
 
 <nav class="menu">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="gouvernance-partagee.html">Gobernanza compartida</a></li>
-        <li><a href="gouvernance-dao.html">Gobernanza & DAO</a></li>
-        <li><a href="organisation-politique-territorialiale.html">Organización política territorial</a></li>
-        <li><a href="economie-integree.html">Economía integrada</a></li>
-        <li><a href="protocole.html">Protocolo</a></li>
-        <li><a href="glossaire.html" class="active">Glosario</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-    </ul>
+<ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="constitution.html">Constitución</a></li>
+    <li><a href="gouvernance-partagee.html">Gobernanza</a></li>
+    <li><a href="vote-numerique.html">Voto Digital</a></li>
+    <li><a href="vote-token.html">Voto y Token</a></li>
+    <li><a href="debats.html">Debates</a></li>
+    <li><a href="referendums.html">Referéndums</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+</ul>
 </nav>
-
 <nav class="sommaire-horizontal">
-    <ul>
-        <li><a href="constitution.html">Constitución</a></li>
-        <li><a href="limites-structurelles.html">Límites estructurales</a></li>
-        <li><a href="desequilibres-structurels.html">Desequilibrios estructurales</a></li>
-        <li><a href="organisation-politique-territorialiale.html">Organización política territorial</a></li>
-        <li><a href="gouvernance-dao.html">Gobernanza DAO</a></li>
-    </ul>
-</nav>
+<ul>
 
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="glossaire.html">Glosario</a></li>
+
+<li><a href="protocole.html">Protocolo</a></li>
+
+<li><a href="desequilibres-structurels.html">Desequilibrios Estructurales</a></li>
+
+<li><a href="limites-structurelles.html">Límites Estructurales</a></li>
+
+<li><a href="democratie-directe.html">Democracia Directa</a></li>
+
+<li><a href="constitution.html">Constitución</a></li>
+
+<li><a href="gouvernance-partagee.html">Gobernanza Compartida</a></li>
+
+<li><a href="gouvernance-dao.html">Gobernanza DAO</a></li>
+
+<li><a href="organisation-structurelle.html">Organización Estructural</a></li>
+
+<li><a href="organisation-politique-territoriale.html">Organización Territorial</a></li>
+
+<li><a href="organisation-economique.html">Organización Económica</a></li>
+
+<li><a href="economie-integree.html">Economía Integrada</a></li>
+
+<li><a href="autonome.html">Autonomía Alimentaria</a></li>
+
+<li><a href="systeme-hydrique.html">Sistema Hídrico</a></li>
+
+<li><a href="identite-numerique.html">Identidad Digital</a></li>
+
+<li><a href="vote-numerique.html">Voto Digital</a></li>
+
+<li><a href="anonymat-du-vote.html">Anonimato del Voto</a></li>
+
+<li><a href="vote-token.html">Infraestructura Token</a></li>
+
+<li><a href="debats.html">Debates Ciudadanos</a></li>
+
+<li><a href="commissions.html">Comisiones Ciudadanas</a></li>
+
+<li><a href="initiatives.html">Iniciativas Ciudadanas</a></li>
+
+<li><a href="referendums.html">Referéndums</a></li>
+
+<li><a href="resultats.html">Resultados Públicos</a></li>
+
+<li><a href="simulateur.html">Simulador de Decisiones</a></li>
+
+<li><a href="plateforme.html">Plataforma</a></li>
+
+<li><a href="contact.html">Contacto</a></li>
+
+</ul>
+</nav>
+    
 <section class="zone-bleue">
     <h1>Glosario</h1>
 </section>
@@ -214,17 +416,25 @@
     <p>© 2026 Peuplitique – Todos los derechos reservados</p>
 </footer>
 
-</div>
-<!-- FIN ES -->
+    <script>
+        function showLang(lang) {
 
+            document.querySelectorAll('.lang-block').forEach(block => {
+                block.style.display = 'none';
+            });
 
+            document.getElementById(lang).style.display = 'block';
+        }
 
-<!-- SCRIPT LANG -->
-<script>
-function showLang(lang) {
-    document.querySelectorAll('.lang-block').forEach(b => b.style.display = 'none');
-    document.getElementById(lang).style.display = 'block';
-}
-</script>
+        showLang('fr');
+    </script>
 
 </body>
+
+</html>
+
+
+
+
+
+
