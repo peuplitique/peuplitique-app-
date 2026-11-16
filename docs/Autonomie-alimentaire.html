@@ -23,42 +23,61 @@
         font-size:18px;
         cursor:pointer;
     }
+.mobile-dropdown{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    background:#002f5f;
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}   
 
-    .mobile-dropdown{
-        display:none;
-        background:#002f5f;
-    }
+.mobile-dropdown.open{
+    max-height:500px;
+opacity:1;
+}
 
-    .mobile-dropdown a{
+.mobile-dropdown a{
+    display:block;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-dropdown a:hover{
+    background:#3FD1C2;
+    color:#003f7f;
+}
+
+.menuIcon{
+    display:inline-block;
+    margin-right:8px;
+    transition:transform 0.3s ease;
+}
+
+.menuIcon.rotate{
+    transform:rotate(90deg);
+}
+
+@media (max-width:768px){
+
+    .mobile-menu{
         display:block;
-        color:white;
-        padding:12px;
-        text-decoration:none;
-        border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
-    .mobile-dropdown a:hover{
-        background:#3FD1C2;
-        color:#003f7f;
+    .menu,
+    .sommaire-horizontal{
+        display:none;
     }
 
-    @media (max-width:768px){
-
-        .mobile-menu{
-            display:block;
-        }
-
-        .menu,
-        .sommaire-horizontal{
-            display:none;
-        }
-
-    }
+}
 
 </style>
 
 </head>
-
+       
 <body>
 
 <!-- LANGUES -->
@@ -93,6 +112,27 @@
 
     <div class="ligne"></div>
 </header>
+<div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
 
 <nav class="menu">
 <ul>
@@ -465,7 +505,28 @@ VERSION ANGLAISE
 
     <div class="ligne"></div>
 </header>  
-    
+ <div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
+   
  <nav class="menu">
 <ul>
     <li><a href="index.html">Home</a></li>
@@ -887,6 +948,27 @@ access to fundamental needs.
 
     <div class="ligne"></div>
 </header>
+<div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
 
 <nav class="menu">
 <ul>
@@ -1192,22 +1274,39 @@ cada Estado puede construir progresivamente su propia seguridad alimentaria.
 
     <!-- SCRIPT LANG -->
 
-    <script>
-        function showLang(lang) {
+      <script>
 
-            document.querySelectorAll('.lang-block').forEach(block => {
-                block.style.display = 'none';
-            });
+function toggleMenu(button) {
 
-            document.getElementById(lang).style.display = 'block';
-        }
+    const menu = button.nextElementSibling;
 
-        showLang('fr');
-    </script>
+    const icon = button.querySelector('.menuIcon');
+
+    menu.classList.toggle('open');
+
+    icon.classList.toggle('rotate');
+
+}
+
+function showLang(lang) {
+
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = 'none';
+    });
+
+    document.getElementById(lang).style.display = 'block';
+
+}
+
+showLang('fr');
+
+</script>
 
 </body>
-
 </html>
+    
+    
+
 
 
 
