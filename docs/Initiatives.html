@@ -4,124 +4,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PeuplitiK – Application</title>
+<title>PeuplitiK – Initiatives</title>
 
 <link rel="stylesheet" href="style.css">
+    <style>
+
+    .mobile-menu{
+        display:none;
+    }
+
+    .menu-btn{
+        width:100%;
+        padding:15px;
+        background:#003f7f;
+        color:white;
+        border:none;
+        font-size:18px;
+        cursor:pointer;
+    }
+
+.mobile-dropdown{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    background:#002f5f;
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}   
+
+.mobile-dropdown.open{
+    max-height:500px;
+opacity:1;
+}
+
+.mobile-dropdown a{
+    display:block;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-dropdown a:hover{
+    background:#3FD1C2;
+    color:#003f7f;
+}
+
+.menuIcon{
+    display:inline-block;
+    margin-right:8px;
+    transition:transform 0.3s ease;
+}
+
+.menuIcon.rotate{
+    transform:rotate(90deg);
+}
+
+@media (max-width:768px){
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .menu,
+    .sommaire-horizontal{
+        display:none;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<header class="header">
-    <h1>PeuplitiK</h1>
-    <p>Plateforme citoyenne – Participation, transparence, gouvernance partagée</p>
-    <div class="ligne"></div>
-</header>
-
-<div class="zone-bleue">
-    PeuplitiK – Application Citoyenne
-</div>
-
-<section class="bande-blanche">
+<!-- LANGUES -->
 
 <div class="lang-switch">
-    <button data-lang="fr">FR</button>
-    <button data-lang="en">EN</button>
+    <button onclick="showLang('fr')">FR</button>
+    <button onclick="showLang('en')">EN</button>
+    <button onclick="showLang('es')">ES</button>
 </div>
 
-</section>
+    <!-- ===================================================== -->
+    <!-- ====================== FR =========================== -->
+    <!-- ===================================================== -->
+
+    <div id="fr" class="lang-block">
+
+
+<header class="header">
+
+    <h1>PEUPLITIK</h1>
+
+    <h2>ÉTAT SOUVERAIN NUMÉRIQUE</h2>
+
+    <h3>ANONYMAT DU VOTE</h3>
+
+    <p>
+        SÉCURITÉ • CONFIDENTIALITÉ • INTÉGRITÉ DÉMOCRATIQUE
+    </p>
+
+    <h4 class="sous-titre">
+    Initiatives citoyennes
+</h4>
+
+    <div class="ligne"></div>
+
+</header>
+
+<div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
 
 <nav class="menu">
 <ul>
-
-<li><a href="intro-acceuil.html">Accueil</a></li>
+ 
+<li><a href="index.html">Accueil</a></li>
+ 
+<li><a href="constitution.html">Constitution</a></li>
+ 
 <li><a href="gouvernance-partagee.html">Gouvernance</a></li>
-<li><a href="identite-numerique.html">Citoyenneté numérique</a></li>
-<li><a href="debats.html">Participation</a></li>
-<li><a href="contact.html">Contact</a></li>
+ 
+<li><a href="vote-numerique.html">Vote numérique</a></li>
+ 
+<li><a href="vote-token.html">Token Infrastructure</a></li>
+ 
+<li><a href="debats.html">Débats</a></li>
 
+<li><a href="medias.html">Médias citoyens</a></li>
+
+<li><a href="presse.html">Presse</a></li> 
+     
+<li><a href="referendums.html">Référendums</a></li>
+ 
+<li><a href="contact.html">Contact</a></li>
+ 
 </ul>
 </nav>
 
 <nav class="sommaire-horizontal">
 <ul>
-<ul>
-
-<li><a href="intro-acceuil.html">Accueil</a></li>
-
+ 
+<li><a href="index.html">Accueil</a></li>
+ 
 <li><a href="glossaire.html">Glossaire</a></li>
-
+ 
 <li><a href="protocole.html">Protocole</a></li>
-
+ 
 <li><a href="desequilibres-structurels.html">Déséquilibres structurels</a></li>
-
+ 
 <li><a href="limites-structurelles.html">Limites structurelles</a></li>
-
+ 
+<li><a href="democratie-directe.html">Démocratie directe</a></li>
+ 
 <li><a href="constitution.html">Constitution</a></li>
-
+ 
 <li><a href="gouvernance-partagee.html">Gouvernance partagée</a></li>
-
+ 
 <li><a href="gouvernance-dao.html">Gouvernance DAO</a></li>
-
+ 
 <li><a href="organisation-structurelle.html">Organisation structurelle</a></li>
+ 
+<li><a href="organisation-politique-territoriale.html">Organisation territoriale</a></li>
+ 
+<li><a href="organisation-economique.html">Organisation économique</a></li>
+ 
+<li><a href="economie-integree.html">Économie intégrée</a></li>
+ 
+<li><a href="autonomie-alimentaire.html">Autonomie alimentaire</a></li>
+ 
+<li><a href="systeme-hydrique.html">Système hydrique</a></li>
+ 
+<li><a href="identite-numerique.html">Identité numérique</a></li>
+ 
+<li><a href="vote-numerique.html">Vote numérique</a></li>
+ 
+<li><a href="anonymat-du-vote.html">Anonymat du vote</a></li>
+ 
+<li><a href="vote-token.html">Infrastructure Token</a></li>
+ 
+<li><a href="debats.html">Débats citoyens</a></li>
 
-<li><a href="organisation-politique-territoriale.html">
-Organisation territoriale
-</a></li>
+<li><a href="medias.html">Médias citoyens</a></li>
 
-<li><a href="organisation-economique.html">
-Organisation économique
-</a></li>
-
-<li><a href="economie-integree.html">
-Économie intégrée
-</a></li>
-
-<li><a href="identite-numerique.html">
-Identité numérique
-</a></li>
-
-<li><a href="vote-numerique.html">
-Vote numérique
-</a></li>
-
-<li><a href="vote-token.html">
-Token citoyen
-</a></li>
-<li><a href="anonymat-du-vote.html">
-Anonymat du vote
-</a></li>
-
-<li><a href="debats.html">
-Débats citoyens
-</a></li>
-
-<li><a href="referendums.html">
-Référendums
-</a></li>
-
-<li><a href="resultats.html">
-Résultats publics
-</a></li>
-
-<li><a href="initiatives.html">
-Proposer une initiative
-</a></li>
-
-<li><a href="commissions.html">
-Commissions citoyennes
-</a></li>
-
-<li><a href="simulateur.html">
-Simulateur de décision
-</a></li>
-
-<li><a href="contact.html">
-Contact
-</a></li>
-
+<li><a href="presse.html">Presse</a></li> 
+ 
+<li><a href="commissions.html">Commissions citoyennes</a></li>
+ 
+<li><a href="initiatives.html">Initiatives citoyennes</a></li>
+ 
+<li><a href="referendums.html">Référendums</a></li>
+ 
+<li><a href="resultats.html">Résultats publics</a></li>
+ 
+<li><a href="simulateur.html">Simulateur de décision</a></li>
+ 
+<li><a href="plateforme.html">Plateforme</a></li>
+ 
+<li><a href="contact.html">Contact</a></li>
+ 
 </ul>
 </nav>
+<main class="content">
+   
+<section class="zone-bleue">
+<section class="article-section">
 
 <h2>Initiatives Citoyennes</h2>
 <p>
@@ -170,38 +278,119 @@ Participer aux groupes de travail thématiques.
 <p>
 Suivre les décisions issues des consultations.
 </p>
-
+<h3>Pages liées</h3>
+ 
+<ul>
+ 
+<li>
+<a href="identite-numerique.html">
+Identité numérique
+</a>
+</li>
+ 
+<li>
+<a href="vote-numerique.html">
+Vote numérique
+</a>
+</li>
+ 
+<li>
+<a href="vote-token.html">
+Infrastructure Token
+</a>
+</li>
+ 
+<li>
+<a href="debats.html">
+Débats citoyens
+</a>
+</li>
+ 
+<li>
+<a href="referendums.html">
+Référendums
+</a>
+</li>
+</ul> 
+</section>
+</section>
+</main>
 </div>
-<!-- FIN FR -->
+<!-- FIN FR -->  
+
+
 <div class="lang-block" id="en" style="display:none;">
 
 <!-- VERSION ANGLAISE -->
-<nav class="menu-haut">
- 
-<a href="index.html">Home</a>
- 
-<a href="gouvernance-partagee.html">
-Governance
-</a>
- 
-<a href="identite-numerique.html">
-Digital Citizenship
-</a>
- 
-<a href="debats.html">
-Participation
-</a>
- 
-<a href="contact.html">
-Contact
-</a>
- 
+
+    <header class="header">
+    <h1>PEUPLITIK</h1>
+
+    <h2>DIGITAL SOVEREIGN STATE</h2>
+
+    <h3>DIRECT DEMOCRACY</h3>
+
+    <p>
+        CONNECTED TERRITORIES • ACTIVE CITIZENS • SUSTAINABLE FUTURE
+    </p>
+
+    <h4 class="sous-titre">
+    Citizen Initiatives
+</h4>
+<div class="ligne"></div>
+</header>  
+<div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Home</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Governance</a>
+        <a href="vote-numerique.html">Digital Voting</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
+         
+    <nav class="menu">
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="constitution.html">Constitution</a></li>
+
+<li><a href="gouvernance-partagee.html">Governance</a></li>
+
+<li><a href="vote-numerique.html">Digital Voting</a></li>
+
+<li><a href="vote-token.html">Token Infrastructure</a></li>
+
+<li><a href="debats.html">Debates</a></li>
+
+<li><a href="medias.html">Citizen Media</a></li>
+
+<li><a href="presse.html">Press</a></li>   
+
+<li><a href="referendums.html">Referendums</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
 </nav>
 
 <nav class="sommaire-horizontal">
 <ul>
 
-<li><a href="intro-acceuil.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
 <li><a href="glossaire.html">Glossary</a></li>
 
@@ -210,6 +399,8 @@ Contact
 <li><a href="desequilibres-structurels.html">Structural Imbalances</a></li>
 
 <li><a href="limites-structurelles.html">Structural Limits</a></li>
+
+<li><a href="democratie-directe.html">Direct Democracy</a></li>
 
 <li><a href="constitution.html">Constitution</a></li>
 
@@ -225,30 +416,46 @@ Contact
 
 <li><a href="economie-integree.html">Integrated Economy</a></li>
 
+<li><a href="autonomie-alimentaire.html">Food Autonomy</a></li>
+
+<li><a href="systeme-hydrique.html">Water System</a></li>
+
 <li><a href="identite-numerique.html">Digital Identity</a></li>
 
 <li><a href="vote-numerique.html">Digital Voting</a></li>
 
-<li><a href="vote-token.html">Citizen Token</a></li>
-
 <li><a href="anonymat-du-vote.html">Vote Anonymity</a></li>
 
+<li><a href="vote-token.html">Token Infrastructure</a></li>
+
 <li><a href="debats.html">Citizen Debates</a></li>
+
+<li><a href="medias.html">Citizen Media</a></li>
+
+<li><a href="presse.html">Press</a></li>
+
+<li><a href="commissions.html">Citizen Commissions</a></li>
+
+<li><a href="initiatives.html">Citizen Initiatives</a></li>
 
 <li><a href="referendums.html">Referendums</a></li>
 
 <li><a href="resultats.html">Public Results</a></li>
 
-<li><a href="initiatives.html">Citizen Initiatives</a></li>
-
-<li><a href="commissions.html">Citizen Commissions</a></li>
-
 <li><a href="simulateur.html">Decision Simulator</a></li>
+
+<li><a href="plateforme.html">Platform</a></li>
 
 <li><a href="contact.html">Contact</a></li>
 
 </ul>
 </nav>
+<main class="content">
+<section class="zone-bleue">
+<h2> Citizen Initiatives    </h2>
+</section>
+<section class="article-section">
+
  <h2>Citizen Initiatives</h2>
 
 <p>
@@ -298,36 +505,275 @@ Participate in thematic working groups.
 Follow decisions resulting from
 consultations and votes.
 </p>
+<h3>Related Pages</h3>
 
-</div> 
- 
+<ul>
+
+<li><a href="identite-numerique.html">Digital Identity</a></li>
+
+<li><a href="vote-numerique.html">Digital Voting</a></li>
+
+<li><a href="vote-token.html">Token Infrastructure</a></li>
+
+<li><a href="debats.html">Citizen Debates</a></li>
+
+<li><a href="referendums.html">Referendums</a></li>
+
+</ul>
+
+</section>
+</main>
 </div>
-<!-- FIN EN -->
+
+<!-- END EN -->
+    
+<div class="lang-block" id="es" style="display:none;">
+
+<header class="header">
+    <h1>PEUPLITIK</h1>
+
+    <h2>ESTADO SOBERANO DIGITAL</h2>
+
+    <h3>ANONIMATO DEL VOTO</h3>
+
+    <p>
+        SEGURIDAD • CONFIDENCIALIDAD • INTEGRIDAD DEMOCRÁTICA
+    </p>
+
+    <h4 class="sous-titre">
+    Iniciativas Ciudadanas
+</h4>
+
+    <div class="ligne"></div>
+</header>
+ <div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+        <a href="index.html">Inicio</a>
+        <a href="constitution.html">Constitución</a>
+        <a href="gouvernance-partagee.html">Gobernanza</a>
+        <a href="vote-numerique.html">Voto Digital</a>
+        <a href="vote-token.html">Infraestructura Token</a>
+        <a href="contact.html">Contacto</a>
+
+    </div>
+
+</div>  
+    <nav class="menu">
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="constitution.html">Constitución</a></li>
+
+<li><a href="gouvernance-partagee.html">Gobernanza</a></li>
+
+<li><a href="vote-numerique.html">Voto Digital</a></li>
+
+<li><a href="vote-token.html">Voto y Token</a></li>
+
+<li><a href="debats.html">Debates</a></li>
+
+<li><a href="referendums.html">Referéndums</a></li>
+
+<li><a href="contact.html">Contacto</a></li>
+
+</ul>
+</nav>
+
+<nav class="sommaire-horizontal">
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="glossaire.html">Glosario</a></li>
+
+<li><a href="protocole.html">Protocolo</a></li>
+
+<li><a href="desequilibres-structurels.html">Desequilibrios Estructurales</a></li>
+
+<li><a href="limites-structurelles.html">Límites Estructurales</a></li>
+
+<li><a href="democratie-directe.html">Democracia Directa</a></li>
+
+<li><a href="constitution.html">Constitución</a></li>
+
+<li><a href="gouvernance-partagee.html">Gobernanza Compartida</a></li>
+
+<li><a href="gouvernance-dao.html">Gobernanza DAO</a></li>
+
+<li><a href="organisation-structurelle.html">Organización Estructural</a></li>
+
+<li><a href="organisation-politique-territoriale.html">Organización Territorial</a></li>
+
+<li><a href="organisation-economique.html">Organización Económica</a></li>
+
+<li><a href="economie-integree.html">Economía Integrada</a></li>
+
+<li><a href="autonomie-alimentaire.html">Autonomía Alimentaria</a></li>
+
+<li><a href="systeme-hydrique.html">Sistema Hídrico</a></li>
+
+<li><a href="identite-numerique.html">Identidad Digital</a></li>
+
+<li><a href="vote-numerique.html">Voto Digital</a></li>
+
+<li><a href="anonymat-du-vote.html">Anonimato del Voto</a></li>
+
+<li><a href="vote-token.html">Infraestructura Token</a></li>
+
+<li><a href="debats.html">Debates Ciudadanos</a></li>
+    
+<li><a href="medias.html">Medios Ciudadanos</a></li>
+
+<li><a href="presse.html">Prensa</a></li>  
+
+<li><a href="commissions.html">Comisiones Ciudadanas</a></li>
+
+<li><a href="initiatives.html">Iniciativas Ciudadanas</a></li>
+
+<li><a href="referendums.html">Referéndums</a></li>
+
+<li><a href="resultats.html">Resultados Públicos</a></li>
+
+<li><a href="simulateur.html">Simulador de Decisiones</a></li>
+
+<li><a href="plateforme.html">Plataforma</a></li>
+
+<li><a href="contact.html">Contacto</a></li>
+
+</ul>
+</nav>
+<main class="content">
+
+<section class="zone-bleue">
+
+<h2>Iniciativas Ciudadanas</h2>
+
+</section>
+
+<section class="article-section">
+
+<p>
+Las iniciativas ciudadanas permiten
+a cualquier ciudadano proponer una idea,
+un proyecto o una reforma.
+</p>
+
+<p>
+Una iniciativa puede ser:
+</p>
+
+<ul>
+<li>Local</li>
+<li>Regional</li>
+<li>Nacional</li>
+<li>Internacional</li>
+</ul>
+
+<p>
+Después del debate público,
+una iniciativa puede evolucionar hacia
+una consulta o un referéndum.
+</p>
+
+<h3><a href="debats.html">Debates Ciudadanos</a></h3>
+
+<p>
+Discutir y mejorar las propuestas ciudadanas.
+</p>
+
+<h3><a href="referendums.html">Referéndums</a></h3>
+
+<p>
+Someter una iniciativa a consulta
+o a votación ciudadana.
+</p>
+
+<h3><a href="commissions.html">Comisiones Ciudadanas</a></h3>
+
+<p>
+Participar en grupos de trabajo temáticos.
+</p>
+
+<h3><a href="resultats.html">Resultados Públicos</a></h3>
+
+<p>
+Seguir las decisiones resultantes
+de consultas y votaciones.
+</p>
+
+<h3>Páginas Relacionadas</h3>
+
+<ul>
+
+<li><a href="identite-numerique.html">Identidad Digital</a></li>
+
+<li><a href="vote-numerique.html">Voto Digital</a></li>
+
+<li><a href="vote-token.html">Infraestructura Token</a></li>
+
+<li><a href="debats.html">Debates Ciudadanos</a></li>
+
+<li><a href="referendums.html">Referéndums</a></li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- FIN ES -->
+
 <footer>
-    <p>© 2026 PeuplitiK – Tous droits réservés</p>
+    <p>© 2026 Peuplitique - Tous droits réservés</p>
 </footer>
 
-<script>
+    <!-- SCRIPT LANG -->
 
-document.querySelectorAll('.lang-switch button').forEach(btn => {
+   <script>
 
-    btn.addEventListener('click', () => {
+function toggleMenu(button) {
 
-        const lang = btn.dataset.lang;
+    const menu = button.nextElementSibling;
 
-        document.querySelectorAll('.lang-block').forEach(block => {
+    const icon = button.querySelector('.menuIcon');
 
-            block.style.display =
-            block.id === lang ? 'block' : 'none';
+    menu.classList.toggle('open');
 
-        });
+    icon.classList.toggle('rotate');
 
+}
+
+function showLang(lang) {
+
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = 'none';
     });
 
-});
+    document.getElementById(lang).style.display = 'block';
+
+}
+
+showLang('fr');
 
 </script>
 
 </body>
-
 </html>
+    
+    
+
+
+
+
+
