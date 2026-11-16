@@ -24,36 +24,56 @@
         cursor:pointer;
     }
 
-    .mobile-dropdown{
-        display:none;
-        background:#002f5f;
-    }
+.mobile-dropdown{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    background:#002f5f;
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}   
 
-    .mobile-dropdown a{
+.mobile-dropdown.open{
+    max-height:500px;
+opacity:1;
+}
+
+.mobile-dropdown a{
+    display:block;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-dropdown a:hover{
+    background:#3FD1C2;
+    color:#003f7f;
+}
+
+.menuIcon{
+    display:inline-block;
+    margin-right:8px;
+    transition:transform 0.3s ease;
+}
+
+.menuIcon.rotate{
+    transform:rotate(90deg);
+}
+
+@media (max-width:768px){
+
+    .mobile-menu{
         display:block;
-        color:white;
-        padding:12px;
-        text-decoration:none;
-        border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
-    .mobile-dropdown a:hover{
-        background:#3FD1C2;
-        color:#003f7f;
+    .menu,
+    .sommaire-horizontal{
+        display:none;
     }
 
-    @media (max-width:768px){
-
-        .mobile-menu{
-            display:block;
-        }
-
-        .menu,
-        .sommaire-horizontal{
-            display:none;
-        }
-
-    }
+}
 
 </style>
 
@@ -86,6 +106,28 @@
 
     <div class="ligne"></div>
 </header>
+ <div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
+         
 <nav class="menu">
 <ul>
     <li><a href="index.html">Accueil</a></li>
@@ -130,7 +172,7 @@
 
 <li><a href="economie-integree.html">Économie intégrée</a></li>
 
-<li><a href="autonome.html">Autonomie alimentaire</a></li>
+<li><a href="autonomie-alimentaire.html">Autonomie alimentaire</a></li>
 
 <li><a href="systeme-hydrique.html">Système hydrique</a></li>
 
@@ -206,11 +248,93 @@
 </section>
 
 <section id="contributions">
-<h2>Contributions citoyennes</h2>
+    <h2>Contributions citoyennes</h2>
 </section>
 
+<section class="article-section">
+
+<h3>Pages liées</h3>
+
+<ul>
+
+<li>
+<a href="debats.html">
+Débats citoyens
+</a>
+</li>
+
+<li>
+<a href="presse.html">
+Presse
+</a>
+</li>
+
+<li>
+<a href="commissions.html">
+Commissions citoyennes
+</a>
+</li>
+
+<li>
+<a href="initiatives.html">
+Initiatives citoyennes
+</a>
+</li>
+
+<li>
+<a href="referendums.html">
+Référendums
+</a>
+</li>
+
+<li>
+<a href="resultats.html">
+Résultats publics
+</a>
+</li>
+
+</ul>
+<h3>Pages liées</h3>
+
+<ul>
+
+<li><a href="debats.html">Débats citoyens</a></li>
+
+<li><a href="presse.html">Presse</a></li>
+
+<li><a href="commissions.html">Commissions citoyennes</a></li>
+
+<li><a href="initiatives.html">Initiatives citoyennes</a></li>
+
+<li><a href="referendums.html">Référendums</a></li>
+
+<li><a href="resultats.html">Résultats publics</a></li>
+
+</ul>
+</section>
+<h3>Pages liées</h3>
+
+<ul>
+
+<li><a href="debats.html">Débats citoyens</a></li>
+
+<li><a href="presse.html">Presse</a></li>
+
+<li><a href="commissions.html">Commissions citoyennes</a></li>
+
+<li><a href="initiatives.html">Initiatives citoyennes</a></li>
+
+<li><a href="referendums.html">Référendums</a></li>
+
+<li><a href="resultats.html">Résultats publics</a></li>
+
+</ul>
 </main>
+
 </div>
+
+<!-- FIN FR -->
+
 <div id="en" class="lang-block" style="display:none;">
 <header class="header">
 
@@ -231,7 +355,28 @@
 <div class="ligne"></div>
 
 </header>
+<div class="mobile-menu">
 
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
+  
 <nav class="menu">
 <ul>
     <li><a href="index.html">Home</a></li>
@@ -276,7 +421,7 @@
 
 <li><a href="economie-integree.html">Integrated Economy</a></li>
 
-<li><a href="autonome.html">Food Autonomy</a></li>
+<li><a href="autonomie-alimentaire.html">Food Autonomy</a></li>
 
 <li><a href="systeme-hydrique.html">Water System</a></li>
 
@@ -356,7 +501,23 @@
 <section id="contributions">
 <h2>Citizen Contributions</h2>
 </section>
+<h3>Related Pages</h3>
 
+<ul>
+
+<li><a href="debats.html">Citizen Debates</a></li>
+
+<li><a href="presse.html">Press</a></li>
+
+<li><a href="commissions.html">Citizen Commissions</a></li>
+
+<li><a href="initiatives.html">Citizen Initiatives</a></li>
+
+<li><a href="referendums.html">Referendums</a></li>
+
+<li><a href="resultats.html">Public Results</a></li>
+
+</ul>
 </main>
 
 </div>
@@ -382,6 +543,29 @@
     <div class="ligne"></div>
 
 </header>
+<div class="mobile-menu">
+
+    <button class="menu-btn" onclick="toggleMenu(this)">
+
+        <span class="menuIcon">☰</span> MENU
+
+    </button>
+
+    <div class="mobile-dropdown">
+
+
+        <a href="index.html">Accueil</a>
+        <a href="constitution.html">Constitution</a>
+        <a href="gouvernance-partagee.html">Gouvernance</a>
+        <a href="vote-numerique.html">Vote numérique</a>
+        <a href="vote-token.html">Token Infrastructure</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</div>
+  
+
 
 <nav class="menu">
 <ul>
@@ -427,7 +611,7 @@
 
 <li><a href="economie-integree.html">Economía Integrada</a></li>
 
-<li><a href="autonome.html">Autonomía Alimentaria</a></li>
+<li><a href="autonomie-alimentaire.html">Autonomía Alimentaria</a></li>
 
 <li><a href="systeme-hydrique.html">Sistema Hídrico</a></li>
 
@@ -511,28 +695,77 @@
 <h2>Contribuciones Ciudadanas</h2>
 </section>
 
- </div>
+   
+    <h3>Páginas Relacionadas</h3>
+
+<ul>
+
+<li><a href="identite-numerique.html">Identidad Digital</a></li>
+
+<li><a href="vote-numerique.html">Voto Digital</a></li>
+
+<li><a href="vote-token.html">Infraestructura Token</a></li>
+
+<li><a href="debats.html">Debates Ciudadanos</a></li>
+    
+<li><a href="medias.html">Medios Ciudadanos</a></li>
+
+<li><a href="presse.html">Prensa</a></li>  
+
+<li><a href="referendums.html">Referéndums</a></li>
+
+</ul>
+<div style="text-align:center; margin:30px 0;">
+    <a href="index.html"
+       style="color:#3FD1C2; font-weight:bold; text-decoration:none;">
+       ← Volver al inicio
+    </a>
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+    <!-- FIN ES -->
+
 <footer>
-            <p>© 2026 Peuplitique - Tous droits réservés</p>
-        </footer>
+    <p>© 2026 Peuplitique - Tous droits réservés</p>
+</footer>
 
     <!-- SCRIPT LANG -->
 
-    <script>
-        function showLang(lang) {
+   <script>
 
-            document.querySelectorAll('.lang-block').forEach(block => {
-                block.style.display = 'none';
-            });
+function toggleMenu(button) {
 
-            document.getElementById(lang).style.display = 'block';
-        }
+    const menu = button.nextElementSibling;
 
-        showLang('fr');
-    </script>
+    const icon = button.querySelector('.menuIcon');
+
+    menu.classList.toggle('open');
+
+    icon.classList.toggle('rotate');
+
+}
+
+function showLang(lang) {
+
+    document.querySelectorAll('.lang-block').forEach(block => {
+        block.style.display = 'none';
+    });
+
+    document.getElementById(lang).style.display = 'block';
+
+}
+
+showLang('fr');
+
+</script>
 
 </body>
-
 </html>
-
+    
+    
 
