@@ -1,27 +1,135 @@
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 600px) {
+/* ============================
+   MENU MOBILE
+============================ */
+
+.mobile-menu{
+    display:none;
+}
+
+.menu-btn{
+    width:100%;
+    padding:15px;
+    background:#003f7f;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.mobile-dropdown{
+    display:block;
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    background:#002f5f;
+    transition:
+        max-height .35s ease,
+        opacity .25s ease;
+}
+
+.mobile-dropdown.open{
+    display:block;
+    max-height:500px;
+    opacity:1;
+}
+
+.mobile-dropdown a{
+    display:block;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.mobile-dropdown a:hover{
+    background:#3FD1C2;
+    color:#003f7f;
+}
+
+.menuIcon{
+    display:inline-block;
+    margin-right:8px;
+    transition:transform .3s ease;
+}
+
+.menuIcon.rotate{
+    transform:rotate(90deg);
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE
+============================ */
+
+@media (max-width:768px){
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .menu,
+    .sommaire-horizontal{
+        display:none;
+    }
+
+    .content{
+        margin:10px;
+        padding:15px;
+        width:auto;
+    }
+
+    .zone-bleue{
+        padding:15px;
+        font-size:16px;
+    }
+
+    .article-section{
+        width:100%;
+        max-width:100%;
+        overflow-wrap:break-word;
+        word-wrap:break-word;
+    }
 
     .menu-haut,
-    .menu-bas {
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 15px 10px;
+    .menu-bas{
+        flex-wrap:wrap;
+        gap:12px;
+        padding:15px 10px;
     }
 
     .menu-haut a,
-    .menu-bas a {
-        font-size: 14px;
-        padding: 6px 4px;
-        display: block;
+    .menu-bas a{
+        font-size:14px;
+        padding:6px 4px;
+        display:block;
     }
 
-    .zone-bleue {
-        font-size: 16px;
-        padding: 15px;
+    h1{
+        font-size:28px;
     }
 
-    .content {
-        margin: 15px;
-        padding: 20px;
+    h2{
+        font-size:22px;
+    }
+
+    h3{
+        font-size:18px;
+    }
+
+    .sous-titre{
+        font-size:15px;
+        line-height:1.5;
+    }
+
+    pre{
+        overflow-x:auto;
+        font-size:13px;
+    }
+
+    img{
+        max-width:100%;
+        height:auto;
     }
 }
+
+
